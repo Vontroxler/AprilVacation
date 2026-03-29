@@ -3,11 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Panama City Beach Trip Planner — April 6–11, 2026</title>
-<meta name="description" content="Group trip planner for Panama City Beach, April 6-11, 2026. Weather, route, dining, activities, packing, and day-by-day itinerary for 9+ travelers.">
+<title>Gulf Shores Trip Planner — April 6–11, 2026</title>
+<meta name="description" content="Group trip planner for Gulf Shores, Alabama, April 6-11, 2026. Weather, route, dining, activities, packing, and day-by-day itinerary for 9 travelers.">
 <style>
 /* ═══════════════════════════════════════════════
-   COASTAL EDITORIAL — Panama City Beach Planner
+   COASTAL EDITORIAL — Gulf Shores Planner
    ═══════════════════════════════════════════════ */
 
 :root {
@@ -898,15 +898,15 @@ tbody tr:hover { background: var(--accent-teal-soft); }
 <!-- ══════════ NAV ══════════ -->
 <nav class="nav" id="nav" aria-label="Table of Contents">
   <div class="nav-inner">
-    <span class="nav-brand">PCB 2026</span>
-    <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle navigation">
+    <span class="nav-brand">GS 2026</span>
+    <button class="nav-toggle" id="nav-toggle" aria-expanded="true" aria-controls="nav-links" aria-label="Toggle navigation">
       <span></span>
     </button>
-    <ul class="nav-links" id="nav-links">
+    <ul class="nav-links" id="nav-links" role="list">
       <li><a href="#weather">Weather</a></li>
-      <li><a href="#drive">The Drive</a></li>
+      <li><a href="#drive">Drive</a></li>
       <li><a href="#events">Events</a></li>
-      <li><a href="#food">Food</a></li>
+      <li><a href="#restaurants">Dining</a></li>
       <li><a href="#activities">Activities</a></li>
       <li><a href="#packing">Packing</a></li>
       <li><a href="#costs">Costs</a></li>
@@ -917,501 +917,693 @@ tbody tr:hover { background: var(--accent-teal-soft); }
 </nav>
 
 <!-- ══════════ HERO ══════════ -->
-<header class="hero">
+<header class="hero" role="banner">
   <div class="hero-inner">
-    <div class="hero-eyebrow">Group Trip Planner</div>
-    <h1>Panama City Beach</h1>
-    <p class="hero-lead"><strong>Your group of 9+ is heading to Gulf Highlands at the ideal time.</strong> Early April sits in a sweet spot&nbsp;&mdash; spring break crowds thin out, temperatures hover in the comfortable mid-70s, and a free air show featuring the USAF Thunderbirds lands on your final two days.</p>
+    <p class="hero-eyebrow">Group Trip Planner</p>
+    <h1>Gulf Shores, Alabama</h1>
+    <p class="hero-lead">
+      Five nights at <strong>The Beach Club Resort &amp; Spa, Gulf Highlands</strong> &mdash; 925 Beach Club Trail, Gulf Shores, AL. 86 acres of Gulf-front property with 11+ pools, private beach access, tennis, pickleball, and 18-hole mini golf. Everything you need is here. Everything else is a short drive.
+    </p>
     <div class="hero-stats">
       <div class="hero-stat">
-        <span class="hero-stat-value">April 6&ndash;11</span>
-        <span class="hero-stat-label">2026</span>
+        <span class="hero-stat-value">Apr 6&ndash;11</span>
+        <span class="hero-stat-label">2026 Dates</span>
       </div>
       <div class="hero-stat">
-        <span class="hero-stat-value">9+</span>
-        <span class="hero-stat-label">Travelers</span>
+        <span class="hero-stat-value">5 nights</span>
+        <span class="hero-stat-label">Stay length</span>
       </div>
       <div class="hero-stat">
-        <span class="hero-stat-value">600 mi</span>
-        <span class="hero-stat-label">From Paducah</span>
+        <span class="hero-stat-value">9 travelers</span>
+        <span class="hero-stat-label">Group size</span>
       </div>
       <div class="hero-stat">
-        <span class="hero-stat-value">$22&ndash;38</span>
-        <span class="hero-stat-label">Per Person / Day</span>
+        <span class="hero-stat-value">~615 mi</span>
+        <span class="hero-stat-label">Round trip</span>
+      </div>
+      <div class="hero-stat">
+        <span class="hero-stat-value">~$440&ndash;500</span>
+        <span class="hero-stat-label">Per person (excl. lodging)</span>
       </div>
     </div>
   </div>
 </header>
 
-<!-- ══════════ CONTENT ══════════ -->
+<div class="wave-divider" aria-hidden="true">
+  <svg viewBox="0 0 1440 40" preserveAspectRatio="none" fill="var(--bg-primary)">
+    <path d="M0,20 C360,40 720,0 1080,20 C1260,30 1380,10 1440,20 L1440,40 L0,40 Z"/>
+  </svg>
+</div>
+
+<!-- ══════════ MAIN ══════════ -->
 <main class="content">
 
-  <!-- ── 1. WEATHER ── -->
+  <!-- 1. WEATHER -->
   <section class="section" id="weather">
-    <div class="section-header" role="button" tabindex="0" aria-expanded="false" aria-controls="weather-body">
-      <h2><span class="section-num">1</span> Weather: warm days, cool evenings, and swimmable water</h2>
-      <svg class="collapse-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+    <div class="section-header" role="button" tabindex="0" aria-expanded="false" aria-controls="body-weather">
+      <h2><span class="section-num">1</span> Weather &amp; Conditions</h2>
+      <svg class="collapse-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
     </div>
-    <div class="section-body collapsed" id="weather-body">
-      <p>Historical data from Weather-Atlas, NOAA, and Climate-data.org converges on a consistent picture for early April in Panama City Beach. <strong>Expect daytime highs of 73&ndash;77&deg;F and overnight lows of 57&ndash;62&deg;F.</strong> The Gulf water temperature will be around <strong>68&ndash;72&deg;F</strong>&nbsp;&mdash; refreshing rather than warm, but comfortable for active swimmers and kids after an initial adjustment. A rash guard helps both with water chill and sun protection.</p>
+    <div class="section-body collapsed" id="body-weather">
 
-      <p>Rainfall probability on any given day is roughly <strong>24%</strong>, with April averaging about 3 inches total for the month. Realistically, expect 1&ndash;2 days during your 5-day stay with brief afternoon showers that pass quickly. The UV index averages <strong>6&ndash;8 (High)</strong>, meaning sunburn is possible in as little as 15&ndash;20 minutes without protection. Daily sunshine runs 9&ndash;10.5 hours with roughly 13 hours of daylight.</p>
+      <p>April is one of Gulf Shores&rsquo; best months &mdash; warm enough to swim, rarely oppressively hot, and well before peak summer crowds and hurricane season.</p>
 
-      <h3>Early AccuWeather projections</h3>
-      <p>Treat as rough estimates&nbsp;&mdash; true forecasts will firm up by April 1&ndash;2:</p>
       <div class="table-wrap">
         <table>
-          <thead><tr><th>Date</th><th>Projected High</th><th>Projected Low</th></tr></thead>
+          <thead>
+            <tr>
+              <th>Metric</th>
+              <th>Expected Range</th>
+              <th>Notes</th>
+            </tr>
+          </thead>
           <tbody>
-            <tr><td>Mon, Apr 6</td><td>70&ndash;75&deg;F</td><td>56&ndash;61&deg;F</td></tr>
-            <tr><td>Tue, Apr 7</td><td>71&ndash;73&deg;F</td><td>58&ndash;60&deg;F</td></tr>
-            <tr><td>Wed, Apr 8</td><td>73&ndash;75&deg;F</td><td>60&ndash;61&deg;F</td></tr>
-            <tr><td>Thu, Apr 9</td><td>74&ndash;76&deg;F</td><td>62&ndash;63&deg;F</td></tr>
-            <tr><td>Fri, Apr 10</td><td>77&deg;F</td><td>62&ndash;63&deg;F</td></tr>
-            <tr><td>Sat, Apr 11</td><td>77&ndash;78&deg;F</td><td>61&ndash;62&deg;F</td></tr>
+            <tr><td>High temp</td><td>72&ndash;76&deg;F</td><td>Comfortable beach weather; light layers for evening</td></tr>
+            <tr><td>Low temp</td><td>56&ndash;60&deg;F</td><td>Cool at night; bring a hoodie</td></tr>
+            <tr><td>Water temp</td><td>67&ndash;70&deg;F</td><td>Cool but very swimmable for most people</td></tr>
+            <tr><td>Rain chance</td><td>25&ndash;29%</td><td>Afternoon showers possible; usually brief</td></tr>
+            <tr><td>UV Index</td><td>6&ndash;11 (High&ndash;Extreme)</td><td>Sunscreen required; UV peaks 11 AM&ndash;3 PM</td></tr>
+            <tr><td>Wind</td><td>10&ndash;18 mph</td><td>South/SW winds typical; can kick up surf</td></tr>
           </tbody>
         </table>
       </div>
 
-      <p>The week warms as it progresses. <strong>Pack light layers for evenings</strong>&nbsp;&mdash; a hoodie or light jacket is essential when temperatures drop into the upper 50s after sunset.</p>
+      <div class="callout callout-tip">
+        <strong>Live Forecast</strong>
+        Check the live forecast closer to your dates: <a class="web-link" href="https://forecast.weather.gov/MapClick.php?lat=30.25&amp;lon=-87.7" target="_blank" rel="noopener"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg> NWS Forecast for Gulf Shores</a> &mdash; this is what local meteorologists use and the most accurate 7-day source for the area.
+      </div>
 
-      <p>Check the live forecast closer to your dates: <a class="web-link" href="https://forecast.weather.gov/MapClick.php?lat=30.18&lon=-85.81" target="_blank" rel="noopener"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg> NWS Forecast for Panama City Beach</a> (National Weather Service &mdash; the most accurate source, used by local lifeguards and park rangers).</p>
+      <h3>What to Expect by Day</h3>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Day</th>
+              <th>Date</th>
+              <th>Typical Pattern</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Travel Day</td><td>Mon Apr 6</td><td>Check forecast morning of; drive down regardless of destination weather</td></tr>
+            <tr><td>Day 1</td><td>Tue Apr 7</td><td>Good beach window if clear; afternoons can be breezy</td></tr>
+            <tr><td>Day 2</td><td>Wed Apr 8</td><td>Mid-week tends to be most settled; best beach day candidate</td></tr>
+            <tr><td>Day 3</td><td>Thu Apr 9</td><td>Watch for afternoon showers; morning beach ideal</td></tr>
+            <tr><td>Day 4</td><td>Fri Apr 10</td><td>Winds may increase; good day for inland activities if rough</td></tr>
+            <tr><td>Day 5</td><td>Sat Apr 11</td><td>Check before Strawberry Festival (~30 min north in Loxley)</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="callout callout-warn">
+        <strong>Rip Current Awareness</strong>
+        April winds can create strong rip currents even on sunny days. Always check the beach flag before swimming. Never swim against a rip current &mdash; swim parallel to shore to escape it.
+      </div>
+
     </div>
   </section>
 
-  <!-- ── 2. THE DRIVE ── -->
+  <!-- 2. DRIVE -->
   <section class="section" id="drive">
-    <div class="section-header" role="button" tabindex="0" aria-expanded="false" aria-controls="drive-body">
-      <h2><span class="section-num">2</span> The drive: 600 miles, one Buc-ee's, zero time zone changes</h2>
-      <svg class="collapse-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+    <div class="section-header" role="button" tabindex="0" aria-expanded="false" aria-controls="body-drive">
+      <h2><span class="section-num">2</span> Drive &amp; Route</h2>
+      <svg class="collapse-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
     </div>
-    <div class="section-body collapsed" id="drive-body">
+    <div class="section-body collapsed" id="body-drive">
 
-      <h3>Recommended route</h3>
-      <div class="callout">
-        <strong>Route</strong>
-        Paducah &rarr; I-24 East &rarr; Nashville &rarr; I-65 South &rarr; Birmingham &rarr; Montgomery &rarr; I-65 South to Exit 114 (Georgiana) &rarr; US-331 South &rarr; Panama City Beach
-      </div>
-
-      <p>This is the consensus best route from multiple travel forums and mapping tools. The total distance is <strong>approximately 600&ndash;615 miles</strong> with a non-stop drive time of <strong>9.5&ndash;10.5 hours</strong>. With gas stops, a lunch break, and bathroom breaks for a large group, budget <strong>11.5&ndash;13 hours realistically</strong>.</p>
-
-      <p>The final leg matters: from Montgomery, experienced travelers strongly recommend staying on I-65 south past Montgomery to <strong>Exit 114 at Georgiana</strong>, then taking Highway 106/55 to Florala and US-331 south through DeFuniak Springs. This bypasses Montgomery traffic entirely. Note that US-331 arrives on the <strong>west end</strong> of PCB, so you'll drive east along Front Beach Road or Back Beach Road to reach Gulf Highlands on Thomas Drive.</p>
-
-      <h3>Departure strategy</h3>
-      <div class="table-wrap">
-        <table>
-          <thead><tr><th>Depart Paducah</th><th>Nashville (~2 hrs)</th><th>Buc-ee's Athens (~3.5 hrs)</th><th>Birmingham (~5 hrs)</th><th>Arrive PCB</th></tr></thead>
-          <tbody>
-            <tr><td><strong>5:00 AM CT</strong></td><td>7:00 AM (before rush)</td><td>8:30 AM (breakfast stop)</td><td>10:30 AM</td><td><strong>4:00&ndash;5:00 PM</strong></td></tr>
-            <tr><td>6:00 AM CT</td><td>8:00 AM (in rush)</td><td>9:30 AM</td><td>12:00 PM</td><td>5:30&ndash;6:30 PM</td></tr>
-            <tr><td>7:00 AM CT</td><td>9:00 AM (tail of rush)</td><td>10:30 AM</td><td>1:00 PM</td><td>6:30&ndash;7:30 PM</td></tr>
-          </tbody>
-        </table>
-      </div>
+      <p>Paducah to Gulf Shores is a straightforward two-interstate drive &mdash; I-24 East to Nashville, then I-65 South all the way down through Birmingham and Montgomery into Alabama&rsquo;s Gulf Coast. About <strong>305 miles one way</strong> (~6.5 hours without stops). Budget 8&ndash;9 hours with stops going down, the same coming back.</p>
 
       <div class="callout callout-tip">
-        <strong>Best plan</strong>
-        Depart 5:00&ndash;5:30 AM to beat Nashville morning rush hour (worst 6:30&ndash;9:30 AM at the I-24/I-65/I-40 interchange known as "the stack"). This puts you at Buc-ee's Athens around 8:30 AM for breakfast, Birmingham by late morning, and Gulf Highlands by late afternoon.
+        <strong>Route Summary</strong>
+        Paducah &rarr; I-24 East &rarr; Nashville &rarr; I-65 South &rarr; Exit 34B in Mobile (I-10 West briefly) &rarr; Hwy 59 South &rarr; Gulf Shores &rarr; Beach Club Trail
       </div>
 
-      <h3>Gas strategy and prices</h3>
-      <p>Gas prices as of late March 2026 (per GasBuddy/AAA) are elevated due to oil market disruptions:</p>
+      <h3>Key Stops</h3>
       <div class="table-wrap">
         <table>
-          <thead><tr><th>State</th><th>Average $/gallon</th></tr></thead>
+          <thead>
+            <tr>
+              <th>Stop</th>
+              <th>Location</th>
+              <th>Miles In</th>
+              <th>Notes</th>
+            </tr>
+          </thead>
           <tbody>
-            <tr><td>Kentucky</td><td>$3.72</td></tr>
-            <tr><td>Tennessee</td><td>$3.61</td></tr>
-            <tr><td>Alabama</td><td>$3.61</td></tr>
-            <tr><td>Florida</td><td>$3.95</td></tr>
+            <tr>
+              <td><strong>Buc-ee&rsquo;s Athens</strong>
+                <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Buc-ee%27s+Athens+Alabama" target="_blank" rel="noopener"><svg width="9" height="12" viewBox="0 0 9 12" fill="currentColor" aria-hidden="true"><path d="M4.5 0A4.5 4.5 0 0 0 0 4.5C0 7.88 4.5 12 4.5 12S9 7.88 9 4.5A4.5 4.5 0 0 0 4.5 0zm0 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg> Map</a>
+              </td>
+              <td>I-65 Exit 347, Athens AL</td>
+              <td>~165 mi</td>
+              <td>Main gas &amp; food stop (~4.5 hrs in). Clean restrooms, great snacks, fuel up here</td>
+            </tr>
+            <tr>
+              <td><strong>Evergreen AL</strong>
+                <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=gas+station+Evergreen+Alabama+I-65" target="_blank" rel="noopener"><svg width="9" height="12" viewBox="0 0 9 12" fill="currentColor" aria-hidden="true"><path d="M4.5 0A4.5 4.5 0 0 0 0 4.5C0 7.88 4.5 12 4.5 12S9 7.88 9 4.5A4.5 4.5 0 0 0 4.5 0zm0 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg> Map</a>
+              </td>
+              <td>I-65 Exit 93, Evergreen AL</td>
+              <td>~240 mi</td>
+              <td>Last good fuel stop before Mobile. Top off here to avoid Mobile traffic</td>
+            </tr>
+            <tr>
+              <td><strong>Walmart Foley</strong>
+                <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Walmart+2200+S+McKenzie+Foley+Alabama" target="_blank" rel="noopener"><svg width="9" height="12" viewBox="0 0 9 12" fill="currentColor" aria-hidden="true"><path d="M4.5 0A4.5 4.5 0 0 0 0 4.5C0 7.88 4.5 12 4.5 12S9 7.88 9 4.5A4.5 4.5 0 0 0 4.5 0zm0 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg> Map</a>
+              </td>
+              <td>2200 S McKenzie, Foley AL</td>
+              <td>~295 mi</td>
+              <td>Stop here to grocery stock up before arriving at resort. Cheaper than beach stores</td>
+            </tr>
+            <tr>
+              <td><strong>Foley Fish Co.</strong>
+                <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Foley+Fish+Company+321+S+McKenzie+Foley+Alabama" target="_blank" rel="noopener"><svg width="9" height="12" viewBox="0 0 9 12" fill="currentColor" aria-hidden="true"><path d="M4.5 0A4.5 4.5 0 0 0 0 4.5C0 7.88 4.5 12 4.5 12S9 7.88 9 4.5A4.5 4.5 0 0 0 4.5 0zm0 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg> Map</a>
+              </td>
+              <td>321 S McKenzie, Foley AL</td>
+              <td>~295 mi</td>
+              <td>Optional: Fresh local seafood to cook at the resort. Near Walmart for one stop</td>
+            </tr>
           </tbody>
         </table>
       </div>
 
-      <div class="callout callout-warn">
-        <strong>Fill up before entering Florida</strong>
-        Alabama and Tennessee are consistently $0.30+/gallon cheaper. For one vehicle averaging 22 MPG over a 1,200-mile round trip (~55 gallons), expect <strong>$180&ndash;$225 total gas cost</strong>. Use the GasBuddy app for real-time prices along the route.
+      <h3>Gas Estimates</h3>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Vehicle</th>
+              <th>MPG</th>
+              <th>Gallons (Round Trip ~615 mi)</th>
+              <th>Est. Cost @ $3.20/gal</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>SUV / minivan</td><td>22&ndash;26</td><td>24&ndash;28 gal</td><td>$77&ndash;$90</td></tr>
+            <tr><td>Large SUV / truck</td><td>16&ndash;20</td><td>31&ndash;38 gal</td><td>$99&ndash;$122</td></tr>
+            <tr class="row-total"><td colspan="3"><strong>Group total (2 vehicles estimated)</strong></td><td><strong>$165&ndash;$195</strong></td></tr>
+          </tbody>
+        </table>
       </div>
 
-      <h3>Key fuel stops</h3>
-      <ul>
-        <li><strong>Buc-ee's Athens, AL</strong><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Buc-ee%27s+Athens+Alabama" target="_blank" rel="noopener"><svg width="9" height="12" viewBox="0 0 9 12" fill="currentColor" aria-hidden="true"><path d="M4.5 0A4.5 4.5 0 0 0 0 4.5C0 7.88 4.5 12 4.5 12S9 7.88 9 4.5A4.5 4.5 0 0 0 4.5 0zm0 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg> Map</a> (I-65 Exit 347)&nbsp;&mdash; 53,000 sq ft, 120 fuel positions, competitive prices, legendary clean bathrooms, BBQ brisket sandwiches, kolaches, and beaver nuggets. Your ideal first major stop at ~3&ndash;3.5 hours in.</li>
-        <li><strong>Murphy USA stations</strong> at I-65 Exit 238 (Alabaster)<a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Murphy+USA+I-65+Exit+238+Alabaster+Alabama" target="_blank" rel="noopener"><svg width="9" height="12" viewBox="0 0 9 12" fill="currentColor" aria-hidden="true"><path d="M4.5 0A4.5 4.5 0 0 0 0 4.5C0 7.88 4.5 12 4.5 12S9 7.88 9 4.5A4.5 4.5 0 0 0 4.5 0zm0 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg> Map</a> and Exit 130 (Greenville)<a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Murphy+USA+I-65+Exit+130+Greenville+Alabama" target="_blank" rel="noopener"><svg width="9" height="12" viewBox="0 0 9 12" fill="currentColor" aria-hidden="true"><path d="M4.5 0A4.5 4.5 0 0 0 0 4.5C0 7.88 4.5 12 4.5 12S9 7.88 9 4.5A4.5 4.5 0 0 0 4.5 0zm0 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg> Map</a>&nbsp;&mdash; consistently among the cheapest on the corridor.</li>
-        <li><strong>Love's and Pilot/Flying J</strong> are plentiful along the entire I-65 corridor through Tennessee and Alabama.</li>
-      </ul>
+      <h3>Optional Sightseeing Detour: USS Alabama</h3>
+      <p>The <strong>USS Alabama Battleship Memorial Park</strong> in Mobile is right on your route (I-65 to I-10 into Mobile). If you&rsquo;re making good time and want to stretch legs with the kids, it&rsquo;s about $15/adult, $8/child, and takes 1.5&ndash;2 hours. Skip it if you want to arrive before dark.
+        <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=USS+Alabama+Battleship+Memorial+Park+Mobile" target="_blank" rel="noopener"><svg width="9" height="12" viewBox="0 0 9 12" fill="currentColor" aria-hidden="true"><path d="M4.5 0A4.5 4.5 0 0 0 0 4.5C0 7.88 4.5 12 4.5 12S9 7.88 9 4.5A4.5 4.5 0 0 0 4.5 0zm0 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg> Map</a>
+      </p>
 
-      <h3>Road alerts</h3>
-      <div class="callout callout-warn">
-        <strong>Active construction</strong>
-        The I-65 Shelby County widening project between Calera and Alabaster (Exits 231&ndash;238) will likely still be active&nbsp;&mdash; expect lane shifts and reduced speeds. The I-65/Lakeshore Parkway interchange (Exit 256, Birmingham) is also under construction. <strong>No toll roads</strong> on this entire route. Watch for speed traps on US-331 through rural Alabama&nbsp;&mdash; fines run ~$170.
+      <div class="callout">
+        <strong>Departure Tip</strong>
+        Leave Paducah by 6 AM to arrive at Gulf Shores by 3&ndash;4 PM with stops, giving you time to grocery shop in Foley and settle in before dark. Monday morning traffic through Nashville is manageable before 8 AM.
       </div>
 
-      <h3>Worth-a-stop attractions along the route</h3>
-      <ul>
-        <li><strong>Buc-ee's Athens</strong> (mile ~300): Not just a gas station&nbsp;&mdash; it's an experience. BBQ counter, fudge shop, jerky wall, and endless snacks make this a highlight for kids and adults alike.</li>
-        <li><strong>Ave Maria Grotto, Cullman, AL</strong><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Ave+Maria+Grotto+Cullman+Alabama" target="_blank" rel="noopener"><svg width="9" height="12" viewBox="0 0 9 12" fill="currentColor" aria-hidden="true"><path d="M4.5 0A4.5 4.5 0 0 0 0 4.5C0 7.88 4.5 12 4.5 12S9 7.88 9 4.5A4.5 4.5 0 0 0 4.5 0zm0 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg> Map</a> (I-65 Exit 310): 125 miniature replicas of famous buildings, quirky and unique&nbsp;&mdash; 30 minutes off-highway.</li>
-        <li><strong>Priester's Pecans</strong><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Priester%27s+Pecans+Fort+Deposit+Alabama" target="_blank" rel="noopener"><svg width="9" height="12" viewBox="0 0 9 12" fill="currentColor" aria-hidden="true"><path d="M4.5 0A4.5 4.5 0 0 0 0 4.5C0 7.88 4.5 12 4.5 12S9 7.88 9 4.5A4.5 4.5 0 0 0 4.5 0zm0 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg> Map</a> (I-65 Exit 142): Candy factory and pecan treats, great for road snacks.</li>
-        <li><strong>DeFuniak Springs, FL</strong><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=DeFuniak+Springs+Florida" target="_blank" rel="noopener"><svg width="9" height="12" viewBox="0 0 9 12" fill="currentColor" aria-hidden="true"><path d="M4.5 0A4.5 4.5 0 0 0 0 4.5C0 7.88 4.5 12 4.5 12S9 7.88 9 4.5A4.5 4.5 0 0 0 4.5 0zm0 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg> Map</a> (on US-331): A charming small town with one of only two perfectly round spring-fed lakes in the world&nbsp;&mdash; worth a quick stretch stop.</li>
-      </ul>
     </div>
   </section>
 
-  <!-- ── 3. EVENTS ── -->
+  <!-- 3. EVENTS -->
   <section class="section" id="events">
-    <div class="section-header" role="button" tabindex="0" aria-expanded="false" aria-controls="events-body">
-      <h2><span class="section-num">3</span> A free air show headlines event week</h2>
-      <svg class="collapse-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+    <div class="section-header" role="button" tabindex="0" aria-expanded="false" aria-controls="body-events">
+      <h2><span class="section-num">3</span> Local Events &amp; Entertainment</h2>
+      <svg class="collapse-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
     </div>
-    <div class="section-body collapsed" id="events-body">
+    <div class="section-body collapsed" id="body-events">
 
-      <h3>Gulf Coast Salute Air Show&nbsp;&mdash; April 10&ndash;12, 2026 (FREE) <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Russell-Fields+City+Pier+Panama+City+Beach+FL" target="_blank" rel="noopener"><svg width="9" height="12" viewBox="0 0 9 12" fill="currentColor" aria-hidden="true"><path d="M4.5 0A4.5 4.5 0 0 0 0 4.5C0 7.88 4.5 12 4.5 12S9 7.88 9 4.5A4.5 4.5 0 0 0 4.5 0zm0 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg> Map</a></h3>
-      <p>This is the headline event of your trip and it's <strong>completely free</strong>. Held at Russell-Fields City Pier, the show features the <strong>USAF Thunderbirds</strong> performing precision aerobatics on Saturday and Sunday at 3:00 PM. Friday April 10 offers practice flights from 10 AM&ndash;4 PM plus an opening ceremony block party from 6&ndash;8 PM where you can meet the pilots.</p>
+      <h3>Baldwin County Strawberry Festival</h3>
+      <p>April 11&ndash;12 in <strong>Loxley, AL</strong> &mdash; about 30 minutes north of Gulf Shores on your way home. This is a beloved local tradition: live music, arts &amp; crafts vendors, strawberry-themed food, carnival rides, and seriously good fresh strawberries. Free admission. Great Saturday morning stop before hitting the road.</p>
+      <p>
+        <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Loxley+Civic+Center+Loxley+Alabama" target="_blank" rel="noopener"><svg width="9" height="12" viewBox="0 0 9 12" fill="currentColor" aria-hidden="true"><path d="M4.5 0A4.5 4.5 0 0 0 0 4.5C0 7.88 4.5 12 4.5 12S9 7.88 9 4.5A4.5 4.5 0 0 0 4.5 0zm0 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg> Loxley, AL</a>
+      </p>
 
-      <div class="callout">
-        <strong>New for 2026: STEM Zone</strong>
-        At Aaron Bessant Park<a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Aaron+Bessant+Park+Panama+City+Beach+FL" target="_blank" rel="noopener"><svg width="9" height="12" viewBox="0 0 9 12" fill="currentColor" aria-hidden="true"><path d="M4.5 0A4.5 4.5 0 0 0 0 4.5C0 7.88 4.5 12 4.5 12S9 7.88 9 4.5A4.5 4.5 0 0 0 4.5 0zm0 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg> Map</a>, running all three days with hands-on activities&nbsp;&mdash; squishy circuits, magnet games, robots, bottle rockets, a marine life touch tank, and LEGO car builds. Tailor-made for your 8&ndash;12 year olds and teens. Bring sunscreen, hearing protection for younger kids, binoculars, and cameras. Text "PCBAIRSHOW" to 888-777 for updates.
-      </div>
-
-      <h3>Other events during your dates</h3>
+      <h3>Live Music: Every Night</h3>
+      <p>Gulf Shores has a thriving live music scene, especially at two venues within a few miles of the resort:</p>
       <ul>
-        <li><strong>Grand Lagoon Waterfront Farmers Market</strong>&nbsp;&mdash; Saturday and Sunday, 8 AM&ndash;1 PM at Captain Anderson's Marina<a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Captain+Anderson%27s+Marina+Panama+City+Beach+FL" target="_blank" rel="noopener"><svg width="9" height="12" viewBox="0 0 9 12" fill="currentColor" aria-hidden="true"><path d="M4.5 0A4.5 4.5 0 0 0 0 4.5C0 7.88 4.5 12 4.5 12S9 7.88 9 4.5A4.5 4.5 0 0 0 4.5 0zm0 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg> Map</a>. Local produce, baked goods, crafts, and live music. Free admission.</li>
-        <li><strong>Dave &amp; Buster's Half-Price Wednesday</strong><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Dave+%26+Buster%27s+Pier+Park+Panama+City+Beach+FL" target="_blank" rel="noopener"><svg width="9" height="12" viewBox="0 0 9 12" fill="currentColor" aria-hidden="true"><path d="M4.5 0A4.5 4.5 0 0 0 0 4.5C0 7.88 4.5 12 4.5 12S9 7.88 9 4.5A4.5 4.5 0 0 0 4.5 0zm0 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg> Map</a>&nbsp;&mdash; April 8 at Pier Park. Games at 50% off, perfect for a teen/kid evening.</li>
-        <li><strong>Live music nightly</strong> at Tootsie's Orchid Lounge<a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Tootsie%27s+Orchid+Lounge+Pier+Park+Panama+City+Beach+FL" target="_blank" rel="noopener"><svg width="9" height="12" viewBox="0 0 9 12" fill="currentColor" aria-hidden="true"><path d="M4.5 0A4.5 4.5 0 0 0 0 4.5C0 7.88 4.5 12 4.5 12S9 7.88 9 4.5A4.5 4.5 0 0 0 4.5 0zm0 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg> Map</a> (Pier Park, family-friendly until 8 PM), Schooners, and various Thomas Drive restaurants.</li>
-        <li><strong>Panama City Symphony season finale</strong>&nbsp;&mdash; Saturday April 11, 7:00 PM, if anyone in the group enjoys orchestral music.</li>
+        <li><strong>The Hangout</strong> &mdash; Beachfront bar and restaurant on Gulf Shores&rsquo; main strip. Free live music most evenings in spring; fire pits on the sand, massive outdoor area.
+          <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=The+Hangout+Gulf+Shores+Alabama" target="_blank" rel="noopener"><svg width="9" height="12" viewBox="0 0 9 12" fill="currentColor" aria-hidden="true"><path d="M4.5 0A4.5 4.5 0 0 0 0 4.5C0 7.88 4.5 12 4.5 12S9 7.88 9 4.5A4.5 4.5 0 0 0 4.5 0zm0 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg> Map</a>
+        </li>
+        <li><strong>LuLu&rsquo;s Gulf Shores</strong> &mdash; Jimmy Buffett&rsquo;s sister&rsquo;s waterfront restaurant on the Intracoastal. Outdoor stage with live music most nights, giant activity yard perfect for kids.
+          <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=LuLu%27s+Gulf+Shores+Alabama" target="_blank" rel="noopener"><svg width="9" height="12" viewBox="0 0 9 12" fill="currentColor" aria-hidden="true"><path d="M4.5 0A4.5 4.5 0 0 0 0 4.5C0 7.88 4.5 12 4.5 12S9 7.88 9 4.5A4.5 4.5 0 0 0 4.5 0zm0 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg> Map</a>
+        </li>
       </ul>
 
-      <p><strong>Timing context:</strong> Easter 2026 falls on Sunday, April 5&nbsp;&mdash; you depart the morning after. By April 6, spring break crowds are mostly gone, creating a more relaxed, family-friendly atmosphere. <strong>However</strong>, some school districts schedule spring break around Easter week, so moderate crowds are still possible. This is shoulder season, not peak summer.</p>
-    </div>
-  </section>
+      <h3>Gulf Shores Beaches at Night</h3>
+      <p>White-sand beaches glow under the moon in April. Evening beach walks, bonfires (check local fire rules), and stargazing are free and one of the best parts of the Gulf Shores experience. Less crowded than summer; much more intimate.</p>
 
-  <!-- ── 4. FOOD ── -->
-  <section class="section" id="food">
-    <div class="section-header" role="button" tabindex="0" aria-expanded="false" aria-controls="food-body">
-      <h2><span class="section-num">4</span> Where to eat without breaking the budget</h2>
-      <svg class="collapse-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
-    </div>
-    <div class="section-body collapsed" id="food-body">
-
-      <p>With $25&ndash;40/person daily covering both food and activities, the winning strategy is <strong>cook breakfast in the condo, pack beach lunches, and eat dinner out 3&ndash;4 nights</strong> while cooking in on the others. This keeps daily food costs around $15&ndash;22/person, leaving $5&ndash;20+ for activities.</p>
-
-      <h3>Breakfast spots (for treat-yourself mornings)</h3>
-      <div class="spot-card">
-        <h4>Thomas Donut &amp; Snack Shop <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Thomas+Donut+%26+Snack+Shop+Panama+City+Beach+FL" target="_blank" rel="noopener"><svg width="9" height="12" viewBox="0 0 9 12" fill="currentColor" aria-hidden="true"><path d="M4.5 0A4.5 4.5 0 0 0 0 4.5C0 7.88 4.5 12 4.5 12S9 7.88 9 4.5A4.5 4.5 0 0 0 4.5 0zm0 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg> Map</a></h4>
-        <span class="spot-price">$3&ndash;8/person</span>
-        <p>The undisputed local legend&nbsp;&mdash; glazed donuts, maple bacon donuts, and breakfast sandwiches. Open since 1971, expect a line that moves fast.</p>
-      </div>
-      <div class="spot-card">
-        <h4>Andy's Flour Power <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Andy%27s+Flour+Power+Panama+City+Beach+FL" target="_blank" rel="noopener"><svg width="9" height="12" viewBox="0 0 9 12" fill="currentColor" aria-hidden="true"><path d="M4.5 0A4.5 4.5 0 0 0 0 4.5C0 7.88 4.5 12 4.5 12S9 7.88 9 4.5A4.5 4.5 0 0 0 4.5 0zm0 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg> Map</a></h4>
-        <span class="spot-price">$8&ndash;14/person</span>
-        <p>Fresh breakfast with excellent French toast and omelets.</p>
-      </div>
-      <div class="spot-card">
-        <h4>The Pancakery <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=The+Pancakery+Panama+City+Beach+FL" target="_blank" rel="noopener"><svg width="9" height="12" viewBox="0 0 9 12" fill="currentColor" aria-hidden="true"><path d="M4.5 0A4.5 4.5 0 0 0 0 4.5C0 7.88 4.5 12 4.5 12S9 7.88 9 4.5A4.5 4.5 0 0 0 4.5 0zm0 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg> Map</a></h4>
-        <span class="spot-price">$8&ndash;14/person</span>
-        <p>Gourmet pancakes and Belgian waffles with a kids' menu.</p>
-      </div>
-      <p>For most mornings, though, cook eggs, bacon, and pancakes in the condo for $2&ndash;3/person.</p>
-
-      <h3>Best-value lunch and casual dining</h3>
-      <ul>
-        <li><strong>Finn's Island Style Grub</strong><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Finn%27s+Island+Style+Grub+7210+Thomas+Drive+Panama+City+Beach+FL" target="_blank" rel="noopener"><svg width="9" height="12" viewBox="0 0 9 12" fill="currentColor" aria-hidden="true"><path d="M4.5 0A4.5 4.5 0 0 0 0 4.5C0 7.88 4.5 12 4.5 12S9 7.88 9 4.5A4.5 4.5 0 0 0 4.5 0zm0 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg> Map</a> (7210 Thomas Dr)&nbsp;&mdash; Fish tacos, burritos, a&ccedil;a&iacute; bowls. Counter service, outdoor picnic tables. <strong>$8&ndash;14/person.</strong> One of the best cheap eats in PCB, rated 4.6 on TripAdvisor.</li>
-        <li><strong>Diego's Burrito Factory</strong><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Diego%27s+Burrito+Factory+Panama+City+Beach+FL" target="_blank" rel="noopener"><svg width="9" height="12" viewBox="0 0 9 12" fill="currentColor" aria-hidden="true"><path d="M4.5 0A4.5 4.5 0 0 0 0 4.5C0 7.88 4.5 12 4.5 12S9 7.88 9 4.5A4.5 4.5 0 0 0 4.5 0zm0 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg> Map</a>&nbsp;&mdash; Build-your-own burritos and tacos. <strong>$10&ndash;13/person.</strong> Fast-moving line, easy for big groups.</li>
-        <li><strong>Dat Cajun Place</strong><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Dat+Cajun+Place+8501+Thomas+Dr+Panama+City+Beach+FL" target="_blank" rel="noopener"><svg width="9" height="12" viewBox="0 0 9 12" fill="currentColor" aria-hidden="true"><path d="M4.5 0A4.5 4.5 0 0 0 0 4.5C0 7.88 4.5 12 4.5 12S9 7.88 9 4.5A4.5 4.5 0 0 0 4.5 0zm0 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg> Map</a> (8501 Thomas Dr)&nbsp;&mdash; Authentic gumbo, po'boys, crawfish, beignets. <strong>$10&ndash;20/person.</strong> Wednesday specials: <strong>$7.99 jambalaya and $2 wines.</strong> Live music 6&ndash;10 PM. Voted "Best of Bay" in three categories.</li>
-        <li><strong>David's New Orleans Style Caf&eacute;</strong><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=David%27s+New+Orleans+Style+Cafe+Panama+City+Beach+FL" target="_blank" rel="noopener"><svg width="9" height="12" viewBox="0 0 9 12" fill="currentColor" aria-hidden="true"><path d="M4.5 0A4.5 4.5 0 0 0 0 4.5C0 7.88 4.5 12 4.5 12S9 7.88 9 4.5A4.5 4.5 0 0 0 4.5 0zm0 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg> Map</a>&nbsp;&mdash; Po'boys, muffulettas, beignets, and sno-balls. <strong>$8&ndash;15/person.</strong> Outstanding reviews.</li>
-      </ul>
-
-      <h3>Must-try seafood restaurants</h3>
-      <div class="spot-card">
-        <h4>Pineapple Willy's <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Pineapple+Willy%27s+Panama+City+Beach+FL" target="_blank" rel="noopener"><svg width="9" height="12" viewBox="0 0 9 12" fill="currentColor" aria-hidden="true"><path d="M4.5 0A4.5 4.5 0 0 0 0 4.5C0 7.88 4.5 12 4.5 12S9 7.88 9 4.5A4.5 4.5 0 0 0 4.5 0zm0 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg> Map</a></h4>
-        <span class="spot-price">$15&ndash;25/person &middot; Kids $6&ndash;8</span>
-        <p>Sits on its own beachfront pier and is a PCB icon. Famous for BBQ ribs, mahi BLT, gator bites, and Key lime pie. Walk-in only&nbsp;&mdash; arrive before 5 PM to minimize waits. Note: 18% gratuity is auto-added for parties of 6+.</p>
-      </div>
-      <div class="spot-card">
-        <h4>Schooners <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Schooners+5121+Gulf+Dr+Panama+City+Beach+FL" target="_blank" rel="noopener"><svg width="9" height="12" viewBox="0 0 9 12" fill="currentColor" aria-hidden="true"><path d="M4.5 0A4.5 4.5 0 0 0 0 4.5C0 7.88 4.5 12 4.5 12S9 7.88 9 4.5A4.5 4.5 0 0 0 4.5 0zm0 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg> Map</a></h4>
-        <span class="spot-price">$15&ndash;25/person</span>
-        <p>"The Last Local Beach Club" (5121 Gulf Dr) fires a sunset cannon every evening that kids love. Casual beachfront dining with crab cakes, shrimp and grits, and early bird specials from 4&ndash;6 PM.</p>
-      </div>
-      <div class="spot-card">
-        <h4>Sharky's Beachfront <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Sharky%27s+Beachfront+Restaurant+Panama+City+Beach+FL" target="_blank" rel="noopener"><svg width="9" height="12" viewBox="0 0 9 12" fill="currentColor" aria-hidden="true"><path d="M4.5 0A4.5 4.5 0 0 0 0 4.5C0 7.88 4.5 12 4.5 12S9 7.88 9 4.5A4.5 4.5 0 0 0 4.5 0zm0 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg> Map</a></h4>
-        <span class="spot-price">$15&ndash;25/person</span>
-        <p>Has a <strong>ship-shaped playground on the beach</strong>&nbsp;&mdash; a game-changer for keeping kids occupied during waits. Gulf oysters, shrimp tacos, and coconut shrimp. Can seat groups up to 25.</p>
-      </div>
-      <div class="spot-card">
-        <h4>Captain Anderson's <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Captain+Anderson%27s+Restaurant+Panama+City+Beach+FL" target="_blank" rel="noopener"><svg width="9" height="12" viewBox="0 0 9 12" fill="currentColor" aria-hidden="true"><path d="M4.5 0A4.5 4.5 0 0 0 0 4.5C0 7.88 4.5 12 4.5 12S9 7.88 9 4.5A4.5 4.5 0 0 0 4.5 0zm0 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg> Map</a></h4>
-        <span class="spot-price">$30&ndash;50/person &middot; Kids ~$8</span>
-        <p>The iconic splurge dinner&nbsp;&mdash; open since 1967, 725 seats, fresh fish grilled over hardwood coals. Best for one special night. Arrive at the 4:30 PM opening to watch the fishing fleet unload.</p>
-      </div>
-
-      <h3>Budget-saving food tips</h3>
       <div class="callout callout-tip">
-        <strong>Money savers</strong>
-        <ul style="margin-bottom:0">
-          <li><strong>Buy fresh seafood at Shrimp City</strong><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Shrimp+City+Thomas+Drive+Panama+City+Beach+FL" target="_blank" rel="noopener"><svg width="9" height="12" viewBox="0 0 9 12" fill="currentColor" aria-hidden="true"><path d="M4.5 0A4.5 4.5 0 0 0 0 4.5C0 7.88 4.5 12 4.5 12S9 7.88 9 4.5A4.5 4.5 0 0 0 4.5 0zm0 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg> Map</a> (Thomas Dr)&nbsp;&mdash; they'll steam your shrimp with Old Bay for free. Bring it back to the condo for a fraction of restaurant prices.</li>
-          <li><strong>Gulf Highlands has grill areas</strong>&nbsp;&mdash; buy burgers, chicken, and hot dogs at Publix and grill out.</li>
-          <li><strong>Kids eat cheaper everywhere</strong>&nbsp;&mdash; most kids' meals run $6&ndash;8, so budget around the adult meals.</li>
-          <li><strong>Dat Cajun Place Wednesdays</strong> offer the best budget dinner deal of the week.</li>
-          <li><strong>Schooners early bird specials</strong> (4&ndash;6 PM) save significantly on seafood dinners.</li>
-        </ul>
+        <strong>Check Local Listings</strong>
+        Gulf Shores events shift seasonally. Check the Alabama Gulf Coast Convention &amp; Visitors Bureau event calendar closer to your dates for concerts, festivals, and art walks that may be running that week.
       </div>
+
     </div>
   </section>
 
-  <!-- ── 5. ACTIVITIES ── -->
+  <!-- 4. RESTAURANTS -->
+  <section class="section" id="restaurants">
+    <div class="section-header" role="button" tabindex="0" aria-expanded="false" aria-controls="body-restaurants">
+      <h2><span class="section-num">4</span> Restaurants &amp; Dining</h2>
+      <svg class="collapse-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+    </div>
+    <div class="section-body collapsed" id="body-restaurants">
+
+      <p>Gulf Shores has exceptional seafood at every price point. The general rule: the more touristy the location, the higher the price. Venture one block off the strip and you find the same quality for 30% less.</p>
+
+      <h3>Breakfast</h3>
+
+      <div class="spot-card">
+        <h4>Sunliner Diner
+          <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Sunliner+Diner+Gulf+Shores+Alabama" target="_blank" rel="noopener"><svg width="9" height="12" viewBox="0 0 9 12" fill="currentColor" aria-hidden="true"><path d="M4.5 0A4.5 4.5 0 0 0 0 4.5C0 7.88 4.5 12 4.5 12S9 7.88 9 4.5A4.5 4.5 0 0 0 4.5 0zm0 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg> Map</a>
+        </h4>
+        <span class="spot-price">$8&ndash;14/person</span>
+        <p style="margin:0">Classic American diner with Gulf Shores flair. Known for huge portions, excellent biscuits, and good coffee. Locals' favorite for breakfast. Gets busy &mdash; arrive early or expect a short wait on weekends.</p>
+      </div>
+
+      <h3>Casual &amp; Family</h3>
+
+      <div class="spot-card">
+        <h4>LuLu&rsquo;s Gulf Shores
+          <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=LuLu%27s+Gulf+Shores+Alabama" target="_blank" rel="noopener"><svg width="9" height="12" viewBox="0 0 9 12" fill="currentColor" aria-hidden="true"><path d="M4.5 0A4.5 4.5 0 0 0 0 4.5C0 7.88 4.5 12 4.5 12S9 7.88 9 4.5A4.5 4.5 0 0 0 4.5 0zm0 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg> Map</a>
+        </h4>
+        <span class="spot-price">$14&ndash;22/person</span>
+        <p style="margin:0">Jimmy Buffett&rsquo;s sister Lucy&rsquo;s place on the Intracoastal Waterway. Huge outdoor area with a climbing wall, hammocks, and yard games. Great for groups with kids. Fresh seafood, burgers, and margaritas. Live music most evenings. Can have a 45-min wait on weekends &mdash; put your name in and explore the activity yard.</p>
+      </div>
+
+      <div class="spot-card">
+        <h4>Shrimp Basket
+          <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Shrimp+Basket+Gulf+Shores+Alabama" target="_blank" rel="noopener"><svg width="9" height="12" viewBox="0 0 9 12" fill="currentColor" aria-hidden="true"><path d="M4.5 0A4.5 4.5 0 0 0 0 4.5C0 7.88 4.5 12 4.5 12S9 7.88 9 4.5A4.5 4.5 0 0 0 4.5 0zm0 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg> Map</a>
+        </h4>
+        <span class="spot-price">$10&ndash;16/person</span>
+        <p style="margin:0">Gulf Shores&rsquo; most beloved budget seafood chain. Fried shrimp, po&rsquo;boys, and hushpuppies done right. No frills, generous portions. Great for lunch or a quick dinner. Multiple locations &mdash; pick whichever is closest.</p>
+      </div>
+
+      <div class="spot-card">
+        <h4>The Hangout
+          <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=The+Hangout+Gulf+Shores+Alabama" target="_blank" rel="noopener"><svg width="9" height="12" viewBox="0 0 9 12" fill="currentColor" aria-hidden="true"><path d="M4.5 0A4.5 4.5 0 0 0 0 4.5C0 7.88 4.5 12 4.5 12S9 7.88 9 4.5A4.5 4.5 0 0 0 4.5 0zm0 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg> Map</a>
+        </h4>
+        <span class="spot-price">$14&ndash;24/person</span>
+        <p style="margin:0">Right on the beach at the main Gulf Shores strip. Casual coastal food, fire pits, outdoor bars, live music in evenings. More of an experience than a restaurant, but the food is solid. Best at sunset with drinks before heading elsewhere for a full dinner.</p>
+      </div>
+
+      <div class="spot-card">
+        <h4>Tacky Jack&rsquo;s
+          <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Tacky+Jack%27s+Gulf+Shores+Alabama" target="_blank" rel="noopener"><svg width="9" height="12" viewBox="0 0 9 12" fill="currentColor" aria-hidden="true"><path d="M4.5 0A4.5 4.5 0 0 0 0 4.5C0 7.88 4.5 12 4.5 12S9 7.88 9 4.5A4.5 4.5 0 0 0 4.5 0zm0 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg> Map</a>
+        </h4>
+        <span class="spot-price">$12&ndash;20/person</span>
+        <p style="margin:0">Waterfront dive bar and seafood joint. Laid-back atmosphere, good raw bar, and strong drinks. Great for a relaxed evening with the group. Dockside seating available.</p>
+      </div>
+
+      <div class="spot-card">
+        <h4>Hog Wild BBQ
+          <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Hog+Wild+BBQ+Gulf+Shores+Alabama" target="_blank" rel="noopener"><svg width="9" height="12" viewBox="0 0 9 12" fill="currentColor" aria-hidden="true"><path d="M4.5 0A4.5 4.5 0 0 0 0 4.5C0 7.88 4.5 12 4.5 12S9 7.88 9 4.5A4.5 4.5 0 0 0 4.5 0zm0 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg> Map</a>
+        </h4>
+        <span class="spot-price">$10&ndash;18/person</span>
+        <p style="margin:0">When you need a break from seafood. Solid Alabama-style BBQ with pulled pork, ribs, and smoked chicken. Affordable and filling. Good for a lunch when beach plans change.</p>
+      </div>
+
+      <h3>Nicer Dinners</h3>
+
+      <div class="spot-card">
+        <h4>Cobalt &mdash; The Restaurant
+          <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Cobalt+Restaurant+Orange+Beach+Alabama" target="_blank" rel="noopener"><svg width="9" height="12" viewBox="0 0 9 12" fill="currentColor" aria-hidden="true"><path d="M4.5 0A4.5 4.5 0 0 0 0 4.5C0 7.88 4.5 12 4.5 12S9 7.88 9 4.5A4.5 4.5 0 0 0 4.5 0zm0 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg> Map</a>
+        </h4>
+        <span class="spot-price">$22&ndash;38/person</span>
+        <p style="margin:0">Upscale seafood with panoramic bay views in Orange Beach (~15 min east). Known for Gulf fish preparations and excellent wine list. Make a reservation. Good for a nicer group dinner night.</p>
+      </div>
+
+      <div class="spot-card">
+        <h4>The Gulf
+          <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=The+Gulf+Orange+Beach+Alabama" target="_blank" rel="noopener"><svg width="9" height="12" viewBox="0 0 9 12" fill="currentColor" aria-hidden="true"><path d="M4.5 0A4.5 4.5 0 0 0 0 4.5C0 7.88 4.5 12 4.5 12S9 7.88 9 4.5A4.5 4.5 0 0 0 4.5 0zm0 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg> Map</a>
+        </h4>
+        <span class="spot-price">$20&ndash;35/person</span>
+        <p style="margin:0">Creative coastal cuisine in Orange Beach. Converted warehouse vibe, eclectic menu focused on locally sourced seafood. One of the most critically acclaimed restaurants in the area. Reserve ahead.</p>
+      </div>
+
+      <div class="spot-card">
+        <h4>Fisher&rsquo;s at Orange Beach Marina
+          <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Fisher%27s+at+Orange+Beach+Marina+Alabama" target="_blank" rel="noopener"><svg width="9" height="12" viewBox="0 0 9 12" fill="currentColor" aria-hidden="true"><path d="M4.5 0A4.5 4.5 0 0 0 0 4.5C0 7.88 4.5 12 4.5 12S9 7.88 9 4.5A4.5 4.5 0 0 0 4.5 0zm0 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg> Map</a>
+        </h4>
+        <span class="spot-price">Upstairs $30&ndash;50 / Dockside $15&ndash;25/person</span>
+        <p style="margin:0">Two restaurants in one building at the marina in Orange Beach. Upstairs is a white-tablecloth splurge (reserve ahead); Dockside is casual with the same stunning water views at half the price. The Dockside is excellent value for a nicer-feeling evening.</p>
+      </div>
+
+      <h3>Cook-In Meals</h3>
+      <p>With a full kitchen at The Beach Club Resort, cooking some meals in is the biggest budget lever. A grocery run to <strong>Rouses Market</strong> (1545 Gulf Shores Pkwy) stocks you with Gulf-caught shrimp, crab legs, and fresh fish to boil or grill at the resort &mdash; way cheaper than any restaurant and a fun group activity.
+        <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Rouses+Market+Gulf+Shores+Parkway+Alabama" target="_blank" rel="noopener"><svg width="9" height="12" viewBox="0 0 9 12" fill="currentColor" aria-hidden="true"><path d="M4.5 0A4.5 4.5 0 0 0 0 4.5C0 7.88 4.5 12 4.5 12S9 7.88 9 4.5A4.5 4.5 0 0 0 4.5 0zm0 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg> Rouses Market</a>
+        (has in-store boiled seafood counter too)
+      </p>
+
+    </div>
+  </section>
+
+  <!-- 5. ACTIVITIES -->
   <section class="section" id="activities">
-    <div class="section-header" role="button" tabindex="0" aria-expanded="false" aria-controls="activities-body">
-      <h2><span class="section-num">5</span> Activities: more free fun than you can fit in a week</h2>
-      <svg class="collapse-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+    <div class="section-header" role="button" tabindex="0" aria-expanded="false" aria-controls="body-activities">
+      <h2><span class="section-num">5</span> Activities</h2>
+      <svg class="collapse-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
     </div>
-    <div class="section-body collapsed" id="activities-body">
+    <div class="section-body collapsed" id="body-activities">
 
-      <h3>Gulf Highlands' built-in amenities (all free with your stay)</h3>
-      <p>Before spending a dime, know that Gulf Highlands includes <strong>11 pools</strong> (5 seasonally heated, 1 Gulf-front), an <strong>18-hole miniature golf course</strong>, tennis and pickleball courts, shuffleboard, a playground, a fitness center, and private beach access with showers. On a budget day, you literally never need to leave the resort.</p>
+      <h3>Free &amp; Low-Cost</h3>
+      <ul>
+        <li><strong>The Beach (Gulf Highlands)</strong> &mdash; Private beach access through the resort. White quartz sand and clear Gulf water. The single best free activity of the trip. Morning and late afternoon are best for UV/heat.</li>
+        <li><strong>Resort Amenities</strong> &mdash; 11+ pools, lazy river, tennis, pickleball, 18-hole mini golf, fitness center, and walking trails. Worth a full day without ever leaving the property.</li>
+        <li><strong>Gulf State Park</strong> &mdash; $10 vehicle day-use fee. 6,150 acres of natural Gulf Coast habitat with 28 miles of trails (voted USA Today&rsquo;s Best Recreational Trail). The 2,448-foot fishing pier is free to walk (fee to fish). Bike rentals available.
+          <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Gulf+State+Park+Gulf+Shores+Alabama" target="_blank" rel="noopener"><svg width="9" height="12" viewBox="0 0 9 12" fill="currentColor" aria-hidden="true"><path d="M4.5 0A4.5 4.5 0 0 0 0 4.5C0 7.88 4.5 12 4.5 12S9 7.88 9 4.5A4.5 4.5 0 0 0 4.5 0zm0 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg> Map</a>
+        </li>
+        <li><strong>Gulf Shores Beach Boardwalk</strong> &mdash; Free to walk. Shops, restaurants, and bars along the main strip. Good for an evening stroll.
+          <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Gulf+Shores+AL+beach+boardwalk" target="_blank" rel="noopener"><svg width="9" height="12" viewBox="0 0 9 12" fill="currentColor" aria-hidden="true"><path d="M4.5 0A4.5 4.5 0 0 0 0 4.5C0 7.88 4.5 12 4.5 12S9 7.88 9 4.5A4.5 4.5 0 0 0 4.5 0zm0 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg> Map</a>
+        </li>
+      </ul>
 
-      <h3>The best free and low-cost options</h3>
-      <p><strong>St. Andrews State Park</strong><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=St.+Andrews+State+Park+4607+State+Park+Lane+Panama+City+Beach+FL" target="_blank" rel="noopener"><svg width="9" height="12" viewBox="0 0 9 12" fill="currentColor" aria-hidden="true"><path d="M4.5 0A4.5 4.5 0 0 0 0 4.5C0 7.88 4.5 12 4.5 12S9 7.88 9 4.5A4.5 4.5 0 0 0 4.5 0zm0 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg> Map</a><a class="web-link" href="https://www.floridastateparks.org/parks-and-trails/st-andrews-state-park" target="_blank" rel="noopener"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg> Website</a> (4607 State Park Lane) is just minutes east of Gulf Highlands on Thomas Drive and is the crown jewel of the area. At <strong>$8 per vehicle</strong> (fitting up to 8 people), this is extraordinary value. The park offers 1.5 miles of pristine white sand beach, <strong>excellent beginner snorkeling at the rock jetties</strong>, two hiking trails (including Gator Lake Trail where you may spot alligators), two fishing piers, WWII-era gun mounts, and incredible wildlife viewing. Budget half a day minimum.</p>
-      <p><strong>Conservation Park</strong><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Conservation+Park+Panama+City+Beach+FL" target="_blank" rel="noopener"><svg width="9" height="12" viewBox="0 0 9 12" fill="currentColor" aria-hidden="true"><path d="M4.5 0A4.5 4.5 0 0 0 0 4.5C0 7.88 4.5 12 4.5 12S9 7.88 9 4.5A4.5 4.5 0 0 0 4.5 0zm0 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg> Map</a><a class="web-link" href="https://www.baycountyfl.gov/386/Conservation-Park" target="_blank" rel="noopener"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1 4-10z"/></svg> Website</a> is completely <strong>free</strong>&nbsp;&mdash; 2,900 acres with 24+ miles of trails ranging from an easy 1.8-mile loop to 11+ mile routes. Boardwalks through cypress strands, eagles, alligators, and wildflowers. A perfect free morning activity.</p>
-      <p><strong>Pier fishing</strong> at M.B. Miller County Pier<a class="map-link" href="https://www.google.com/maps/search/?api=1&query=M.B.+Miller+County+Pier+Panama+City+Beach+FL" target="_blank" rel="noopener"><svg width="9" height="12" viewBox="0 0 9 12" fill="currentColor" aria-hidden="true"><path d="M4.5 0A4.5 4.5 0 0 0 0 4.5C0 7.88 4.5 12 4.5 12S9 7.88 9 4.5A4.5 4.5 0 0 0 4.5 0zm0 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg> Map</a> costs just <strong>$6/day</strong> (includes your daily fishing license) with rod rental at ~$10. The Russell-Fields Pier<a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Russell-Fields+City+Pier+Panama+City+Beach+FL" target="_blank" rel="noopener"><svg width="9" height="12" viewBox="0 0 9 12" fill="currentColor" aria-hidden="true"><path d="M4.5 0A4.5 4.5 0 0 0 0 4.5C0 7.88 4.5 12 4.5 12S9 7.88 9 4.5A4.5 4.5 0 0 0 4.5 0zm0 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg> Map</a> charges $7/day. Both extend 1,500 feet into the Gulf. Children 6 and under are free.</p>
+      <h3>Paid Activities</h3>
+      <ul>
+        <li><strong>Dolphin Cruise &mdash; Southern Rose Dolphin Cruises</strong> &mdash; ~$29/person. 2-hour cruise on the Intracoastal Waterway. Sightings nearly guaranteed in April. Great for kids and adults. Book in advance online.
+          <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Southern+Rose+Dolphin+Cruises+Orange+Beach+Alabama" target="_blank" rel="noopener"><svg width="9" height="12" viewBox="0 0 9 12" fill="currentColor" aria-hidden="true"><path d="M4.5 0A4.5 4.5 0 0 0 0 4.5C0 7.88 4.5 12 4.5 12S9 7.88 9 4.5A4.5 4.5 0 0 0 4.5 0zm0 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg> Map</a>
+        </li>
+        <li><strong>Waterville USA Waterpark</strong> &mdash; ~$35&ndash;40/person. Full waterpark with slides, lazy river, and wave pool. Great for a hot day when you want more than the beach. Plan a half or full day.
+          <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Waterville+USA+Gulf+Shores+Alabama" target="_blank" rel="noopener"><svg width="9" height="12" viewBox="0 0 9 12" fill="currentColor" aria-hidden="true"><path d="M4.5 0A4.5 4.5 0 0 0 0 4.5C0 7.88 4.5 12 4.5 12S9 7.88 9 4.5A4.5 4.5 0 0 0 4.5 0zm0 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg> Map</a>
+        </li>
+        <li><strong>Alabama Gulf Coast Zoo</strong> &mdash; ~$19/adult, $14/child. One of the best small zoos in the Southeast. Known for interactivity &mdash; you can hand-feed giraffes, pet stingrays, and interact with lemurs. Half-day activity.
+          <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Alabama+Gulf+Coast+Zoo+Gulf+Shores" target="_blank" rel="noopener"><svg width="9" height="12" viewBox="0 0 9 12" fill="currentColor" aria-hidden="true"><path d="M4.5 0A4.5 4.5 0 0 0 0 4.5C0 7.88 4.5 12 4.5 12S9 7.88 9 4.5A4.5 4.5 0 0 0 4.5 0zm0 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg> Map</a>
+        </li>
+        <li><strong>The Track Gulf Shores</strong> &mdash; ~$8&ndash;20/person. Go-karts, bumper boats, mini golf, and rides. All-ages; perfect for an evening or when the beach gets too hot.
+          <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=The+Track+Gulf+Shores+Alabama" target="_blank" rel="noopener"><svg width="9" height="12" viewBox="0 0 9 12" fill="currentColor" aria-hidden="true"><path d="M4.5 0A4.5 4.5 0 0 0 0 4.5C0 7.88 4.5 12 4.5 12S9 7.88 9 4.5A4.5 4.5 0 0 0 4.5 0zm0 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg> Map</a>
+        </li>
+      </ul>
 
-      <h3>Top paid attractions worth the money</h3>
-      <div class="table-wrap">
-        <table>
-          <thead><tr><th>Activity</th><th>Cost/Person</th><th>Best For</th><th>Notes</th></tr></thead>
-          <tbody>
-            <tr><td><strong>Shell Island shuttle</strong><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Shell+Island+Panama+City+Beach+FL" target="_blank" rel="noopener"><svg width="9" height="12" viewBox="0 0 9 12" fill="currentColor" aria-hidden="true"><path d="M4.5 0A4.5 4.5 0 0 0 0 4.5C0 7.88 4.5 12 4.5 12S9 7.88 9 4.5A4.5 4.5 0 0 0 4.5 0zm0 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg> Map</a></td><td>$18&ndash;25</td><td>All ages</td><td>Undeveloped barrier island, snorkeling, shelling. Bring food/water&nbsp;&mdash; no facilities. Call 850-233-0504 for spring schedule.</td></tr>
-            <tr><td><strong>Dolphin cruise (Capt. Anderson III)</strong><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Captain+Anderson%27s+Marina+Panama+City+Beach+FL" target="_blank" rel="noopener"><svg width="9" height="12" viewBox="0 0 9 12" fill="currentColor" aria-hidden="true"><path d="M4.5 0A4.5 4.5 0 0 0 0 4.5C0 7.88 4.5 12 4.5 12S9 7.88 9 4.5A4.5 4.5 0 0 0 4.5 0zm0 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg> Map</a></td><td><strong>$25</strong></td><td>All ages</td><td>Best budget cruise option. For 9 people = $225 total.</td></tr>
-            <tr><td><strong>Go-karts (Hidden Lagoon)</strong><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Hidden+Lagoon+Putt+Putt+Go+Karts+Panama+City+Beach+FL" target="_blank" rel="noopener"><svg width="9" height="12" viewBox="0 0 9 12" fill="currentColor" aria-hidden="true"><path d="M4.5 0A4.5 4.5 0 0 0 0 4.5C0 7.88 4.5 12 4.5 12S9 7.88 9 4.5A4.5 4.5 0 0 0 4.5 0zm0 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg> Map</a></td><td>$11&ndash;15</td><td>8+</td><td>Longest track on the Emerald Coast (~1 mile). Two mini golf courses also on-site.</td></tr>
-            <tr><td><strong>SkyWheel + Mini Golf combo</strong><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=SkyWheel+Pier+Park+Panama+City+Beach+FL" target="_blank" rel="noopener"><svg width="9" height="12" viewBox="0 0 9 12" fill="currentColor" aria-hidden="true"><path d="M4.5 0A4.5 4.5 0 0 0 0 4.5C0 7.88 4.5 12 4.5 12S9 7.88 9 4.5A4.5 4.5 0 0 0 4.5 0zm0 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg> Map</a></td><td>~$30</td><td>All ages</td><td>200-ft observation wheel at Pier Park plus 18 holes.</td></tr>
-            <tr><td><strong>WonderWorks</strong><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=WonderWorks+Panama+City+Beach+FL" target="_blank" rel="noopener"><svg width="9" height="12" viewBox="0 0 9 12" fill="currentColor" aria-hidden="true"><path d="M4.5 0A4.5 4.5 0 0 0 0 4.5C0 7.88 4.5 12 4.5 12S9 7.88 9 4.5A4.5 4.5 0 0 0 4.5 0zm0 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg> Map</a><a class="web-link" href="https://www.wonderworksonline.com/panama-city-beach/" target="_blank" rel="noopener"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1 4-10z"/></svg> Website</a></td><td>$29&ndash;35</td><td>8&ndash;17</td><td>100+ interactive STEM exhibits, ropes course, laser tag. Best rainy day option. Look for Tripster discounts.</td></tr>
-            <tr><td><strong>Banana boat ride</strong><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Adventures+at+Sea+Panama+City+Beach+FL" target="_blank" rel="noopener"><svg width="9" height="12" viewBox="0 0 9 12" fill="currentColor" aria-hidden="true"><path d="M4.5 0A4.5 4.5 0 0 0 0 4.5C0 7.88 4.5 12 4.5 12S9 7.88 9 4.5A4.5 4.5 0 0 0 4.5 0zm0 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg> Map</a></td><td>$30&ndash;40</td><td>8+</td><td>Fast, bouncy, guaranteed screaming. Adventures at Sea operates them for up to 6 riders per boat.</td></tr>
-            <tr><td><strong>Coconut Creek mini golf + Gran Maze</strong><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Coconut+Creek+Family+Fun+Park+Panama+City+Beach+FL" target="_blank" rel="noopener"><svg width="9" height="12" viewBox="0 0 9 12" fill="currentColor" aria-hidden="true"><path d="M4.5 0A4.5 4.5 0 0 0 0 4.5C0 7.88 4.5 12 4.5 12S9 7.88 9 4.5A4.5 4.5 0 0 0 4.5 0zm0 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg> Map</a></td><td>$15&ndash;25</td><td>All ages</td><td>Two unique courses plus America's first Gran Maze. Kids 5 and under free.</td></tr>
-          </tbody>
-        </table>
-      </div>
+      <h3>Rainy Day Options</h3>
+      <ul>
+        <li><strong>Gulf Bowl Foley</strong> (~15 min north) &mdash; Bowling, laser tag, and VR gaming. Good for 2&ndash;3 hours of dry indoor fun.
+          <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Gulf+Bowl+Foley+Alabama" target="_blank" rel="noopener"><svg width="9" height="12" viewBox="0 0 9 12" fill="currentColor" aria-hidden="true"><path d="M4.5 0A4.5 4.5 0 0 0 0 4.5C0 7.88 4.5 12 4.5 12S9 7.88 9 4.5A4.5 4.5 0 0 0 4.5 0zm0 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg> Map</a>
+        </li>
+        <li><strong>OWA Theme Park, Foley</strong> (~15 min north) &mdash; Indoor/outdoor amusement park. Rides, entertainment, and dining. Good backup plan for a rough weather day.
+          <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=OWA+Theme+Park+Foley+Alabama" target="_blank" rel="noopener"><svg width="9" height="12" viewBox="0 0 9 12" fill="currentColor" aria-hidden="true"><path d="M4.5 0A4.5 4.5 0 0 0 0 4.5C0 7.88 4.5 12 4.5 12S9 7.88 9 4.5A4.5 4.5 0 0 0 4.5 0zm0 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg> Map</a>
+        </li>
+        <li><strong>Alabama Gulf Coast Zoo</strong> &mdash; Works in light rain; many animal areas are partially covered.</li>
+        <li><strong>Foley&rsquo;s Tanger Outlet Mall</strong> &mdash; Right off I-65 near Foley. Free and air-conditioned.
+          <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Tanger+Outlets+Foley+Alabama" target="_blank" rel="noopener"><svg width="9" height="12" viewBox="0 0 9 12" fill="currentColor" aria-hidden="true"><path d="M4.5 0A4.5 4.5 0 0 0 0 4.5C0 7.88 4.5 12 4.5 12S9 7.88 9 4.5A4.5 4.5 0 0 0 4.5 0zm0 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg> Map</a>
+        </li>
+      </ul>
 
-      <h3>Rainy day backup plan</h3>
-      <p><strong>WonderWorks</strong> is the top rainy day pick&nbsp;&mdash; 3&ndash;4 hours of indoor entertainment with a hurricane simulator, astronaut gyroscope, bubble lab, glow-in-the-dark ropes course, and laser tag. <strong>Rock'It Lanes</strong><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Rock%27It+Lanes+513+Richard+Jackson+Blvd+Panama+City+Beach+FL" target="_blank" rel="noopener"><svg width="9" height="12" viewBox="0 0 9 12" fill="currentColor" aria-hidden="true"><path d="M4.5 0A4.5 4.5 0 0 0 0 4.5C0 7.88 4.5 12 4.5 12S9 7.88 9 4.5A4.5 4.5 0 0 0 4.5 0zm0 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg> Map</a> (513 Richard Jackson Blvd, near Gulf Highlands) combines bowling, roller skating, a mega arcade, and pool tables under one roof&nbsp;&mdash; perfect for a mixed-age group. <strong>Dave &amp; Buster's</strong><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Dave+%26+Buster%27s+Pier+Park+Panama+City+Beach+FL" target="_blank" rel="noopener"><svg width="9" height="12" viewBox="0 0 9 12" fill="currentColor" aria-hidden="true"><path d="M4.5 0A4.5 4.5 0 0 0 0 4.5C0 7.88 4.5 12 4.5 12S9 7.88 9 4.5A4.5 4.5 0 0 0 4.5 0zm0 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg> Map</a> at Pier Park offers arcade games and food (remember: half-price games on Wednesday April 8). <strong>Rainforest Blacklight Golf &amp; Arcade</strong><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Rainforest+Blacklight+Golf+Arcade+Panama+City+Beach+FL" target="_blank" rel="noopener"><svg width="9" height="12" viewBox="0 0 9 12" fill="currentColor" aria-hidden="true"><path d="M4.5 0A4.5 4.5 0 0 0 0 4.5C0 7.88 4.5 12 4.5 12S9 7.88 9 4.5A4.5 4.5 0 0 0 4.5 0zm0 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg> Map</a> provides glow-in-the-dark indoor mini golf at ~$10&ndash;15/person.</p>
+      <h3>Day Trips (&lt; 2 hours)</h3>
+      <ul>
+        <li><strong>Pensacola, FL &mdash; National Naval Aviation Museum</strong> (~1 hr east) &mdash; FREE admission. One of the largest air and space museums in the world. Blue Angels practice in the area. All-day attraction.
+          <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=National+Naval+Aviation+Museum+Pensacola+Florida" target="_blank" rel="noopener"><svg width="9" height="12" viewBox="0 0 9 12" fill="currentColor" aria-hidden="true"><path d="M4.5 0A4.5 4.5 0 0 0 0 4.5C0 7.88 4.5 12 4.5 12S9 7.88 9 4.5A4.5 4.5 0 0 0 4.5 0zm0 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg> Map</a>
+        </li>
+        <li><strong>Fairhope, AL</strong> (~1 hr north) &mdash; Charming arts town on Mobile Bay. Walkable downtown with galleries, restaurants, a famous pier, and bluff views over the bay. Great half-day excursion.
+          <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Fairhope+Alabama" target="_blank" rel="noopener"><svg width="9" height="12" viewBox="0 0 9 12" fill="currentColor" aria-hidden="true"><path d="M4.5 0A4.5 4.5 0 0 0 0 4.5C0 7.88 4.5 12 4.5 12S9 7.88 9 4.5A4.5 4.5 0 0 0 4.5 0zm0 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg> Map</a>
+        </li>
+        <li><strong>Dauphin Island, AL</strong> (~1 hr west) &mdash; Remote barrier island with a wild beach, bird sanctuary, and historic fort. Very different feel from Gulf Shores. Worth it for a quieter beach day.
+          <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Dauphin+Island+Alabama" target="_blank" rel="noopener"><svg width="9" height="12" viewBox="0 0 9 12" fill="currentColor" aria-hidden="true"><path d="M4.5 0A4.5 4.5 0 0 0 0 4.5C0 7.88 4.5 12 4.5 12S9 7.88 9 4.5A4.5 4.5 0 0 0 4.5 0zm0 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg> Map</a>
+        </li>
+        <li><strong>Mobile, AL &mdash; USS Alabama</strong> (~1 hr west) &mdash; WWII battleship and submarine. $15/adult, $8/child. Half-day.
+          <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=USS+Alabama+Battleship+Memorial+Park+Mobile" target="_blank" rel="noopener"><svg width="9" height="12" viewBox="0 0 9 12" fill="currentColor" aria-hidden="true"><path d="M4.5 0A4.5 4.5 0 0 0 0 4.5C0 7.88 4.5 12 4.5 12S9 7.88 9 4.5A4.5 4.5 0 0 0 4.5 0zm0 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg> Map</a>
+        </li>
+      </ul>
 
-      <h3>What teens won't think is "lame"</h3>
-      <p>Shell Island feels like an adventure, not a family activity. The snorkeling at St. Andrews jetties is genuinely cool. Go-kart racing at Race City's PCB 500 track has real speed. WonderWorks' ropes course and laser tag appeal to competitive teens. Parasailing ($79&ndash;99/person) and jet ski rentals ($125/hour for 2 riders, must be 16+ to drive) are premium thrills worth considering as a group splurge. The Air Show Thunderbirds on April 10&ndash;11 will impress anyone regardless of age.</p>
-
-      <h3>Day trip: Seaside and Highway 30A (~45 minutes east)</h3>
-      <p>The pastel-cottage town of <strong>Seaside</strong><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Seaside+Florida+Highway+30A" target="_blank" rel="noopener"><svg width="9" height="12" viewBox="0 0 9 12" fill="currentColor" aria-hidden="true"><path d="M4.5 0A4.5 4.5 0 0 0 0 4.5C0 7.88 4.5 12 4.5 12S9 7.88 9 4.5A4.5 4.5 0 0 0 4.5 0zm0 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg> Map</a>&nbsp;&mdash; the filming location for <em>The Truman Show</em>&nbsp;&mdash; is free to explore and about 30 miles east on Highway 30A. Walk by Truman's house at 31 Natchez Street, browse Modica Market (the film's grocery store, still operating), and grab lunch from the Airstream food truck row. The neighboring communities of Rosemary Beach<a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Rosemary+Beach+Florida+30A" target="_blank" rel="noopener"><svg width="9" height="12" viewBox="0 0 9 12" fill="currentColor" aria-hidden="true"><path d="M4.5 0A4.5 4.5 0 0 0 0 4.5C0 7.88 4.5 12 4.5 12S9 7.88 9 4.5A4.5 4.5 0 0 0 4.5 0zm0 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg> Map</a> and Alys Beach<a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Alys+Beach+Florida+30A" target="_blank" rel="noopener"><svg width="9" height="12" viewBox="0 0 9 12" fill="currentColor" aria-hidden="true"><path d="M4.5 0A4.5 4.5 0 0 0 0 4.5C0 7.88 4.5 12 4.5 12S9 7.88 9 4.5A4.5 4.5 0 0 0 4.5 0zm0 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg> Map</a> offer stunning architecture and beautiful beaches. Budget $5&ndash;15/person for food plus shared gas.</p>
     </div>
   </section>
 
-  <!-- ── 6. PACKING ── -->
+  <!-- 6. PACKING -->
   <section class="section" id="packing">
-    <div class="section-header" role="button" tabindex="0" aria-expanded="false" aria-controls="packing-body">
-      <h2><span class="section-num">6</span> The packing list: what people always forget</h2>
-      <svg class="collapse-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+    <div class="section-header" role="button" tabindex="0" aria-expanded="false" aria-controls="body-packing">
+      <h2><span class="section-num">6</span> Packing List</h2>
+      <svg class="collapse-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
     </div>
-    <div class="section-body collapsed" id="packing-body">
+    <div class="section-body collapsed" id="body-packing">
 
-      <div class="checklist-progress" id="packing-progress">
-        <span id="packing-count">0 / 22 packed</span>
+      <div class="checklist-progress">
+        <span id="packing-count">0 / 0 packed</span>
         <div class="progress-bar"><div class="progress-fill" id="packing-bar"></div></div>
       </div>
 
-      <h3>Beach gear to bring from home</h3>
-      <ul class="checklist" data-group="beach">
-        <li><input type="checkbox" id="ck1"><label class="check-label" for="ck1">Beach chairs (renting runs $30&ndash;50/day)</label></li>
-        <li><input type="checkbox" id="ck2"><label class="check-label" for="ck2">Large umbrella or pop-up shade tent</label></li>
-        <li><input type="checkbox" id="ck3"><label class="check-label" for="ck3">Big cooler + soft daily cooler</label></li>
-        <li><input type="checkbox" id="ck4"><label class="check-label" for="ck4">Mesh bags for sandy items + Ziploc bags for phones</label></li>
-        <li><input type="checkbox" id="ck5"><label class="check-label" for="ck5">Beach towels (at least 2 per person&nbsp;&mdash; condo provides bath towels only)</label></li>
+      <h3>Beach Essentials</h3>
+      <ul class="checklist">
+        <li><input type="checkbox" id="pk1"><label class="check-label" for="pk1">Sunscreen SPF 30+ (lots &mdash; UV is high in April Gulf)</label></li>
+        <li><input type="checkbox" id="pk2"><label class="check-label" for="pk2">Reef-safe sunscreen (required in some areas)</label></li>
+        <li><input type="checkbox" id="pk3"><label class="check-label" for="pk3">Beach towels (1&ndash;2 per person)</label></li>
+        <li><input type="checkbox" id="pk4"><label class="check-label" for="pk4">Beach chairs or sand chairs</label></li>
+        <li><input type="checkbox" id="pk5"><label class="check-label" for="pk5">Beach umbrella or pop-up shade tent</label></li>
+        <li><input type="checkbox" id="pk6"><label class="check-label" for="pk6">Swimsuits (2+ per person for drying time)</label></li>
+        <li><input type="checkbox" id="pk7"><label class="check-label" for="pk7">Rash guards (for kids especially)</label></li>
+        <li><input type="checkbox" id="pk8"><label class="check-label" for="pk8">Beach bag / tote</label></li>
+        <li><input type="checkbox" id="pk9"><label class="check-label" for="pk9">Water shoes or sandals</label></li>
+        <li><input type="checkbox" id="pk10"><label class="check-label" for="pk10">Polarized sunglasses</label></li>
+        <li><input type="checkbox" id="pk11"><label class="check-label" for="pk11">Wide-brim hats</label></li>
+        <li><input type="checkbox" id="pk12"><label class="check-label" for="pk12">Sand toys (buckets, shovels) for kids</label></li>
+        <li><input type="checkbox" id="pk13"><label class="check-label" for="pk13">Waterproof phone case or dry bag</label></li>
+        <li><input type="checkbox" id="pk14"><label class="check-label" for="pk14">Insulated cooler for beach drinks &amp; snacks</label></li>
+        <li><input type="checkbox" id="pk15"><label class="check-label" for="pk15">Reusable water bottles</label></li>
       </ul>
 
-      <h3>Sun and skin protection (non-negotiable at UV 7&ndash;9)</h3>
-      <ul class="checklist" data-group="sun">
-        <li><input type="checkbox" id="ck6"><label class="check-label" for="ck6">SPF 50+ sunscreen in large quantities (reef-safe preferred)</label></li>
-        <li><input type="checkbox" id="ck7"><label class="check-label" for="ck7">Aloe vera gel for inevitable burns</label></li>
-        <li><input type="checkbox" id="ck8"><label class="check-label" for="ck8">Wide-brimmed hats for everyone</label></li>
-        <li><input type="checkbox" id="ck9"><label class="check-label" for="ck9">UV-protective rash guards for kids</label></li>
-        <li><input type="checkbox" id="ck10"><label class="check-label" for="ck10">SPF lip balm + UV sunglasses</label></li>
+      <h3>Clothing</h3>
+      <ul class="checklist">
+        <li><input type="checkbox" id="pk16"><label class="check-label" for="pk16">Light layers for cool evenings (hoodie, light jacket)</label></li>
+        <li><input type="checkbox" id="pk17"><label class="check-label" for="pk17">Casual dinner outfit (at least one nicer evening)</label></li>
+        <li><input type="checkbox" id="pk18"><label class="check-label" for="pk18">Walking/activity shoes</label></li>
+        <li><input type="checkbox" id="pk19"><label class="check-label" for="pk19">Flip flops</label></li>
+        <li><input type="checkbox" id="pk20"><label class="check-label" for="pk20">Rain jacket or compact poncho</label></li>
+        <li><input type="checkbox" id="pk21"><label class="check-label" for="pk21">Cover-ups for beach-to-restaurant</label></li>
       </ul>
 
-      <h3>The items every group forgets</h3>
-      <ul class="checklist" data-group="forgot">
-        <li><input type="checkbox" id="ck11"><label class="check-label" for="ck11"><strong>Baby powder or corn starch</strong>&nbsp;&mdash; rub on skin to remove sand instantly</label></li>
-        <li><input type="checkbox" id="ck12"><label class="check-label" for="ck12"><strong>Water shoes</strong>&nbsp;&mdash; essential for Shell Island and St. Andrews jetties</label></li>
-        <li><input type="checkbox" id="ck13"><label class="check-label" for="ck13"><strong>Extra toilet paper and paper towels</strong>&nbsp;&mdash; starter supplies vanish fast with 9+ people</label></li>
-        <li><input type="checkbox" id="ck14"><label class="check-label" for="ck14"><strong>Laundry detergent pods</strong>&nbsp;&mdash; starter amount won't last the week</label></li>
-        <li><input type="checkbox" id="ck15"><label class="check-label" for="ck15"><strong>Kitchen spices, condiments, coffee, and coffee filters</strong></label></li>
-        <li><input type="checkbox" id="ck16"><label class="check-label" for="ck16"><strong>A can opener and corkscrew</strong>&nbsp;&mdash; not always in rental kitchens</label></li>
-        <li><input type="checkbox" id="ck17"><label class="check-label" for="ck17"><strong>Motion sickness medicine</strong>&nbsp;&mdash; critical for dolphin cruises or boat rides</label></li>
-        <li><input type="checkbox" id="ck18"><label class="check-label" for="ck18"><strong>Meat tenderizer or vinegar</strong>&nbsp;&mdash; for jellyfish stings</label></li>
-        <li><input type="checkbox" id="ck19"><label class="check-label" for="ck19"><strong>Bug spray</strong>&nbsp;&mdash; mosquitoes appear in evenings near lagoons</label></li>
-        <li><input type="checkbox" id="ck20"><label class="check-label" for="ck20"><strong>Power strips</strong>&nbsp;&mdash; condos never have enough outlets</label></li>
-        <li><input type="checkbox" id="ck21"><label class="check-label" for="ck21"><strong>Portable Bluetooth speaker</strong> + deck of cards for evening downtime</label></li>
+      <h3>Medications &amp; Health</h3>
+      <ul class="checklist">
+        <li><input type="checkbox" id="pk22"><label class="check-label" for="pk22">Prescription medications (7-day supply + extra)</label></li>
+        <li><input type="checkbox" id="pk23"><label class="check-label" for="pk23">After-sun lotion / aloe vera gel</label></li>
+        <li><input type="checkbox" id="pk24"><label class="check-label" for="pk24">Motion sickness medication (for boat trips)</label></li>
+        <li><input type="checkbox" id="pk25"><label class="check-label" for="pk25">Basic first aid kit (bandages, antiseptic, pain relievers)</label></li>
+        <li><input type="checkbox" id="pk26"><label class="check-label" for="pk26">Insect repellent (mosquitoes near marshy areas)</label></li>
+        <li><input type="checkbox" id="pk27"><label class="check-label" for="pk27">Allergy medication if needed</label></li>
       </ul>
 
-      <h3>Weather layers</h3>
-      <ul class="checklist" data-group="layers">
-        <li><input type="checkbox" id="ck22"><label class="check-label" for="ck22">Light jacket/hoodie, long pants, compact rain jacket, and closed-toe shoes</label></li>
+      <h3>Gear &amp; Gadgets</h3>
+      <ul class="checklist">
+        <li><input type="checkbox" id="pk28"><label class="check-label" for="pk28">Camera / underwater camera or GoPro</label></li>
+        <li><input type="checkbox" id="pk29"><label class="check-label" for="pk29">Portable phone charger / power bank</label></li>
+        <li><input type="checkbox" id="pk30"><label class="check-label" for="pk30">Bluetooth speaker (waterproof is better)</label></li>
+        <li><input type="checkbox" id="pk31"><label class="check-label" for="pk31">Card/board games for evenings</label></li>
+        <li><input type="checkbox" id="pk32"><label class="check-label" for="pk32">Frisbee, cornhole, volleyball</label></li>
       </ul>
-    </div>
-  </section>
 
-  <!-- ── 7. COSTS ── -->
-  <section class="section" id="costs">
-    <div class="section-header" role="button" tabindex="0" aria-expanded="false" aria-controls="costs-body">
-      <h2><span class="section-num">7</span> Full cost breakdown for 9 people, 5 nights</h2>
-      <svg class="collapse-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
-    </div>
-    <div class="section-body collapsed" id="costs-body">
+      <h3>Kitchen &amp; Food Prep (for cook-in meals)</h3>
+      <ul class="checklist">
+        <li><input type="checkbox" id="pk33"><label class="check-label" for="pk33">Reusable grocery bags</label></li>
+        <li><input type="checkbox" id="pk34"><label class="check-label" for="pk34">Corkscrew / bottle opener</label></li>
+        <li><input type="checkbox" id="pk35"><label class="check-label" for="pk35">Spices &amp; cooking staples (oil, salt, pepper, garlic)</label></li>
+        <li><input type="checkbox" id="pk36"><label class="check-label" for="pk36">Aluminum foil &amp; zip-lock bags</label></li>
+        <li><input type="checkbox" id="pk37"><label class="check-label" for="pk37">Paper plates / disposable cups for beach meals</label></li>
+      </ul>
 
-      <div class="table-wrap">
-        <table>
-          <thead><tr><th>Category</th><th>Low Estimate</th><th>High Estimate</th><th>Notes</th></tr></thead>
-          <tbody>
-            <tr><td><strong>Gas (1 vehicle, round trip)</strong></td><td>$180</td><td>$225</td><td>Fill up in AL/TN, avoid FL prices</td></tr>
-            <tr><td><strong>Groceries (breakfasts, lunches, 2 cook-in dinners)</strong></td><td>$250</td><td>$400</td><td>Walmart for bulk, Publix for quality</td></tr>
-            <tr><td><strong>Dining out (3&ndash;4 group dinners)</strong></td><td>$300</td><td>$600</td><td>Mix of $15/person casual and one $30+ splurge</td></tr>
-            <tr><td><strong>Activities (shared among group)</strong></td><td>$200</td><td>$500</td><td>Heavy use of free options + 2&ndash;3 paid activities</td></tr>
-            <tr><td><strong>Beach/misc supplies</strong></td><td>$50</td><td>$100</td><td>Sunscreen refills, bait, snacks, ice</td></tr>
-            <tr class="row-total"><td><strong>TOTAL (excluding lodging)</strong></td><td><strong>$980</strong></td><td><strong>$1,725</strong></td><td></td></tr>
-            <tr class="row-total"><td><strong>Per person (9 people)</strong></td><td><strong>~$109</strong></td><td><strong>~$192</strong></td><td>Over 5 days</td></tr>
-            <tr class="row-total"><td><strong>Per person per day</strong></td><td><strong>~$22</strong></td><td><strong>~$38</strong></td><td></td></tr>
-          </tbody>
-        </table>
-      </div>
-
-      <p>The $22/day end requires disciplined cooking in and heavy use of free activities (beach days, Conservation Park, Gulf Highlands pools/mini golf, Air Show). The $38/day end allows eating out most meals and 2&ndash;3 paid attractions. <strong>The Air Show alone&nbsp;&mdash; free, two full days of entertainment&nbsp;&mdash; saves the group hundreds of dollars</strong> compared to a week without it.</p>
-
-      <h3>Top money-saving moves</h3>
       <div class="callout callout-tip">
-        <strong>Save big</strong>
-        <ul style="margin-bottom:0">
-          <li>Cook every breakfast in the condo ($2&ndash;3/person vs. $8&ndash;15 eating out).</li>
-          <li>Buy a case of water and beach snacks at Walmart on arrival day instead of buying individually all week.</li>
-          <li>Purchase fresh shrimp at Shrimp City<a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Shrimp+City+Thomas+Drive+Panama+City+Beach+FL" target="_blank" rel="noopener"><svg width="9" height="12" viewBox="0 0 9 12" fill="currentColor" aria-hidden="true"><path d="M4.5 0A4.5 4.5 0 0 0 0 4.5C0 7.88 4.5 12 4.5 12S9 7.88 9 4.5A4.5 4.5 0 0 0 4.5 0zm0 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg> Map</a> on Thomas Drive and have it steamed free&nbsp;&mdash; a seafood feast for a fraction of restaurant cost.</li>
-          <li>Check visitpanamacitybeach.com/pcb-perks/ for the official PCB discount program.</li>
-          <li>Search Tripster and Groupon for WonderWorks and Ripley's discounts before buying at the door.</li>
-        </ul>
+        <strong>Stingray Shuffle Tip</strong>
+        Pack old sneakers or water shoes for everyone. Stingrays bury in the sand in the Gulf surf &mdash; shuffle your feet when entering the water rather than stepping, and you&rsquo;ll never have a problem.
       </div>
+
     </div>
   </section>
 
-  <!-- ── 8. SAFETY ── -->
-  <section class="section" id="safety">
-    <div class="section-header" role="button" tabindex="0" aria-expanded="false" aria-controls="safety-body">
-      <h2><span class="section-num">8</span> Safety, tides, groceries, and local essentials</h2>
-      <svg class="collapse-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+  <!-- 7. COSTS -->
+  <section class="section" id="costs">
+    <div class="section-header" role="button" tabindex="0" aria-expanded="false" aria-controls="body-costs">
+      <h2><span class="section-num">7</span> Cost Breakdown</h2>
+      <svg class="collapse-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
     </div>
-    <div class="section-body collapsed" id="safety-body">
+    <div class="section-body collapsed" id="body-costs">
 
-      <h3>Beach flag system&nbsp;&mdash; teach everyone before day one</h3>
+      <p>Estimates below are per person for the 5-night trip (9 travelers), excluding lodging. Cook-in meals at the resort have the biggest impact on your food budget.</p>
+
       <div class="table-wrap">
         <table>
-          <thead><tr><th>Flag</th><th>Meaning</th><th>What to do</th></tr></thead>
+          <thead>
+            <tr>
+              <th>Category</th>
+              <th>Low</th>
+              <th>High</th>
+              <th>Notes</th>
+            </tr>
+          </thead>
           <tbody>
-            <tr class="flag-row-green"><td>&#x1F7E2; Green</td><td>Low hazard</td><td>Swim with normal caution</td></tr>
-            <tr class="flag-row-yellow"><td>&#x1F7E1; Yellow</td><td>Moderate surf/currents</td><td>Weak swimmers stay near shore</td></tr>
-            <tr class="flag-row-red"><td>&#x1F534; Single Red</td><td>High hazard</td><td>Only experienced swimmers; keep children out</td></tr>
-            <tr class="flag-row-double-red"><td>&#x1F534;&#x1F534; Double Red</td><td><strong>Water closed</strong></td><td><strong>$500 fine if you enter the water</strong></td></tr>
-            <tr class="flag-row-purple"><td>&#x1F7E3; Purple</td><td>Dangerous marine life</td><td>Usually jellyfish; used with other flags</td></tr>
+            <tr><td><strong>Gas</strong> (group share)</td><td>$18</td><td>$22</td><td>~$165&ndash;195 total split 9 ways</td></tr>
+            <tr><td><strong>Groceries / cook-in</strong></td><td>$40</td><td>$60</td><td>2&ndash;3 meals at resort; includes seafood from Rouses or Foley Fish Co.</td></tr>
+            <tr><td><strong>Restaurant meals</strong></td><td>$90</td><td>$130</td><td>6&ndash;8 restaurant meals; mix of casual and one nicer dinner</td></tr>
+            <tr><td><strong>Beach activities</strong></td><td>$0</td><td>$10</td><td>Gulf State Park day-use fee ($10/vehicle); beach itself is free</td></tr>
+            <tr><td><strong>Paid activities</strong></td><td>$60</td><td>$120</td><td>Dolphin cruise, zoo, waterpark, or go-karts; choose 2&ndash;3</td></tr>
+            <tr><td><strong>Day trips</strong></td><td>$0</td><td>$30</td><td>Naval Museum is FREE; USS Alabama is ~$15; Fairhope is free</td></tr>
+            <tr><td><strong>Strawberry Festival</strong></td><td>$0</td><td>$15</td><td>Free admission; budget for food &amp; strawberries at the festival</td></tr>
+            <tr><td><strong>Souvenirs / misc</strong></td><td>$20</td><td>$50</td><td>Gifts, ice cream, boardwalk shops</td></tr>
+            <tr class="row-total"><td><strong>Total Per Person</strong></td><td><strong>~$228</strong></td><td><strong>~$437</strong></td><td></td></tr>
+            <tr class="row-total"><td><strong>Group Total (9 people)</strong></td><td><strong>~$2,050</strong></td><td><strong>~$3,930</strong></td><td>Excl. lodging</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Daily Food Budget</h3>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Day Type</th>
+              <th>Breakfast</th>
+              <th>Lunch</th>
+              <th>Dinner</th>
+              <th>Daily Total/Person</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Cook-in day</td><td>Resort kitchen ($3&ndash;5)</td><td>Beach snacks ($5&ndash;8)</td><td>Group seafood boil ($12&ndash;18)</td><td><strong>$20&ndash;31</strong></td></tr>
+            <tr><td>Casual out</td><td>Sunliner Diner ($10&ndash;14)</td><td>Shrimp Basket ($10&ndash;16)</td><td>LuLu&rsquo;s or Tacky Jack&rsquo;s ($14&ndash;22)</td><td><strong>$34&ndash;52</strong></td></tr>
+            <tr><td>Nicer dinner night</td><td>Resort ($3&ndash;5)</td><td>Light/snack ($8&ndash;12)</td><td>Cobalt or Fisher&rsquo;s ($22&ndash;38)</td><td><strong>$33&ndash;55</strong></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="callout callout-tip">
+        <strong>Biggest Budget Levers</strong>
+        1) Cook in for breakfast and at least 2 dinners &mdash; saves $25&ndash;40/person vs. eating out every meal. 2) Rouses Market seafood counter has boiled shrimp and crab already cooked at grocery prices. 3) Free activities (Gulf State Park, beach, resort amenities) are genuinely excellent &mdash; you don&rsquo;t need to do a paid activity every day.
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 8. SAFETY -->
+  <section class="section" id="safety">
+    <div class="section-header" role="button" tabindex="0" aria-expanded="false" aria-controls="body-safety">
+      <h2><span class="section-num">8</span> Safety &amp; Local Info</h2>
+      <svg class="collapse-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+    </div>
+    <div class="section-body collapsed" id="body-safety">
+
+      <h3>Beach Flag System</h3>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Flag</th>
+              <th>Meaning</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="flag-row-green"><td>Green</td><td>Low hazard, calm conditions</td><td>Safe to swim; normal caution</td></tr>
+            <tr class="flag-row-yellow"><td>Yellow</td><td>Medium hazard, moderate surf/currents</td><td>Swim with caution; good for strong swimmers</td></tr>
+            <tr class="flag-row-red"><td>Red</td><td>High hazard, strong surf or currents</td><td>Use extreme caution; non-swimmers stay out</td></tr>
+            <tr class="flag-row-double-red"><td>Double Red</td><td>Water closed to public swimming</td><td>Do not enter the water &mdash; no exceptions</td></tr>
+            <tr class="flag-row-purple"><td>Purple</td><td>Dangerous marine life (jellyfish, etc.)</td><td>Watch for stings; water may still be open</td></tr>
           </tbody>
         </table>
       </div>
 
       <div class="callout callout-warn">
-        <strong>Get real-time alerts</strong>
-        Text "PCBFLAGS" to 888777 for real-time flag change alerts. Call 850-233-5000 for current conditions. Lifeguards are stationed at Russell-Fields Pier starting April 1, operating 10 AM&ndash;6 PM daily.
+        <strong>Stingray Shuffle &mdash; Important!</strong>
+        Southern stingrays bury themselves in the Gulf surf shallows. Always <strong>shuffle your feet</strong> when walking into the water (don&rsquo;t step). This alerts rays and they move away. Every experienced Gulf swimmer does this automatically.
       </div>
 
-      <h3>Jellyfish and rip currents</h3>
-      <p>Early April is the <strong>very beginning of jellyfish season</strong>&nbsp;&mdash; risk is low but not zero. Moon jellyfish (mild sting) and cannonball jellyfish are most common. If stung, rinse with saltwater (never freshwater), apply vinegar, scrape with a credit card, and apply hydrocortisone cream. Rash guards prevent direct tentacle contact.</p>
-      <div class="callout callout-warn">
-        <strong>Rip currents</strong>
-        Can occur even on yellow-flag days. Teach every member of the group: if caught, <strong>don't fight it</strong>&nbsp;&mdash; swim parallel to shore until free, then swim back. Look for choppy, discolored water flowing seaward or gaps in the wave pattern.
+      <h3>Beach Conditions</h3>
+      <ul>
+        <li><strong>Text alerts:</strong> Text <strong>ALBEACHES</strong> to <strong>888-777</strong> for daily beach condition updates</li>
+        <li><strong>Surf conditions:</strong> Call <strong>251-968-SURF (7873)</strong> for current surf report</li>
+        <li><strong>Rip currents:</strong> Swim parallel to shore to escape; never fight directly against it</li>
+        <li><strong>Jellyfish:</strong> Purple flag means they&rsquo;re present; moon jellies are common in April and mostly harmless</li>
+        <li><strong>Sun safety:</strong> UV peaks 11 AM&ndash;3 PM; reapply sunscreen every 90 minutes on the beach</li>
+      </ul>
+
+      <h3>Grocery Stores</h3>
+      <ul>
+        <li><strong>Rouses Market</strong> &mdash; 1545 Gulf Shores Pkwy. Best local grocery store; Louisiana-style; in-store boiled seafood counter. Highly recommended.
+          <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Rouses+Market+1545+Gulf+Shores+Parkway" target="_blank" rel="noopener"><svg width="9" height="12" viewBox="0 0 9 12" fill="currentColor" aria-hidden="true"><path d="M4.5 0A4.5 4.5 0 0 0 0 4.5C0 7.88 4.5 12 4.5 12S9 7.88 9 4.5A4.5 4.5 0 0 0 4.5 0zm0 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg> Map</a>
+        </li>
+        <li><strong>Publix</strong> &mdash; 1720 Gulf Shores Pkwy. Good backup option, open late.
+          <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Publix+1720+Gulf+Shores+Parkway" target="_blank" rel="noopener"><svg width="9" height="12" viewBox="0 0 9 12" fill="currentColor" aria-hidden="true"><path d="M4.5 0A4.5 4.5 0 0 0 0 4.5C0 7.88 4.5 12 4.5 12S9 7.88 9 4.5A4.5 4.5 0 0 0 4.5 0zm0 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg> Map</a>
+        </li>
+        <li><strong>Walmart Foley</strong> &mdash; 2200 S McKenzie, Foley AL. Stop here on arrival day for bulk supplies.
+          <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Walmart+2200+S+McKenzie+Foley+Alabama" target="_blank" rel="noopener"><svg width="9" height="12" viewBox="0 0 9 12" fill="currentColor" aria-hidden="true"><path d="M4.5 0A4.5 4.5 0 0 0 0 4.5C0 7.88 4.5 12 4.5 12S9 7.88 9 4.5A4.5 4.5 0 0 0 4.5 0zm0 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg> Map</a>
+        </li>
+      </ul>
+
+      <h3>Fresh Seafood Markets</h3>
+      <ul>
+        <li><strong>Foley Fish Company</strong> &mdash; 321 S McKenzie, Foley AL. Stop on the drive in. Fresh off-boat local catch.
+          <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Foley+Fish+Company+321+S+McKenzie+Foley+Alabama" target="_blank" rel="noopener"><svg width="9" height="12" viewBox="0 0 9 12" fill="currentColor" aria-hidden="true"><path d="M4.5 0A4.5 4.5 0 0 0 0 4.5C0 7.88 4.5 12 4.5 12S9 7.88 9 4.5A4.5 4.5 0 0 0 4.5 0zm0 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg> Map</a>
+        </li>
+        <li><strong>Blalock Seafood</strong> &mdash; 1911 Gulf Shores Pkwy. Good local market once you&rsquo;re settled in.
+          <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Blalock+Seafood+1911+Gulf+Shores+Parkway" target="_blank" rel="noopener"><svg width="9" height="12" viewBox="0 0 9 12" fill="currentColor" aria-hidden="true"><path d="M4.5 0A4.5 4.5 0 0 0 0 4.5C0 7.88 4.5 12 4.5 12S9 7.88 9 4.5A4.5 4.5 0 0 0 4.5 0zm0 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg> Map</a>
+        </li>
+      </ul>
+
+      <h3>Medical &amp; Urgent Care</h3>
+      <ul>
+        <li><strong>Baldwin Health Primary &amp; Urgent Care &mdash; Gulf Shores</strong> &mdash; 101 E 15th Ave, Gulf Shores, AL. 5&ndash;8 minutes from The Beach Club. Open 7 days a week, 8 AM&ndash;8 PM. No-appointment urgent care.
+          <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Baldwin+Health+Urgent+Care+101+E+15th+Ave+Gulf+Shores+Alabama" target="_blank" rel="noopener"><svg width="9" height="12" viewBox="0 0 9 12" fill="currentColor" aria-hidden="true"><path d="M4.5 0A4.5 4.5 0 0 0 0 4.5C0 7.88 4.5 12 4.5 12S9 7.88 9 4.5A4.5 4.5 0 0 0 4.5 0zm0 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg> Map</a>
+        </li>
+        <li><strong>South Baldwin Regional Medical Center (ER)</strong> &mdash; 1613 N McKenzie St, Foley, AL. 24/7 emergency room. ~20 minutes north.
+          <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=South+Baldwin+Regional+Medical+Center+1613+N+McKenzie+Foley+Alabama" target="_blank" rel="noopener"><svg width="9" height="12" viewBox="0 0 9 12" fill="currentColor" aria-hidden="true"><path d="M4.5 0A4.5 4.5 0 0 0 0 4.5C0 7.88 4.5 12 4.5 12S9 7.88 9 4.5A4.5 4.5 0 0 0 4.5 0zm0 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg> Map</a>
+        </li>
+      </ul>
+
+      <div class="callout">
+        <strong>Save These Numbers</strong>
+        Beach conditions: <strong>251-968-SURF (7873)</strong> &bull; Text alerts: <strong>ALBEACHES to 888-777</strong> &bull; Urgent Care: <strong>101 E 15th Ave, Gulf Shores</strong>
       </div>
 
-      <h3>Tide schedule for your dates</h3>
-      <p>Gulf tides at PCB are gentle&nbsp;&mdash; only about <strong>1.5 feet of tidal range</strong>. High tide shifts from late morning on Monday to mid-afternoon by Saturday. Best shelling and beach exploration is early morning when tides are lowest. The last quarter moon falls on April 9, producing smaller-than-average tidal swings all week.</p>
-
-      <h3>Grocery stores near Gulf Highlands</h3>
-      <p>Gulf Highlands sits on Thomas Drive on the east end of PCB. Your nearest grocery options:</p>
-      <ul>
-        <li><strong>Publix</strong><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Publix+2419+Thomas+Drive+Panama+City+Beach+FL" target="_blank" rel="noopener"><svg width="9" height="12" viewBox="0 0 9 12" fill="currentColor" aria-hidden="true"><path d="M4.5 0A4.5 4.5 0 0 0 0 4.5C0 7.88 4.5 12 4.5 12S9 7.88 9 4.5A4.5 4.5 0 0 0 4.5 0zm0 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg> Map</a> (Magnolia Plaza, 2419 Thomas Dr)&nbsp;&mdash; ~1&ndash;2 miles. Best quality meat and produce. Open 7 AM&ndash;9 PM.</li>
-        <li><strong>Winn-Dixie</strong><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Winn-Dixie+Thomas+Drive+Panama+City+Beach+FL" target="_blank" rel="noopener"><svg width="9" height="12" viewBox="0 0 9 12" fill="currentColor" aria-hidden="true"><path d="M4.5 0A4.5 4.5 0 0 0 0 4.5C0 7.88 4.5 12 4.5 12S9 7.88 9 4.5A4.5 4.5 0 0 0 4.5 0zm0 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg> Map</a> (Thomas Dr near Publix)&nbsp;&mdash; ~1&ndash;2 miles. Slightly cheaper.</li>
-        <li><strong>Walmart Supercenter</strong><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Walmart+Supercenter+10270+Front+Beach+Road+Panama+City+Beach+FL" target="_blank" rel="noopener"><svg width="9" height="12" viewBox="0 0 9 12" fill="currentColor" aria-hidden="true"><path d="M4.5 0A4.5 4.5 0 0 0 0 4.5C0 7.88 4.5 12 4.5 12S9 7.88 9 4.5A4.5 4.5 0 0 0 4.5 0zm0 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg> Map</a> (10270 Front Beach Rd at Thomas Dr)&nbsp;&mdash; ~2&ndash;3 miles. Best prices and largest selection. <strong>Go early on a weekday</strong>&nbsp;&mdash; weekends are a zoo.</li>
-        <li><strong>Shrimp City</strong><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Shrimp+City+Thomas+Drive+Panama+City+Beach+FL" target="_blank" rel="noopener"><svg width="9" height="12" viewBox="0 0 9 12" fill="currentColor" aria-hidden="true"><path d="M4.5 0A4.5 4.5 0 0 0 0 4.5C0 7.88 4.5 12 4.5 12S9 7.88 9 4.5A4.5 4.5 0 0 0 4.5 0zm0 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg> Map</a> (Thomas Dr)&nbsp;&mdash; Fresh local seafood, will steam purchases free with Old Bay seasoning.</li>
-        <li><strong>Dollar General</strong><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Dollar+General+Thomas+Drive+Panama+City+Beach+FL" target="_blank" rel="noopener"><svg width="9" height="12" viewBox="0 0 9 12" fill="currentColor" aria-hidden="true"><path d="M4.5 0A4.5 4.5 0 0 0 0 4.5C0 7.88 4.5 12 4.5 12S9 7.88 9 4.5A4.5 4.5 0 0 0 4.5 0zm0 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg> Map</a> (multiple Thomas Dr locations)&nbsp;&mdash; Good for paper goods, snacks, and cleaning supplies at low prices.</li>
-      </ul>
-
-      <h3>Medical facilities</h3>
-      <p><strong>Emerald Coast Urgent Care</strong><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Emerald+Coast+Urgent+Care+2704+Thomas+Drive+Panama+City+Beach+FL" target="_blank" rel="noopener"><svg width="9" height="12" viewBox="0 0 9 12" fill="currentColor" aria-hidden="true"><path d="M4.5 0A4.5 4.5 0 0 0 0 4.5C0 7.88 4.5 12 4.5 12S9 7.88 9 4.5A4.5 4.5 0 0 0 4.5 0zm0 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg> Map</a> at 2704 Thomas Drive is less than 2 miles from Gulf Highlands&nbsp;&mdash; open 7 days/week, walk-in. For emergencies, <strong>Bay Medical Center</strong><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Bay+Medical+Center+Panama+City+Florida" target="_blank" rel="noopener"><svg width="9" height="12" viewBox="0 0 9 12" fill="currentColor" aria-hidden="true"><path d="M4.5 0A4.5 4.5 0 0 0 0 4.5C0 7.88 4.5 12 4.5 12S9 7.88 9 4.5A4.5 4.5 0 0 0 4.5 0zm0 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg> Map</a> in Panama City (12 miles) is a Level II Trauma Center.</p>
-
-      <h3>Quick-reference local tips</h3>
-      <ul>
-        <li>Both Paducah and PCB are in <strong>Central Time</strong>&nbsp;&mdash; no clock changes needed.</li>
-        <li>Gulf Highlands is a <strong>24/7 gated community with security</strong> and includes 2 parking spaces per townhome.</li>
-        <li>The on-site <strong>Beach House restaurant</strong> serves breakfast, lunch, and dinner with Gulf-front seating.</li>
-        <li>PCB enforces a "Leave No Trace" beach ordinance: everything you bring must leave with you, and items left between 7 PM&ndash;7 AM will be removed. No glass is allowed on the beach.</li>
-        <li>Sunset during your trip falls around <strong>7:05&ndash;7:08 PM</strong>&nbsp;&mdash; beautiful from the Gulf Highlands beach or from Schooners' deck while the sunset cannon fires.</li>
-      </ul>
     </div>
   </section>
 
-  <!-- ── ITINERARY ── -->
+  <!-- 9. ITINERARY -->
   <section class="section" id="itinerary">
-    <div class="section-header" role="button" tabindex="0" aria-expanded="false" aria-controls="itinerary-body">
-      <h2><span class="section-num" style="width:auto;border-radius:var(--radius-sm);padding:0 0.5em;">Day-by-Day</span> Suggested itinerary</h2>
-      <svg class="collapse-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+    <div class="section-header" role="button" tabindex="0" aria-expanded="false" aria-controls="body-itinerary">
+      <h2><span class="section-num">9</span> Day-by-Day Itinerary</h2>
+      <svg class="collapse-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
     </div>
-    <div class="section-body collapsed" id="itinerary-body">
+    <div class="section-body collapsed" id="body-itinerary">
+
+      <p>A loose framework &mdash; leave room to adjust based on weather and how the group feels each morning. The best days at the beach often happen when you throw the plan out.</p>
+
       <div class="day-grid">
 
         <div class="day-card">
-          <div class="day-date">Day 1</div>
+          <div class="day-date">Day 0 &mdash; Travel Day</div>
           <div class="day-label">Monday, April 6</div>
-          <p class="day-desc">Arrive late afternoon after the long drive. Grocery run at Walmart or Publix. Explore Gulf Highlands, hit the pool, cook dinner in. Easy first evening.</p>
-          <span class="day-tag tag-free">Arrival Day</span>
+          <p class="day-desc">Depart Paducah by 6 AM. Fuel stop at <strong>Buc-ee&rsquo;s Athens</strong> (~4.5 hrs in). Optional top-off at Evergreen AL. Stop at <strong>Walmart Foley</strong> and/or <strong>Foley Fish Company</strong> for groceries and fresh seafood. Arrive at The Beach Club Resort by 3&ndash;4 PM. Check in, unpack, and walk to the beach before dark. Cook-in dinner from grocery haul.</p>
+          <span class="day-tag tag-budget">Travel Day</span>
+        </div>
+
+        <div class="day-card">
+          <div class="day-date">Day 1</div>
+          <div class="day-label">Tuesday, April 7</div>
+          <p class="day-desc">Full resort day. Morning swim at the private beach. Explore the 11+ pools &mdash; lazy river, kids pool, lap pool. Afternoon beach chairs in the sun. Pick up anything you missed at <strong>Rouses Market</strong>. Evening dinner at <strong>LuLu&rsquo;s</strong> &mdash; call ahead for wait times. Live music on their outdoor stage after dinner.</p>
+          <span class="day-tag tag-free">Resort Day</span>
         </div>
 
         <div class="day-card">
           <div class="day-date">Day 2</div>
-          <div class="day-label">Tuesday, April 7</div>
-          <p class="day-desc">St. Andrews State Park day. Snorkel the jetties, hike Gator Lake Trail, fish from the pier, and beach it. Pack lunch. $2&ndash;8/person total.</p>
-          <span class="day-tag tag-budget">$2&ndash;8/person</span>
+          <div class="day-label">Wednesday, April 8</div>
+          <p class="day-desc">Morning at <strong>Gulf State Park</strong> &mdash; walk the trail or rent bikes, walk the 2,448-ft pier out over the Gulf. Lunch at <strong>Shrimp Basket</strong>. Afternoon back to the resort beach (best beach day candidate &mdash; mid-week is typically most settled). Evening: <strong>group seafood boil</strong> at the resort kitchen with Foley Fish Co. shrimp and crab. Walk to The Hangout for a nightcap &mdash; live music most evenings.</p>
+          <span class="day-tag tag-free">Beach + Park</span>
         </div>
 
         <div class="day-card">
           <div class="day-date">Day 3</div>
-          <div class="day-label">Wednesday, April 8</div>
-          <p class="day-desc">Morning at Conservation Park (free hike), afternoon beach time, evening at Dave &amp; Buster's for half-price games plus dinner at Dat Cajun Place ($7.99 jambalaya Wednesday special).</p>
-          <span class="day-tag tag-budget">Budget Day</span>
+          <div class="day-label">Thursday, April 9</div>
+          <p class="day-desc"><strong>Dolphin cruise</strong> in the morning &mdash; book Southern Rose Dolphin Cruises ahead (~$29/person). Afternoon at <strong>Alabama Gulf Coast Zoo</strong> ($19/adult, $14/child) &mdash; hand-feed giraffes and touch stingrays. Dinner at <strong>Cobalt</strong> or <strong>The Gulf</strong> in Orange Beach for the nicer group dinner night. Make a reservation. Walk Orange Beach marina area after dinner.</p>
+          <span class="day-tag tag-highlight">Dolphin + Zoo Day</span>
         </div>
 
         <div class="day-card">
           <div class="day-date">Day 4</div>
-          <div class="day-label">Thursday, April 9</div>
-          <p class="day-desc">Shell Island day. Take the morning shuttle, bring everything you need, snorkel and shell-hunt all day. Evening: Pineapple Willy's or Schooners for a seafood dinner.</p>
-          <span class="day-tag tag-highlight">Adventure Day</span>
-        </div>
-
-        <div class="day-card">
-          <div class="day-date">Day 5</div>
           <div class="day-label">Friday, April 10</div>
-          <p class="day-desc"><strong>Air Show day one.</strong> Practice flights 10 AM&ndash;4 PM, STEM Zone all day at Aaron Bessant Park (free). Block Party 6&ndash;8 PM&nbsp;&mdash; meet the pilots. A full, completely free day of entertainment.</p>
-          <span class="day-tag tag-free">Free &middot; Air Show</span>
+          <p class="day-desc">Choose based on weather and group energy: <strong>Waterville USA waterpark</strong> if it&rsquo;s warm and sunny; <strong>Pensacola Naval Aviation Museum</strong> (FREE, 1 hr east) or <strong>Fairhope</strong> (1 hr north) if you want a change of scenery. Afternoon back on the beach. Last casual dinner out &mdash; <strong>Tacky Jack&rsquo;s</strong> or <strong>Fisher&rsquo;s Dockside</strong> at OB Marina. Evening: The Track for go-karts if the group is up for it.</p>
+          <span class="day-tag tag-budget">Flex Day</span>
         </div>
 
         <div class="day-card">
-          <div class="day-date">Day 6</div>
+          <div class="day-date">Day 5 &mdash; Departure</div>
           <div class="day-label">Saturday, April 11</div>
-          <p class="day-desc">Morning farmers market at Grand Lagoon (8 AM&ndash;1 PM). <strong>Air Show main event</strong> with Thunderbirds at 3 PM. Squeeze in the SkyWheel or one last beach session. Farewell seafood dinner. Pack up for the drive home.</p>
-          <span class="day-tag tag-highlight">Thunderbirds Day</span>
+          <p class="day-desc">One last sunrise beach walk. Breakfast at <strong>Sunliner Diner</strong> if they can fit the group, or cook in. Check out by 10&ndash;11 AM. Head north on Hwy 59 / I-65. Stop at the <strong>Baldwin County Strawberry Festival in Loxley</strong> (~30 min north, opens 9 AM) &mdash; free admission, fresh strawberries, live music. Fuel up in Evergreen for the rest of the drive home.</p>
+          <span class="day-tag tag-highlight">Strawberry Festival</span>
         </div>
 
       </div>
-
-      <p style="margin-top:1.5rem">This framework keeps 3 of 6 days essentially free (under $10/person), leaving budget room for Shell Island, one splurge dinner, and a couple of paid attractions. The Air Show landing on your final two days is genuinely lucky timing&nbsp;&mdash; it's the single best free event PCB hosts all year, and the STEM Zone gives your kids and teens hours of hands-on engagement at zero cost.</p>
 
       <div class="callout">
-        <strong>Before you go</strong>
-        Check back at forecast.weather.gov around April 2&ndash;3 for your firm 7-day forecast, and text PCBFLAGS to 888777 on arrival day. Have a great trip!
+        <strong>Before You Go</strong>
+        Check the NWS 7-day forecast for Gulf Shores around April 2&ndash;3 to plan the flex day. Text ALBEACHES to 888-777 on arrival morning for beach conditions. Have a great trip!
       </div>
+
     </div>
   </section>
 
@@ -1420,7 +1612,7 @@ tbody tr:hover { background: var(--accent-teal-soft); }
 <!-- ══════════ FOOTER ══════════ -->
 <footer class="footer">
   <div class="footer-wave">~ ~ ~</div>
-  <p>Panama City Beach Group Trip Planner &middot; April 6&ndash;11, 2026</p>
+  <p>Gulf Shores Group Trip Planner &middot; April 6&ndash;11, 2026 &middot; The Beach Club Resort, Gulf Highlands, AL</p>
 </footer>
 
 <!-- ══════════ SCROLL TO TOP ══════════ -->
@@ -1515,7 +1707,7 @@ tbody tr:hover { background: var(--accent-teal-soft); }
   });
 
   /* ── Packing checklist with localStorage ── */
-  var STORAGE_KEY = 'pcb2026-packing';
+  var STORAGE_KEY = 'gs2026-packing';
   var checkboxes = document.querySelectorAll('.checklist input[type="checkbox"]');
   var totalItems = checkboxes.length;
 

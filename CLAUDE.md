@@ -1,6 +1,6 @@
 # CLAUDE.md — AprilVacation
 
-This project is a single-file trip planner for a Panama City Beach group vacation (April 6–11, 2026) shared with the group via GitHub Pages.
+This project is a single-file trip planner for a Gulf Shores, Alabama group vacation (April 6–11, 2026) shared with the group via GitHub Pages. The destination is **The Beach Club Resort & Spa, Gulf Highlands** — 925 Beach Club Trail, Gulf Shores, AL 36542.
 
 ## File
 
@@ -32,9 +32,9 @@ Source markdown: `compass_artifact_wf-d6989072-a52f-42db-90e5-7c0f8d80285d_text_
 
 Sections (with HTML `id`):
 1. `#weather` — Weather tables and forecasts
-2. `#drive` — Route, departure, gas stops (gas calc: 1 vehicle, 22 MPG, 1,200 mi round trip)
+2. `#drive` — Route, departure, gas stops (gas calc: 3 vehicles, 22 MPG avg, ~1,230 mi round trip from KC area)
 3. `#events` — Air Show and local events
-4. `#food` — Restaurants and budget dining guide
+4. `#restaurants` — Restaurants and budget dining guide
 5. `#activities` — Free and paid activities
 6. `#packing` — Interactive packing checklist
 7. `#costs` — Full cost breakdown (totals: $980–$1,725 excl. lodging; ~$22–38/person/day)
