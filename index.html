@@ -344,6 +344,7 @@ li strong:first-child { color: var(--accent-coral); }
   cursor: pointer;
   position: relative;
   flex-shrink: 0;
+  touch-action: manipulation;
 }
 
 .nav-toggle span,
@@ -468,6 +469,7 @@ li strong:first-child { color: var(--accent-coral); }
   align-items: flex-start;
   user-select: none;
   -webkit-user-select: none;
+  touch-action: manipulation;
 }
 
 .section-header h2 {
@@ -808,6 +810,7 @@ tbody tr:hover { background: var(--accent-teal-soft); }
   transform: translateY(10px);
   transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
   z-index: 50;
+  touch-action: manipulation;
 }
 
 .scroll-top.visible {
@@ -902,6 +905,14 @@ tbody tr:hover { background: var(--accent-teal-soft); }
   .day-card { padding: 1rem 1.15rem; }
 }
 </style>
+<noscript>
+<style>
+  .section-body.collapsed { max-height: none !important; opacity: 1 !important; padding: revert !important; }
+  .collapse-icon { display: none !important; }
+  .nav-toggle { display: none !important; }
+  .nav-links { display: flex !important; flex-wrap: wrap; }
+</style>
+</noscript>
 </head>
 <body>
 
@@ -1635,6 +1646,22 @@ tbody tr:hover { background: var(--accent-teal-soft); }
 (function() {
   'use strict';
 
+  /* ── Local file detection: expand all sections, show notice ── */
+  if (window.location.protocol === 'file:') {
+    var notice = document.createElement('div');
+    notice.style.cssText = 'background:var(--accent-gold-soft,#f5ecd6);border-bottom:3px solid var(--accent-gold,#c49032);padding:0.75em 1.5em;text-align:center;font-size:0.9rem;color:var(--text-primary,#2c2417);position:relative;z-index:200;margin-top:calc(var(--nav-height,52px) + env(safe-area-inset-top,0px));';
+    notice.innerHTML = '<strong>Viewing as a local file.</strong> Some features (checklist saving) may be limited. For the best experience, open this page from its shared web link.';
+    var body = document.querySelector('body');
+    var hero = document.querySelector('.hero');
+    body.insertBefore(notice, hero);
+    document.querySelectorAll('.section-body').forEach(function(b) {
+      b.classList.remove('collapsed');
+    });
+    document.querySelectorAll('.section-header').forEach(function(h) {
+      h.setAttribute('aria-expanded', 'true');
+    });
+  }
+
   /* ── Mobile nav toggle ── */
   var toggle = document.querySelector('.nav-toggle');
   var navLinks = document.getElementById('nav-links');
@@ -1648,7 +1675,7 @@ tbody tr:hover { background: var(--accent-teal-soft); }
   navLinks.querySelectorAll('a').forEach(function(a) {
     a.addEventListener('click', function() {
       navLinks.classList.remove('open');
-      toggle.setAttribute('aria-expanded', 'false');
+      toggle.setAttribute('aria-expanded', 'true');
       var targetId = this.getAttribute('href').slice(1);
       var section = document.getElementById(targetId);
       if (section) {
