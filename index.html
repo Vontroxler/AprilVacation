@@ -2,9 +2,16 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Gulf Shores Trip Planner — April 6–11, 2026</title>
 <meta name="description" content="Group trip planner for Gulf Shores, Alabama, April 6-11, 2026. Weather, route, dining, activities, packing, and day-by-day itinerary for 9 travelers.">
+<!-- iOS / Safari -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Gulf Shores Trip">
+<meta name="format-detection" content="telephone=no">
+<meta name="theme-color" content="#0d2137" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#040a10" media="(prefers-color-scheme: dark)">
 <style>
 /* ═══════════════════════════════════════════════
    COASTAL EDITORIAL — Gulf Shores Planner
@@ -93,7 +100,7 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: calc(var(--nav-height) + 24px);
+  scroll-padding-top: calc(var(--nav-height) + env(safe-area-inset-top) + 24px);
   -webkit-text-size-adjust: 100%;
 }
 
@@ -175,7 +182,7 @@ li strong:first-child { color: var(--accent-coral); }
   position: relative;
   overflow: hidden;
   padding: clamp(3rem, 10vw, 6rem) 1.5rem clamp(2.5rem, 8vw, 4.5rem);
-  margin-top: var(--nav-height);
+  margin-top: calc(var(--nav-height) + env(safe-area-inset-top));
 }
 
 .hero::before {
@@ -298,7 +305,10 @@ li strong:first-child { color: var(--accent-coral); }
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--border-light);
-  height: var(--nav-height);
+  height: calc(var(--nav-height) + env(safe-area-inset-top));
+  padding-top: env(safe-area-inset-top);
+  padding-left: env(safe-area-inset-left);
+  padding-right: env(safe-area-inset-right);
   display: flex;
   align-items: center;
   transition: box-shadow 0.3s;
@@ -394,7 +404,7 @@ li strong:first-child { color: var(--accent-coral); }
 
   .nav-links {
     position: absolute;
-    top: var(--nav-height);
+    top: calc(var(--nav-height) + env(safe-area-inset-top));
     left: 0;
     right: 0;
     flex-direction: column;
