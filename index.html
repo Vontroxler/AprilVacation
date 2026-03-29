@@ -353,9 +353,9 @@ li strong:first-child { color: var(--accent-coral); }
 .nav-toggle span::before { content: ''; top: -7px; }
 .nav-toggle span::after { content: ''; top: 7px; }
 
-.nav-toggle[aria-expanded="true"] span { background: transparent; }
-.nav-toggle[aria-expanded="true"] span::before { top: 0; transform: rotate(45deg); background: var(--text-primary); }
-.nav-toggle[aria-expanded="true"] span::after { top: 0; transform: rotate(-45deg); background: var(--text-primary); }
+.nav-toggle[aria-expanded="false"] span { background: transparent; }
+.nav-toggle[aria-expanded="false"] span::before { top: 0; transform: rotate(45deg); background: var(--text-primary); }
+.nav-toggle[aria-expanded="false"] span::after { top: 0; transform: rotate(-45deg); background: var(--text-primary); }
 
 .nav-links {
   list-style: none;
@@ -856,6 +856,31 @@ tbody tr:hover { background: var(--accent-teal-soft); }
   * { box-shadow: none !important; }
 }
 
+/* ── Map & web link pills ── */
+.map-link, .web-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25em;
+  border: none !important;
+  border-radius: 3px;
+  padding: 0.1em 0.4em;
+  font-size: 0.68rem;
+  font-family: var(--font-body);
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-decoration: none !important;
+  transition: background 0.15s, color 0.15s;
+  vertical-align: middle;
+  white-space: nowrap;
+  margin-left: 0.3em;
+  line-height: 1.6;
+}
+.map-link { color: var(--accent-teal); background: var(--accent-teal-soft); }
+.map-link:hover { background: var(--accent-teal); color: white; }
+.web-link { color: var(--accent-blue); background: rgba(36,116,168,0.12); }
+.web-link:hover { background: var(--accent-blue); color: white; }
+@media print { .map-link, .web-link { display: none; } }
+
 /* ── Responsive ── */
 @media (max-width: 600px) {
   .content { padding: 0 1rem 3rem; }
@@ -923,11 +948,11 @@ tbody tr:hover { background: var(--accent-teal-soft); }
 
   <!-- ── 1. WEATHER ── -->
   <section class="section" id="weather">
-    <div class="section-header" role="button" tabindex="0" aria-expanded="true" aria-controls="weather-body">
+    <div class="section-header" role="button" tabindex="0" aria-expanded="false" aria-controls="weather-body">
       <h2><span class="section-num">1</span> Weather: warm days, cool evenings, and swimmable water</h2>
       <svg class="collapse-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
     </div>
-    <div class="section-body" id="weather-body">
+    <div class="section-body collapsed" id="weather-body">
       <p>Historical data from Weather-Atlas, NOAA, and Climate-data.org converges on a consistent picture for early April in Panama City Beach. <strong>Expect daytime highs of 73&ndash;77&deg;F and overnight lows of 57&ndash;62&deg;F.</strong> The Gulf water temperature will be around <strong>68&ndash;72&deg;F</strong>&nbsp;&mdash; refreshing rather than warm, but comfortable for active swimmers and kids after an initial adjustment. A rash guard helps both with water chill and sun protection.</p>
 
       <p>Rainfall probability on any given day is roughly <strong>24%</strong>, with April averaging about 3 inches total for the month. Realistically, expect 1&ndash;2 days during your 5-day stay with brief afternoon showers that pass quickly. The UV index averages <strong>6&ndash;8 (High)</strong>, meaning sunburn is possible in as little as 15&ndash;20 minutes without protection. Daily sunshine runs 9&ndash;10.5 hours with roughly 13 hours of daylight.</p>
@@ -954,11 +979,11 @@ tbody tr:hover { background: var(--accent-teal-soft); }
 
   <!-- ── 2. THE DRIVE ── -->
   <section class="section" id="drive">
-    <div class="section-header" role="button" tabindex="0" aria-expanded="true" aria-controls="drive-body">
+    <div class="section-header" role="button" tabindex="0" aria-expanded="false" aria-controls="drive-body">
       <h2><span class="section-num">2</span> The drive: 600 miles, one Buc-ee's, zero time zone changes</h2>
       <svg class="collapse-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
     </div>
-    <div class="section-body" id="drive-body">
+    <div class="section-body collapsed" id="drive-body">
 
       <h3>Recommended route</h3>
       <div class="callout">
@@ -1008,8 +1033,8 @@ tbody tr:hover { background: var(--accent-teal-soft); }
 
       <h3>Key fuel stops</h3>
       <ul>
-        <li><strong>Buc-ee's Athens, AL</strong> (I-65 Exit 347)&nbsp;&mdash; 53,000 sq ft, 120 fuel positions, competitive prices, legendary clean bathrooms, BBQ brisket sandwiches, kolaches, and beaver nuggets. Your ideal first major stop at ~3&ndash;3.5 hours in.</li>
-        <li><strong>Murphy USA stations</strong> at I-65 Exit 238 (Alabaster) and Exit 130 (Greenville)&nbsp;&mdash; consistently among the cheapest on the corridor.</li>
+        <li><strong>Buc-ee's Athens, AL</strong><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Buc-ee%27s+Athens+Alabama" target="_blank" rel="noopener"><svg width="9" height="12" viewBox="0 0 9 12" fill="currentColor" aria-hidden="true"><path d="M4.5 0A4.5 4.5 0 0 0 0 4.5C0 7.88 4.5 12 4.5 12S9 7.88 9 4.5A4.5 4.5 0 0 0 4.5 0zm0 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg> Map</a> (I-65 Exit 347)&nbsp;&mdash; 53,000 sq ft, 120 fuel positions, competitive prices, legendary clean bathrooms, BBQ brisket sandwiches, kolaches, and beaver nuggets. Your ideal first major stop at ~3&ndash;3.5 hours in.</li>
+        <li><strong>Murphy USA stations</strong> at I-65 Exit 238 (Alabaster)<a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Murphy+USA+I-65+Exit+238+Alabaster+Alabama" target="_blank" rel="noopener"><svg width="9" height="12" viewBox="0 0 9 12" fill="currentColor" aria-hidden="true"><path d="M4.5 0A4.5 4.5 0 0 0 0 4.5C0 7.88 4.5 12 4.5 12S9 7.88 9 4.5A4.5 4.5 0 0 0 4.5 0zm0 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg> Map</a> and Exit 130 (Greenville)<a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Murphy+USA+I-65+Exit+130+Greenville+Alabama" target="_blank" rel="noopener"><svg width="9" height="12" viewBox="0 0 9 12" fill="currentColor" aria-hidden="true"><path d="M4.5 0A4.5 4.5 0 0 0 0 4.5C0 7.88 4.5 12 4.5 12S9 7.88 9 4.5A4.5 4.5 0 0 0 4.5 0zm0 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg> Map</a>&nbsp;&mdash; consistently among the cheapest on the corridor.</li>
         <li><strong>Love's and Pilot/Flying J</strong> are plentiful along the entire I-65 corridor through Tennessee and Alabama.</li>
       </ul>
 
@@ -1022,34 +1047,34 @@ tbody tr:hover { background: var(--accent-teal-soft); }
       <h3>Worth-a-stop attractions along the route</h3>
       <ul>
         <li><strong>Buc-ee's Athens</strong> (mile ~300): Not just a gas station&nbsp;&mdash; it's an experience. BBQ counter, fudge shop, jerky wall, and endless snacks make this a highlight for kids and adults alike.</li>
-        <li><strong>Ave Maria Grotto, Cullman, AL</strong> (I-65 Exit 310): 125 miniature replicas of famous buildings, quirky and unique&nbsp;&mdash; 30 minutes off-highway.</li>
-        <li><strong>Priester's Pecans</strong> (I-65 Exit 142): Candy factory and pecan treats, great for road snacks.</li>
-        <li><strong>DeFuniak Springs, FL</strong> (on US-331): A charming small town with one of only two perfectly round spring-fed lakes in the world&nbsp;&mdash; worth a quick stretch stop.</li>
+        <li><strong>Ave Maria Grotto, Cullman, AL</strong><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Ave+Maria+Grotto+Cullman+Alabama" target="_blank" rel="noopener"><svg width="9" height="12" viewBox="0 0 9 12" fill="currentColor" aria-hidden="true"><path d="M4.5 0A4.5 4.5 0 0 0 0 4.5C0 7.88 4.5 12 4.5 12S9 7.88 9 4.5A4.5 4.5 0 0 0 4.5 0zm0 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg> Map</a> (I-65 Exit 310): 125 miniature replicas of famous buildings, quirky and unique&nbsp;&mdash; 30 minutes off-highway.</li>
+        <li><strong>Priester's Pecans</strong><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Priester%27s+Pecans+Fort+Deposit+Alabama" target="_blank" rel="noopener"><svg width="9" height="12" viewBox="0 0 9 12" fill="currentColor" aria-hidden="true"><path d="M4.5 0A4.5 4.5 0 0 0 0 4.5C0 7.88 4.5 12 4.5 12S9 7.88 9 4.5A4.5 4.5 0 0 0 4.5 0zm0 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg> Map</a> (I-65 Exit 142): Candy factory and pecan treats, great for road snacks.</li>
+        <li><strong>DeFuniak Springs, FL</strong><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=DeFuniak+Springs+Florida" target="_blank" rel="noopener"><svg width="9" height="12" viewBox="0 0 9 12" fill="currentColor" aria-hidden="true"><path d="M4.5 0A4.5 4.5 0 0 0 0 4.5C0 7.88 4.5 12 4.5 12S9 7.88 9 4.5A4.5 4.5 0 0 0 4.5 0zm0 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg> Map</a> (on US-331): A charming small town with one of only two perfectly round spring-fed lakes in the world&nbsp;&mdash; worth a quick stretch stop.</li>
       </ul>
     </div>
   </section>
 
   <!-- ── 3. EVENTS ── -->
   <section class="section" id="events">
-    <div class="section-header" role="button" tabindex="0" aria-expanded="true" aria-controls="events-body">
+    <div class="section-header" role="button" tabindex="0" aria-expanded="false" aria-controls="events-body">
       <h2><span class="section-num">3</span> A free air show headlines event week</h2>
       <svg class="collapse-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
     </div>
-    <div class="section-body" id="events-body">
+    <div class="section-body collapsed" id="events-body">
 
-      <h3>Gulf Coast Salute Air Show&nbsp;&mdash; April 10&ndash;12, 2026 (FREE)</h3>
+      <h3>Gulf Coast Salute Air Show&nbsp;&mdash; April 10&ndash;12, 2026 (FREE) <a class="web-link" href="https://www.gulfcoastsalute.com" target="_blank" rel="noopener"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg> Website</a> <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Russell-Fields+City+Pier+Panama+City+Beach+FL" target="_blank" rel="noopener"><svg width="9" height="12" viewBox="0 0 9 12" fill="currentColor" aria-hidden="true"><path d="M4.5 0A4.5 4.5 0 0 0 0 4.5C0 7.88 4.5 12 4.5 12S9 7.88 9 4.5A4.5 4.5 0 0 0 4.5 0zm0 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg> Map</a></h3>
       <p>This is the headline event of your trip and it's <strong>completely free</strong>. Held at Russell-Fields City Pier, the show features the <strong>USAF Thunderbirds</strong> performing precision aerobatics on Saturday and Sunday at 3:00 PM. Friday April 10 offers practice flights from 10 AM&ndash;4 PM plus an opening ceremony block party from 6&ndash;8 PM where you can meet the pilots.</p>
 
       <div class="callout">
         <strong>New for 2026: STEM Zone</strong>
-        At Aaron Bessant Park, running all three days with hands-on activities&nbsp;&mdash; squishy circuits, magnet games, robots, bottle rockets, a marine life touch tank, and LEGO car builds. Tailor-made for your 8&ndash;12 year olds and teens. Bring sunscreen, hearing protection for younger kids, binoculars, and cameras. Text "PCBAIRSHOW" to 888-777 for updates.
+        At Aaron Bessant Park<a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Aaron+Bessant+Park+Panama+City+Beach+FL" target="_blank" rel="noopener"><svg width="9" height="12" viewBox="0 0 9 12" fill="currentColor" aria-hidden="true"><path d="M4.5 0A4.5 4.5 0 0 0 0 4.5C0 7.88 4.5 12 4.5 12S9 7.88 9 4.5A4.5 4.5 0 0 0 4.5 0zm0 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg> Map</a>, running all three days with hands-on activities&nbsp;&mdash; squishy circuits, magnet games, robots, bottle rockets, a marine life touch tank, and LEGO car builds. Tailor-made for your 8&ndash;12 year olds and teens. Bring sunscreen, hearing protection for younger kids, binoculars, and cameras. Text "PCBAIRSHOW" to 888-777 for updates.
       </div>
 
       <h3>Other events during your dates</h3>
       <ul>
-        <li><strong>Grand Lagoon Waterfront Farmers Market</strong>&nbsp;&mdash; Saturday and Sunday, 8 AM&ndash;1 PM at Captain Anderson's Marina. Local produce, baked goods, crafts, and live music. Free admission.</li>
-        <li><strong>Dave &amp; Buster's Half-Price Wednesday</strong>&nbsp;&mdash; April 8 at Pier Park. Games at 50% off, perfect for a teen/kid evening.</li>
-        <li><strong>Live music nightly</strong> at Tootsie's Orchid Lounge (Pier Park, family-friendly until 8 PM), Schooners, and various Thomas Drive restaurants.</li>
+        <li><strong>Grand Lagoon Waterfront Farmers Market</strong>&nbsp;&mdash; Saturday and Sunday, 8 AM&ndash;1 PM at Captain Anderson's Marina<a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Captain+Anderson%27s+Marina+Panama+City+Beach+FL" target="_blank" rel="noopener"><svg width="9" height="12" viewBox="0 0 9 12" fill="currentColor" aria-hidden="true"><path d="M4.5 0A4.5 4.5 0 0 0 0 4.5C0 7.88 4.5 12 4.5 12S9 7.88 9 4.5A4.5 4.5 0 0 0 4.5 0zm0 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg> Map</a>. Local produce, baked goods, crafts, and live music. Free admission.</li>
+        <li><strong>Dave &amp; Buster's Half-Price Wednesday</strong><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Dave+%26+Buster%27s+Pier+Park+Panama+City+Beach+FL" target="_blank" rel="noopener"><svg width="9" height="12" viewBox="0 0 9 12" fill="currentColor" aria-hidden="true"><path d="M4.5 0A4.5 4.5 0 0 0 0 4.5C0 7.88 4.5 12 4.5 12S9 7.88 9 4.5A4.5 4.5 0 0 0 4.5 0zm0 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg> Map</a>&nbsp;&mdash; April 8 at Pier Park. Games at 50% off, perfect for a teen/kid evening.</li>
+        <li><strong>Live music nightly</strong> at Tootsie's Orchid Lounge<a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Tootsie%27s+Orchid+Lounge+Pier+Park+Panama+City+Beach+FL" target="_blank" rel="noopener"><svg width="9" height="12" viewBox="0 0 9 12" fill="currentColor" aria-hidden="true"><path d="M4.5 0A4.5 4.5 0 0 0 0 4.5C0 7.88 4.5 12 4.5 12S9 7.88 9 4.5A4.5 4.5 0 0 0 4.5 0zm0 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg> Map</a> (Pier Park, family-friendly until 8 PM), Schooners, and various Thomas Drive restaurants.</li>
         <li><strong>Panama City Symphony season finale</strong>&nbsp;&mdash; Saturday April 11, 7:00 PM, if anyone in the group enjoys orchestral music.</li>
       </ul>
 
@@ -1059,27 +1084,27 @@ tbody tr:hover { background: var(--accent-teal-soft); }
 
   <!-- ── 4. FOOD ── -->
   <section class="section" id="food">
-    <div class="section-header" role="button" tabindex="0" aria-expanded="true" aria-controls="food-body">
+    <div class="section-header" role="button" tabindex="0" aria-expanded="false" aria-controls="food-body">
       <h2><span class="section-num">4</span> Where to eat without breaking the budget</h2>
       <svg class="collapse-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
     </div>
-    <div class="section-body" id="food-body">
+    <div class="section-body collapsed" id="food-body">
 
       <p>With $25&ndash;40/person daily covering both food and activities, the winning strategy is <strong>cook breakfast in the condo, pack beach lunches, and eat dinner out 3&ndash;4 nights</strong> while cooking in on the others. This keeps daily food costs around $15&ndash;22/person, leaving $5&ndash;20+ for activities.</p>
 
       <h3>Breakfast spots (for treat-yourself mornings)</h3>
       <div class="spot-card">
-        <h4>Thomas Donut &amp; Snack Shop</h4>
+        <h4>Thomas Donut &amp; Snack Shop <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Thomas+Donut+%26+Snack+Shop+Panama+City+Beach+FL" target="_blank" rel="noopener"><svg width="9" height="12" viewBox="0 0 9 12" fill="currentColor" aria-hidden="true"><path d="M4.5 0A4.5 4.5 0 0 0 0 4.5C0 7.88 4.5 12 4.5 12S9 7.88 9 4.5A4.5 4.5 0 0 0 4.5 0zm0 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg> Map</a></h4>
         <span class="spot-price">$3&ndash;8/person</span>
         <p>The undisputed local legend&nbsp;&mdash; glazed donuts, maple bacon donuts, and breakfast sandwiches. Open since 1971, expect a line that moves fast.</p>
       </div>
       <div class="spot-card">
-        <h4>Andy's Flour Power</h4>
+        <h4>Andy's Flour Power <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Andy%27s+Flour+Power+Panama+City+Beach+FL" target="_blank" rel="noopener"><svg width="9" height="12" viewBox="0 0 9 12" fill="currentColor" aria-hidden="true"><path d="M4.5 0A4.5 4.5 0 0 0 0 4.5C0 7.88 4.5 12 4.5 12S9 7.88 9 4.5A4.5 4.5 0 0 0 4.5 0zm0 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg> Map</a></h4>
         <span class="spot-price">$8&ndash;14/person</span>
         <p>Fresh breakfast with excellent French toast and omelets.</p>
       </div>
       <div class="spot-card">
-        <h4>The Pancakery</h4>
+        <h4>The Pancakery <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=The+Pancakery+Panama+City+Beach+FL" target="_blank" rel="noopener"><svg width="9" height="12" viewBox="0 0 9 12" fill="currentColor" aria-hidden="true"><path d="M4.5 0A4.5 4.5 0 0 0 0 4.5C0 7.88 4.5 12 4.5 12S9 7.88 9 4.5A4.5 4.5 0 0 0 4.5 0zm0 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg> Map</a></h4>
         <span class="spot-price">$8&ndash;14/person</span>
         <p>Gourmet pancakes and Belgian waffles with a kids' menu.</p>
       </div>
@@ -1087,30 +1112,30 @@ tbody tr:hover { background: var(--accent-teal-soft); }
 
       <h3>Best-value lunch and casual dining</h3>
       <ul>
-        <li><strong>Finn's Island Style Grub</strong> (7210 Thomas Dr)&nbsp;&mdash; Fish tacos, burritos, a&ccedil;a&iacute; bowls. Counter service, outdoor picnic tables. <strong>$8&ndash;14/person.</strong> One of the best cheap eats in PCB, rated 4.6 on TripAdvisor.</li>
-        <li><strong>Diego's Burrito Factory</strong>&nbsp;&mdash; Build-your-own burritos and tacos. <strong>$10&ndash;13/person.</strong> Fast-moving line, easy for big groups.</li>
-        <li><strong>Dat Cajun Place</strong> (8501 Thomas Dr)&nbsp;&mdash; Authentic gumbo, po'boys, crawfish, beignets. <strong>$10&ndash;20/person.</strong> Wednesday specials: <strong>$7.99 jambalaya and $2 wines.</strong> Live music 6&ndash;10 PM. Voted "Best of Bay" in three categories.</li>
-        <li><strong>David's New Orleans Style Caf&eacute;</strong>&nbsp;&mdash; Po'boys, muffulettas, beignets, and sno-balls. <strong>$8&ndash;15/person.</strong> Outstanding reviews.</li>
+        <li><strong>Finn's Island Style Grub</strong><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Finn%27s+Island+Style+Grub+7210+Thomas+Drive+Panama+City+Beach+FL" target="_blank" rel="noopener"><svg width="9" height="12" viewBox="0 0 9 12" fill="currentColor" aria-hidden="true"><path d="M4.5 0A4.5 4.5 0 0 0 0 4.5C0 7.88 4.5 12 4.5 12S9 7.88 9 4.5A4.5 4.5 0 0 0 4.5 0zm0 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg> Map</a> (7210 Thomas Dr)&nbsp;&mdash; Fish tacos, burritos, a&ccedil;a&iacute; bowls. Counter service, outdoor picnic tables. <strong>$8&ndash;14/person.</strong> One of the best cheap eats in PCB, rated 4.6 on TripAdvisor.</li>
+        <li><strong>Diego's Burrito Factory</strong><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Diego%27s+Burrito+Factory+Panama+City+Beach+FL" target="_blank" rel="noopener"><svg width="9" height="12" viewBox="0 0 9 12" fill="currentColor" aria-hidden="true"><path d="M4.5 0A4.5 4.5 0 0 0 0 4.5C0 7.88 4.5 12 4.5 12S9 7.88 9 4.5A4.5 4.5 0 0 0 4.5 0zm0 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg> Map</a>&nbsp;&mdash; Build-your-own burritos and tacos. <strong>$10&ndash;13/person.</strong> Fast-moving line, easy for big groups.</li>
+        <li><strong>Dat Cajun Place</strong><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Dat+Cajun+Place+8501+Thomas+Dr+Panama+City+Beach+FL" target="_blank" rel="noopener"><svg width="9" height="12" viewBox="0 0 9 12" fill="currentColor" aria-hidden="true"><path d="M4.5 0A4.5 4.5 0 0 0 0 4.5C0 7.88 4.5 12 4.5 12S9 7.88 9 4.5A4.5 4.5 0 0 0 4.5 0zm0 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg> Map</a> (8501 Thomas Dr)&nbsp;&mdash; Authentic gumbo, po'boys, crawfish, beignets. <strong>$10&ndash;20/person.</strong> Wednesday specials: <strong>$7.99 jambalaya and $2 wines.</strong> Live music 6&ndash;10 PM. Voted "Best of Bay" in three categories.</li>
+        <li><strong>David's New Orleans Style Caf&eacute;</strong><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=David%27s+New+Orleans+Style+Cafe+Panama+City+Beach+FL" target="_blank" rel="noopener"><svg width="9" height="12" viewBox="0 0 9 12" fill="currentColor" aria-hidden="true"><path d="M4.5 0A4.5 4.5 0 0 0 0 4.5C0 7.88 4.5 12 4.5 12S9 7.88 9 4.5A4.5 4.5 0 0 0 4.5 0zm0 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg> Map</a>&nbsp;&mdash; Po'boys, muffulettas, beignets, and sno-balls. <strong>$8&ndash;15/person.</strong> Outstanding reviews.</li>
       </ul>
 
       <h3>Must-try seafood restaurants</h3>
       <div class="spot-card">
-        <h4>Pineapple Willy's</h4>
+        <h4>Pineapple Willy's <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Pineapple+Willy%27s+Panama+City+Beach+FL" target="_blank" rel="noopener"><svg width="9" height="12" viewBox="0 0 9 12" fill="currentColor" aria-hidden="true"><path d="M4.5 0A4.5 4.5 0 0 0 0 4.5C0 7.88 4.5 12 4.5 12S9 7.88 9 4.5A4.5 4.5 0 0 0 4.5 0zm0 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg> Map</a></h4>
         <span class="spot-price">$15&ndash;25/person &middot; Kids $6&ndash;8</span>
         <p>Sits on its own beachfront pier and is a PCB icon. Famous for BBQ ribs, mahi BLT, gator bites, and Key lime pie. Walk-in only&nbsp;&mdash; arrive before 5 PM to minimize waits. Note: 18% gratuity is auto-added for parties of 6+.</p>
       </div>
       <div class="spot-card">
-        <h4>Schooners</h4>
+        <h4>Schooners <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Schooners+5121+Gulf+Dr+Panama+City+Beach+FL" target="_blank" rel="noopener"><svg width="9" height="12" viewBox="0 0 9 12" fill="currentColor" aria-hidden="true"><path d="M4.5 0A4.5 4.5 0 0 0 0 4.5C0 7.88 4.5 12 4.5 12S9 7.88 9 4.5A4.5 4.5 0 0 0 4.5 0zm0 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg> Map</a></h4>
         <span class="spot-price">$15&ndash;25/person</span>
         <p>"The Last Local Beach Club" (5121 Gulf Dr) fires a sunset cannon every evening that kids love. Casual beachfront dining with crab cakes, shrimp and grits, and early bird specials from 4&ndash;6 PM.</p>
       </div>
       <div class="spot-card">
-        <h4>Sharky's Beachfront</h4>
+        <h4>Sharky's Beachfront <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Sharky%27s+Beachfront+Restaurant+Panama+City+Beach+FL" target="_blank" rel="noopener"><svg width="9" height="12" viewBox="0 0 9 12" fill="currentColor" aria-hidden="true"><path d="M4.5 0A4.5 4.5 0 0 0 0 4.5C0 7.88 4.5 12 4.5 12S9 7.88 9 4.5A4.5 4.5 0 0 0 4.5 0zm0 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg> Map</a></h4>
         <span class="spot-price">$15&ndash;25/person</span>
         <p>Has a <strong>ship-shaped playground on the beach</strong>&nbsp;&mdash; a game-changer for keeping kids occupied during waits. Gulf oysters, shrimp tacos, and coconut shrimp. Can seat groups up to 25.</p>
       </div>
       <div class="spot-card">
-        <h4>Captain Anderson's</h4>
+        <h4>Captain Anderson's <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Captain+Anderson%27s+Restaurant+Panama+City+Beach+FL" target="_blank" rel="noopener"><svg width="9" height="12" viewBox="0 0 9 12" fill="currentColor" aria-hidden="true"><path d="M4.5 0A4.5 4.5 0 0 0 0 4.5C0 7.88 4.5 12 4.5 12S9 7.88 9 4.5A4.5 4.5 0 0 0 4.5 0zm0 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg> Map</a></h4>
         <span class="spot-price">$30&ndash;50/person &middot; Kids ~$8</span>
         <p>The iconic splurge dinner&nbsp;&mdash; open since 1967, 725 seats, fresh fish grilled over hardwood coals. Best for one special night. Arrive at the 4:30 PM opening to watch the fishing fleet unload.</p>
       </div>
@@ -1119,7 +1144,7 @@ tbody tr:hover { background: var(--accent-teal-soft); }
       <div class="callout callout-tip">
         <strong>Money savers</strong>
         <ul style="margin-bottom:0">
-          <li><strong>Buy fresh seafood at Shrimp City</strong> (Thomas Dr)&nbsp;&mdash; they'll steam your shrimp with Old Bay for free. Bring it back to the condo for a fraction of restaurant prices.</li>
+          <li><strong>Buy fresh seafood at Shrimp City</strong><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Shrimp+City+Thomas+Drive+Panama+City+Beach+FL" target="_blank" rel="noopener"><svg width="9" height="12" viewBox="0 0 9 12" fill="currentColor" aria-hidden="true"><path d="M4.5 0A4.5 4.5 0 0 0 0 4.5C0 7.88 4.5 12 4.5 12S9 7.88 9 4.5A4.5 4.5 0 0 0 4.5 0zm0 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg> Map</a> (Thomas Dr)&nbsp;&mdash; they'll steam your shrimp with Old Bay for free. Bring it back to the condo for a fraction of restaurant prices.</li>
           <li><strong>Gulf Highlands has grill areas</strong>&nbsp;&mdash; buy burgers, chicken, and hot dogs at Publix and grill out.</li>
           <li><strong>Kids eat cheaper everywhere</strong>&nbsp;&mdash; most kids' meals run $6&ndash;8, so budget around the adult meals.</li>
           <li><strong>Dat Cajun Place Wednesdays</strong> offer the best budget dinner deal of the week.</li>
@@ -1131,54 +1156,54 @@ tbody tr:hover { background: var(--accent-teal-soft); }
 
   <!-- ── 5. ACTIVITIES ── -->
   <section class="section" id="activities">
-    <div class="section-header" role="button" tabindex="0" aria-expanded="true" aria-controls="activities-body">
+    <div class="section-header" role="button" tabindex="0" aria-expanded="false" aria-controls="activities-body">
       <h2><span class="section-num">5</span> Activities: more free fun than you can fit in a week</h2>
       <svg class="collapse-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
     </div>
-    <div class="section-body" id="activities-body">
+    <div class="section-body collapsed" id="activities-body">
 
       <h3>Gulf Highlands' built-in amenities (all free with your stay)</h3>
       <p>Before spending a dime, know that Gulf Highlands includes <strong>11 pools</strong> (5 seasonally heated, 1 Gulf-front), an <strong>18-hole miniature golf course</strong>, tennis and pickleball courts, shuffleboard, a playground, a fitness center, and private beach access with showers. On a budget day, you literally never need to leave the resort.</p>
 
       <h3>The best free and low-cost options</h3>
-      <p><strong>St. Andrews State Park</strong> (4607 State Park Lane) is just minutes east of Gulf Highlands on Thomas Drive and is the crown jewel of the area. At <strong>$8 per vehicle</strong> (fitting up to 8 people), this is extraordinary value. The park offers 1.5 miles of pristine white sand beach, <strong>excellent beginner snorkeling at the rock jetties</strong>, two hiking trails (including Gator Lake Trail where you may spot alligators), two fishing piers, WWII-era gun mounts, and incredible wildlife viewing. Budget half a day minimum.</p>
-      <p><strong>Conservation Park</strong> is completely <strong>free</strong>&nbsp;&mdash; 2,900 acres with 24+ miles of trails ranging from an easy 1.8-mile loop to 11+ mile routes. Boardwalks through cypress strands, eagles, alligators, and wildflowers. A perfect free morning activity.</p>
-      <p><strong>Pier fishing</strong> at M.B. Miller County Pier costs just <strong>$6/day</strong> (includes your daily fishing license) with rod rental at ~$10. The Russell-Fields Pier charges $7/day. Both extend 1,500 feet into the Gulf. Children 6 and under are free.</p>
+      <p><strong>St. Andrews State Park</strong><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=St.+Andrews+State+Park+4607+State+Park+Lane+Panama+City+Beach+FL" target="_blank" rel="noopener"><svg width="9" height="12" viewBox="0 0 9 12" fill="currentColor" aria-hidden="true"><path d="M4.5 0A4.5 4.5 0 0 0 0 4.5C0 7.88 4.5 12 4.5 12S9 7.88 9 4.5A4.5 4.5 0 0 0 4.5 0zm0 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg> Map</a><a class="web-link" href="https://www.floridastateparks.org/parks-and-trails/st-andrews-state-park" target="_blank" rel="noopener"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg> Website</a> (4607 State Park Lane) is just minutes east of Gulf Highlands on Thomas Drive and is the crown jewel of the area. At <strong>$8 per vehicle</strong> (fitting up to 8 people), this is extraordinary value. The park offers 1.5 miles of pristine white sand beach, <strong>excellent beginner snorkeling at the rock jetties</strong>, two hiking trails (including Gator Lake Trail where you may spot alligators), two fishing piers, WWII-era gun mounts, and incredible wildlife viewing. Budget half a day minimum.</p>
+      <p><strong>Conservation Park</strong><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Conservation+Park+Panama+City+Beach+FL" target="_blank" rel="noopener"><svg width="9" height="12" viewBox="0 0 9 12" fill="currentColor" aria-hidden="true"><path d="M4.5 0A4.5 4.5 0 0 0 0 4.5C0 7.88 4.5 12 4.5 12S9 7.88 9 4.5A4.5 4.5 0 0 0 4.5 0zm0 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg> Map</a><a class="web-link" href="https://www.baycountyfl.gov/386/Conservation-Park" target="_blank" rel="noopener"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1 4-10z"/></svg> Website</a> is completely <strong>free</strong>&nbsp;&mdash; 2,900 acres with 24+ miles of trails ranging from an easy 1.8-mile loop to 11+ mile routes. Boardwalks through cypress strands, eagles, alligators, and wildflowers. A perfect free morning activity.</p>
+      <p><strong>Pier fishing</strong> at M.B. Miller County Pier<a class="map-link" href="https://www.google.com/maps/search/?api=1&query=M.B.+Miller+County+Pier+Panama+City+Beach+FL" target="_blank" rel="noopener"><svg width="9" height="12" viewBox="0 0 9 12" fill="currentColor" aria-hidden="true"><path d="M4.5 0A4.5 4.5 0 0 0 0 4.5C0 7.88 4.5 12 4.5 12S9 7.88 9 4.5A4.5 4.5 0 0 0 4.5 0zm0 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg> Map</a> costs just <strong>$6/day</strong> (includes your daily fishing license) with rod rental at ~$10. The Russell-Fields Pier<a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Russell-Fields+City+Pier+Panama+City+Beach+FL" target="_blank" rel="noopener"><svg width="9" height="12" viewBox="0 0 9 12" fill="currentColor" aria-hidden="true"><path d="M4.5 0A4.5 4.5 0 0 0 0 4.5C0 7.88 4.5 12 4.5 12S9 7.88 9 4.5A4.5 4.5 0 0 0 4.5 0zm0 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg> Map</a> charges $7/day. Both extend 1,500 feet into the Gulf. Children 6 and under are free.</p>
 
       <h3>Top paid attractions worth the money</h3>
       <div class="table-wrap">
         <table>
           <thead><tr><th>Activity</th><th>Cost/Person</th><th>Best For</th><th>Notes</th></tr></thead>
           <tbody>
-            <tr><td><strong>Shell Island shuttle</strong></td><td>$18&ndash;25</td><td>All ages</td><td>Undeveloped barrier island, snorkeling, shelling. Bring food/water&nbsp;&mdash; no facilities. Call 850-233-0504 for spring schedule.</td></tr>
-            <tr><td><strong>Dolphin cruise (Capt. Anderson III)</strong></td><td><strong>$25</strong></td><td>All ages</td><td>Best budget cruise option. For 9 people = $225 total.</td></tr>
-            <tr><td><strong>Go-karts (Hidden Lagoon)</strong></td><td>$11&ndash;15</td><td>8+</td><td>Longest track on the Emerald Coast (~1 mile). Two mini golf courses also on-site.</td></tr>
-            <tr><td><strong>SkyWheel + Mini Golf combo</strong></td><td>~$30</td><td>All ages</td><td>200-ft observation wheel at Pier Park plus 18 holes.</td></tr>
-            <tr><td><strong>WonderWorks</strong></td><td>$29&ndash;35</td><td>8&ndash;17</td><td>100+ interactive STEM exhibits, ropes course, laser tag. Best rainy day option. Look for Tripster discounts.</td></tr>
-            <tr><td><strong>Banana boat ride</strong></td><td>$30&ndash;40</td><td>8+</td><td>Fast, bouncy, guaranteed screaming. Adventures at Sea operates them for up to 6 riders per boat.</td></tr>
-            <tr><td><strong>Coconut Creek mini golf + Gran Maze</strong></td><td>$15&ndash;25</td><td>All ages</td><td>Two unique courses plus America's first Gran Maze. Kids 5 and under free.</td></tr>
+            <tr><td><strong>Shell Island shuttle</strong><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Shell+Island+Panama+City+Beach+FL" target="_blank" rel="noopener"><svg width="9" height="12" viewBox="0 0 9 12" fill="currentColor" aria-hidden="true"><path d="M4.5 0A4.5 4.5 0 0 0 0 4.5C0 7.88 4.5 12 4.5 12S9 7.88 9 4.5A4.5 4.5 0 0 0 4.5 0zm0 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg> Map</a></td><td>$18&ndash;25</td><td>All ages</td><td>Undeveloped barrier island, snorkeling, shelling. Bring food/water&nbsp;&mdash; no facilities. Call 850-233-0504 for spring schedule.</td></tr>
+            <tr><td><strong>Dolphin cruise (Capt. Anderson III)</strong><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Captain+Anderson%27s+Marina+Panama+City+Beach+FL" target="_blank" rel="noopener"><svg width="9" height="12" viewBox="0 0 9 12" fill="currentColor" aria-hidden="true"><path d="M4.5 0A4.5 4.5 0 0 0 0 4.5C0 7.88 4.5 12 4.5 12S9 7.88 9 4.5A4.5 4.5 0 0 0 4.5 0zm0 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg> Map</a></td><td><strong>$25</strong></td><td>All ages</td><td>Best budget cruise option. For 9 people = $225 total.</td></tr>
+            <tr><td><strong>Go-karts (Hidden Lagoon)</strong><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Hidden+Lagoon+Putt+Putt+Go+Karts+Panama+City+Beach+FL" target="_blank" rel="noopener"><svg width="9" height="12" viewBox="0 0 9 12" fill="currentColor" aria-hidden="true"><path d="M4.5 0A4.5 4.5 0 0 0 0 4.5C0 7.88 4.5 12 4.5 12S9 7.88 9 4.5A4.5 4.5 0 0 0 4.5 0zm0 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg> Map</a></td><td>$11&ndash;15</td><td>8+</td><td>Longest track on the Emerald Coast (~1 mile). Two mini golf courses also on-site.</td></tr>
+            <tr><td><strong>SkyWheel + Mini Golf combo</strong><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=SkyWheel+Pier+Park+Panama+City+Beach+FL" target="_blank" rel="noopener"><svg width="9" height="12" viewBox="0 0 9 12" fill="currentColor" aria-hidden="true"><path d="M4.5 0A4.5 4.5 0 0 0 0 4.5C0 7.88 4.5 12 4.5 12S9 7.88 9 4.5A4.5 4.5 0 0 0 4.5 0zm0 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg> Map</a></td><td>~$30</td><td>All ages</td><td>200-ft observation wheel at Pier Park plus 18 holes.</td></tr>
+            <tr><td><strong>WonderWorks</strong><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=WonderWorks+Panama+City+Beach+FL" target="_blank" rel="noopener"><svg width="9" height="12" viewBox="0 0 9 12" fill="currentColor" aria-hidden="true"><path d="M4.5 0A4.5 4.5 0 0 0 0 4.5C0 7.88 4.5 12 4.5 12S9 7.88 9 4.5A4.5 4.5 0 0 0 4.5 0zm0 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg> Map</a><a class="web-link" href="https://www.wonderworksonline.com/panama-city-beach/" target="_blank" rel="noopener"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1 4-10z"/></svg> Website</a></td><td>$29&ndash;35</td><td>8&ndash;17</td><td>100+ interactive STEM exhibits, ropes course, laser tag. Best rainy day option. Look for Tripster discounts.</td></tr>
+            <tr><td><strong>Banana boat ride</strong><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Adventures+at+Sea+Panama+City+Beach+FL" target="_blank" rel="noopener"><svg width="9" height="12" viewBox="0 0 9 12" fill="currentColor" aria-hidden="true"><path d="M4.5 0A4.5 4.5 0 0 0 0 4.5C0 7.88 4.5 12 4.5 12S9 7.88 9 4.5A4.5 4.5 0 0 0 4.5 0zm0 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg> Map</a></td><td>$30&ndash;40</td><td>8+</td><td>Fast, bouncy, guaranteed screaming. Adventures at Sea operates them for up to 6 riders per boat.</td></tr>
+            <tr><td><strong>Coconut Creek mini golf + Gran Maze</strong><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Coconut+Creek+Family+Fun+Park+Panama+City+Beach+FL" target="_blank" rel="noopener"><svg width="9" height="12" viewBox="0 0 9 12" fill="currentColor" aria-hidden="true"><path d="M4.5 0A4.5 4.5 0 0 0 0 4.5C0 7.88 4.5 12 4.5 12S9 7.88 9 4.5A4.5 4.5 0 0 0 4.5 0zm0 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg> Map</a></td><td>$15&ndash;25</td><td>All ages</td><td>Two unique courses plus America's first Gran Maze. Kids 5 and under free.</td></tr>
           </tbody>
         </table>
       </div>
 
       <h3>Rainy day backup plan</h3>
-      <p><strong>WonderWorks</strong> is the top rainy day pick&nbsp;&mdash; 3&ndash;4 hours of indoor entertainment with a hurricane simulator, astronaut gyroscope, bubble lab, glow-in-the-dark ropes course, and laser tag. <strong>Rock'It Lanes</strong> (513 Richard Jackson Blvd, near Gulf Highlands) combines bowling, roller skating, a mega arcade, and pool tables under one roof&nbsp;&mdash; perfect for a mixed-age group. <strong>Dave &amp; Buster's</strong> at Pier Park offers arcade games and food (remember: half-price games on Wednesday April 8). <strong>Rainforest Blacklight Golf &amp; Arcade</strong> provides glow-in-the-dark indoor mini golf at ~$10&ndash;15/person.</p>
+      <p><strong>WonderWorks</strong> is the top rainy day pick&nbsp;&mdash; 3&ndash;4 hours of indoor entertainment with a hurricane simulator, astronaut gyroscope, bubble lab, glow-in-the-dark ropes course, and laser tag. <strong>Rock'It Lanes</strong><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Rock%27It+Lanes+513+Richard+Jackson+Blvd+Panama+City+Beach+FL" target="_blank" rel="noopener"><svg width="9" height="12" viewBox="0 0 9 12" fill="currentColor" aria-hidden="true"><path d="M4.5 0A4.5 4.5 0 0 0 0 4.5C0 7.88 4.5 12 4.5 12S9 7.88 9 4.5A4.5 4.5 0 0 0 4.5 0zm0 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg> Map</a> (513 Richard Jackson Blvd, near Gulf Highlands) combines bowling, roller skating, a mega arcade, and pool tables under one roof&nbsp;&mdash; perfect for a mixed-age group. <strong>Dave &amp; Buster's</strong><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Dave+%26+Buster%27s+Pier+Park+Panama+City+Beach+FL" target="_blank" rel="noopener"><svg width="9" height="12" viewBox="0 0 9 12" fill="currentColor" aria-hidden="true"><path d="M4.5 0A4.5 4.5 0 0 0 0 4.5C0 7.88 4.5 12 4.5 12S9 7.88 9 4.5A4.5 4.5 0 0 0 4.5 0zm0 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg> Map</a> at Pier Park offers arcade games and food (remember: half-price games on Wednesday April 8). <strong>Rainforest Blacklight Golf &amp; Arcade</strong><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Rainforest+Blacklight+Golf+Arcade+Panama+City+Beach+FL" target="_blank" rel="noopener"><svg width="9" height="12" viewBox="0 0 9 12" fill="currentColor" aria-hidden="true"><path d="M4.5 0A4.5 4.5 0 0 0 0 4.5C0 7.88 4.5 12 4.5 12S9 7.88 9 4.5A4.5 4.5 0 0 0 4.5 0zm0 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg> Map</a> provides glow-in-the-dark indoor mini golf at ~$10&ndash;15/person.</p>
 
       <h3>What teens won't think is "lame"</h3>
       <p>Shell Island feels like an adventure, not a family activity. The snorkeling at St. Andrews jetties is genuinely cool. Go-kart racing at Race City's PCB 500 track has real speed. WonderWorks' ropes course and laser tag appeal to competitive teens. Parasailing ($79&ndash;99/person) and jet ski rentals ($125/hour for 2 riders, must be 16+ to drive) are premium thrills worth considering as a group splurge. The Air Show Thunderbirds on April 10&ndash;11 will impress anyone regardless of age.</p>
 
       <h3>Day trip: Seaside and Highway 30A (~45 minutes east)</h3>
-      <p>The pastel-cottage town of <strong>Seaside</strong>&nbsp;&mdash; the filming location for <em>The Truman Show</em>&nbsp;&mdash; is free to explore and about 30 miles east on Highway 30A. Walk by Truman's house at 31 Natchez Street, browse Modica Market (the film's grocery store, still operating), and grab lunch from the Airstream food truck row. The neighboring communities of Rosemary Beach and Alys Beach offer stunning architecture and beautiful beaches. Budget $5&ndash;15/person for food plus shared gas.</p>
+      <p>The pastel-cottage town of <strong>Seaside</strong><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Seaside+Florida+Highway+30A" target="_blank" rel="noopener"><svg width="9" height="12" viewBox="0 0 9 12" fill="currentColor" aria-hidden="true"><path d="M4.5 0A4.5 4.5 0 0 0 0 4.5C0 7.88 4.5 12 4.5 12S9 7.88 9 4.5A4.5 4.5 0 0 0 4.5 0zm0 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg> Map</a>&nbsp;&mdash; the filming location for <em>The Truman Show</em>&nbsp;&mdash; is free to explore and about 30 miles east on Highway 30A. Walk by Truman's house at 31 Natchez Street, browse Modica Market (the film's grocery store, still operating), and grab lunch from the Airstream food truck row. The neighboring communities of Rosemary Beach<a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Rosemary+Beach+Florida+30A" target="_blank" rel="noopener"><svg width="9" height="12" viewBox="0 0 9 12" fill="currentColor" aria-hidden="true"><path d="M4.5 0A4.5 4.5 0 0 0 0 4.5C0 7.88 4.5 12 4.5 12S9 7.88 9 4.5A4.5 4.5 0 0 0 4.5 0zm0 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg> Map</a> and Alys Beach<a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Alys+Beach+Florida+30A" target="_blank" rel="noopener"><svg width="9" height="12" viewBox="0 0 9 12" fill="currentColor" aria-hidden="true"><path d="M4.5 0A4.5 4.5 0 0 0 0 4.5C0 7.88 4.5 12 4.5 12S9 7.88 9 4.5A4.5 4.5 0 0 0 4.5 0zm0 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg> Map</a> offer stunning architecture and beautiful beaches. Budget $5&ndash;15/person for food plus shared gas.</p>
     </div>
   </section>
 
   <!-- ── 6. PACKING ── -->
   <section class="section" id="packing">
-    <div class="section-header" role="button" tabindex="0" aria-expanded="true" aria-controls="packing-body">
+    <div class="section-header" role="button" tabindex="0" aria-expanded="false" aria-controls="packing-body">
       <h2><span class="section-num">6</span> The packing list: what people always forget</h2>
       <svg class="collapse-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
     </div>
-    <div class="section-body" id="packing-body">
+    <div class="section-body collapsed" id="packing-body">
 
       <div class="checklist-progress" id="packing-progress">
         <span id="packing-count">0 / 22 packed</span>
@@ -1227,11 +1252,11 @@ tbody tr:hover { background: var(--accent-teal-soft); }
 
   <!-- ── 7. COSTS ── -->
   <section class="section" id="costs">
-    <div class="section-header" role="button" tabindex="0" aria-expanded="true" aria-controls="costs-body">
+    <div class="section-header" role="button" tabindex="0" aria-expanded="false" aria-controls="costs-body">
       <h2><span class="section-num">7</span> Full cost breakdown for 9 people, 5 nights</h2>
       <svg class="collapse-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
     </div>
-    <div class="section-body" id="costs-body">
+    <div class="section-body collapsed" id="costs-body">
 
       <div class="table-wrap">
         <table>
@@ -1257,7 +1282,7 @@ tbody tr:hover { background: var(--accent-teal-soft); }
         <ul style="margin-bottom:0">
           <li>Cook every breakfast in the condo ($2&ndash;3/person vs. $8&ndash;15 eating out).</li>
           <li>Buy a case of water and beach snacks at Walmart on arrival day instead of buying individually all week.</li>
-          <li>Purchase fresh shrimp at Shrimp City on Thomas Drive and have it steamed free&nbsp;&mdash; a seafood feast for a fraction of restaurant cost.</li>
+          <li>Purchase fresh shrimp at Shrimp City<a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Shrimp+City+Thomas+Drive+Panama+City+Beach+FL" target="_blank" rel="noopener"><svg width="9" height="12" viewBox="0 0 9 12" fill="currentColor" aria-hidden="true"><path d="M4.5 0A4.5 4.5 0 0 0 0 4.5C0 7.88 4.5 12 4.5 12S9 7.88 9 4.5A4.5 4.5 0 0 0 4.5 0zm0 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg> Map</a> on Thomas Drive and have it steamed free&nbsp;&mdash; a seafood feast for a fraction of restaurant cost.</li>
           <li>Check visitpanamacitybeach.com/pcb-perks/ for the official PCB discount program.</li>
           <li>Search Tripster and Groupon for WonderWorks and Ripley's discounts before buying at the door.</li>
         </ul>
@@ -1267,11 +1292,11 @@ tbody tr:hover { background: var(--accent-teal-soft); }
 
   <!-- ── 8. SAFETY ── -->
   <section class="section" id="safety">
-    <div class="section-header" role="button" tabindex="0" aria-expanded="true" aria-controls="safety-body">
+    <div class="section-header" role="button" tabindex="0" aria-expanded="false" aria-controls="safety-body">
       <h2><span class="section-num">8</span> Safety, tides, groceries, and local essentials</h2>
       <svg class="collapse-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
     </div>
-    <div class="section-body" id="safety-body">
+    <div class="section-body collapsed" id="safety-body">
 
       <h3>Beach flag system&nbsp;&mdash; teach everyone before day one</h3>
       <div class="table-wrap">
@@ -1305,15 +1330,15 @@ tbody tr:hover { background: var(--accent-teal-soft); }
       <h3>Grocery stores near Gulf Highlands</h3>
       <p>Gulf Highlands sits on Thomas Drive on the east end of PCB. Your nearest grocery options:</p>
       <ul>
-        <li><strong>Publix</strong> (Magnolia Plaza, 2419 Thomas Dr)&nbsp;&mdash; ~1&ndash;2 miles. Best quality meat and produce. Open 7 AM&ndash;9 PM.</li>
-        <li><strong>Winn-Dixie</strong> (Thomas Dr near Publix)&nbsp;&mdash; ~1&ndash;2 miles. Slightly cheaper.</li>
-        <li><strong>Walmart Supercenter</strong> (10270 Front Beach Rd at Thomas Dr)&nbsp;&mdash; ~2&ndash;3 miles. Best prices and largest selection. <strong>Go early on a weekday</strong>&nbsp;&mdash; weekends are a zoo.</li>
-        <li><strong>Shrimp City</strong> (Thomas Dr)&nbsp;&mdash; Fresh local seafood, will steam purchases free with Old Bay seasoning.</li>
-        <li><strong>Dollar General</strong> (multiple Thomas Dr locations)&nbsp;&mdash; Good for paper goods, snacks, and cleaning supplies at low prices.</li>
+        <li><strong>Publix</strong><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Publix+2419+Thomas+Drive+Panama+City+Beach+FL" target="_blank" rel="noopener"><svg width="9" height="12" viewBox="0 0 9 12" fill="currentColor" aria-hidden="true"><path d="M4.5 0A4.5 4.5 0 0 0 0 4.5C0 7.88 4.5 12 4.5 12S9 7.88 9 4.5A4.5 4.5 0 0 0 4.5 0zm0 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg> Map</a> (Magnolia Plaza, 2419 Thomas Dr)&nbsp;&mdash; ~1&ndash;2 miles. Best quality meat and produce. Open 7 AM&ndash;9 PM.</li>
+        <li><strong>Winn-Dixie</strong><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Winn-Dixie+Thomas+Drive+Panama+City+Beach+FL" target="_blank" rel="noopener"><svg width="9" height="12" viewBox="0 0 9 12" fill="currentColor" aria-hidden="true"><path d="M4.5 0A4.5 4.5 0 0 0 0 4.5C0 7.88 4.5 12 4.5 12S9 7.88 9 4.5A4.5 4.5 0 0 0 4.5 0zm0 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg> Map</a> (Thomas Dr near Publix)&nbsp;&mdash; ~1&ndash;2 miles. Slightly cheaper.</li>
+        <li><strong>Walmart Supercenter</strong><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Walmart+Supercenter+10270+Front+Beach+Road+Panama+City+Beach+FL" target="_blank" rel="noopener"><svg width="9" height="12" viewBox="0 0 9 12" fill="currentColor" aria-hidden="true"><path d="M4.5 0A4.5 4.5 0 0 0 0 4.5C0 7.88 4.5 12 4.5 12S9 7.88 9 4.5A4.5 4.5 0 0 0 4.5 0zm0 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg> Map</a> (10270 Front Beach Rd at Thomas Dr)&nbsp;&mdash; ~2&ndash;3 miles. Best prices and largest selection. <strong>Go early on a weekday</strong>&nbsp;&mdash; weekends are a zoo.</li>
+        <li><strong>Shrimp City</strong><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Shrimp+City+Thomas+Drive+Panama+City+Beach+FL" target="_blank" rel="noopener"><svg width="9" height="12" viewBox="0 0 9 12" fill="currentColor" aria-hidden="true"><path d="M4.5 0A4.5 4.5 0 0 0 0 4.5C0 7.88 4.5 12 4.5 12S9 7.88 9 4.5A4.5 4.5 0 0 0 4.5 0zm0 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg> Map</a> (Thomas Dr)&nbsp;&mdash; Fresh local seafood, will steam purchases free with Old Bay seasoning.</li>
+        <li><strong>Dollar General</strong><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Dollar+General+Thomas+Drive+Panama+City+Beach+FL" target="_blank" rel="noopener"><svg width="9" height="12" viewBox="0 0 9 12" fill="currentColor" aria-hidden="true"><path d="M4.5 0A4.5 4.5 0 0 0 0 4.5C0 7.88 4.5 12 4.5 12S9 7.88 9 4.5A4.5 4.5 0 0 0 4.5 0zm0 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg> Map</a> (multiple Thomas Dr locations)&nbsp;&mdash; Good for paper goods, snacks, and cleaning supplies at low prices.</li>
       </ul>
 
       <h3>Medical facilities</h3>
-      <p><strong>Emerald Coast Urgent Care</strong> at 2704 Thomas Drive is less than 2 miles from Gulf Highlands&nbsp;&mdash; open 7 days/week, walk-in. For emergencies, <strong>Bay Medical Center</strong> in Panama City (12 miles) is a Level II Trauma Center.</p>
+      <p><strong>Emerald Coast Urgent Care</strong><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Emerald+Coast+Urgent+Care+2704+Thomas+Drive+Panama+City+Beach+FL" target="_blank" rel="noopener"><svg width="9" height="12" viewBox="0 0 9 12" fill="currentColor" aria-hidden="true"><path d="M4.5 0A4.5 4.5 0 0 0 0 4.5C0 7.88 4.5 12 4.5 12S9 7.88 9 4.5A4.5 4.5 0 0 0 4.5 0zm0 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg> Map</a> at 2704 Thomas Drive is less than 2 miles from Gulf Highlands&nbsp;&mdash; open 7 days/week, walk-in. For emergencies, <strong>Bay Medical Center</strong><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Bay+Medical+Center+Panama+City+Florida" target="_blank" rel="noopener"><svg width="9" height="12" viewBox="0 0 9 12" fill="currentColor" aria-hidden="true"><path d="M4.5 0A4.5 4.5 0 0 0 0 4.5C0 7.88 4.5 12 4.5 12S9 7.88 9 4.5A4.5 4.5 0 0 0 4.5 0zm0 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg> Map</a> in Panama City (12 miles) is a Level II Trauma Center.</p>
 
       <h3>Quick-reference local tips</h3>
       <ul>
@@ -1328,11 +1353,11 @@ tbody tr:hover { background: var(--accent-teal-soft); }
 
   <!-- ── ITINERARY ── -->
   <section class="section" id="itinerary">
-    <div class="section-header" role="button" tabindex="0" aria-expanded="true" aria-controls="itinerary-body">
+    <div class="section-header" role="button" tabindex="0" aria-expanded="false" aria-controls="itinerary-body">
       <h2><span class="section-num" style="width:auto;border-radius:var(--radius-sm);padding:0 0.5em;">Day-by-Day</span> Suggested itinerary</h2>
       <svg class="collapse-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
     </div>
-    <div class="section-body" id="itinerary-body">
+    <div class="section-body collapsed" id="itinerary-body">
       <div class="day-grid">
 
         <div class="day-card">
