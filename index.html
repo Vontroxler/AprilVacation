@@ -1445,6 +1445,16 @@ tbody tr:hover { background: var(--accent-teal-soft); }
     a.addEventListener('click', function() {
       navLinks.classList.remove('open');
       toggle.setAttribute('aria-expanded', 'false');
+      var targetId = this.getAttribute('href').slice(1);
+      var section = document.getElementById(targetId);
+      if (section) {
+        var header = section.querySelector('.section-header');
+        var body = section.querySelector('.section-body');
+        if (header && body && body.classList.contains('collapsed')) {
+          body.classList.remove('collapsed');
+          header.setAttribute('aria-expanded', 'true');
+        }
+      }
     });
   });
 
