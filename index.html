@@ -26,7 +26,7 @@
   --bg-table-header: #e3eff6;
   --bg-table-alt: #f0ece3;
   --bg-callout: #eef6f4;
-  --bg-hero: linear-gradient(175deg, #0d2137 0%, #1a4a6e 40%, #2d8a9e 70%, #7ec4b8 90%, #f6f1e7 100%);
+  --bg-hero: linear-gradient(175deg, #0d2137 0%, #1a4a6e 40%, #2d8a9e 70%, #258a78 88%, #1d7060 100%);
   --bg-hero-pattern: radial-gradient(ellipse at 30% 80%, rgba(126, 196, 184, 0.15) 0%, transparent 60%);
 
   --text-primary: #2c2417;
@@ -910,10 +910,13 @@ tbody tr:hover { background: var(--accent-teal-soft); }
 </style>
 <noscript>
 <style>
+  /* No-JS fallback: expand all sections so content is readable */
   .section-body.collapsed { max-height: none !important; opacity: 1 !important; padding: revert !important; }
   .collapse-icon { display: none !important; }
+  /* Hide the toggle button (non-functional without JS); nav links are omitted
+     since users can scroll — forcing display:flex on the absolutely-positioned
+     mobile dropdown would render it as a permanent overlay. */
   .nav-toggle { display: none !important; }
-  .nav-links { display: flex !important; flex-wrap: wrap; }
 </style>
 </noscript>
 </head>
