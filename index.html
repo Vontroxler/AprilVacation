@@ -51,7 +51,7 @@
   --font-mono: 'Menlo', 'Consolas', 'DejaVu Sans Mono', monospace;
 
   --nav-height: 52px;
-  --content-width: 820px;
+  --content-width: min(1100px, 90vw);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -175,6 +175,7 @@ li strong:first-child { color: var(--accent-coral); }
   position: relative;
   overflow: hidden;
   padding: clamp(3rem, 10vw, 6rem) 1.5rem clamp(2.5rem, 8vw, 4.5rem);
+  margin-top: var(--nav-height);
 }
 
 .hero::before {
@@ -195,7 +196,7 @@ li strong:first-child { color: var(--accent-coral); }
 }
 
 .hero-inner {
-  max-width: var(--content-width);
+  max-width: min(800px, 90vw);
   margin: 0 auto;
   position: relative;
   z-index: 1;
@@ -288,8 +289,10 @@ li strong:first-child { color: var(--accent-coral); }
 
 /* ── Navigation ── */
 .nav {
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
   z-index: 100;
   background: var(--bg-nav);
   backdrop-filter: blur(12px);
@@ -304,7 +307,7 @@ li strong:first-child { color: var(--accent-coral); }
 .nav.scrolled { box-shadow: var(--shadow-md); }
 
 .nav-inner {
-  max-width: calc(var(--content-width) + 3rem);
+  max-width: calc(var(--content-width) + 2rem);
   margin: 0 auto;
   padding: 0 1.5rem;
   width: 100%;
@@ -418,7 +421,7 @@ li strong:first-child { color: var(--accent-coral); }
 .content {
   max-width: var(--content-width);
   margin: 0 auto;
-  padding: 0 1.5rem 4rem;
+  padding: 0 2rem 4rem;
 }
 
 .section {
@@ -867,33 +870,6 @@ tbody tr:hover { background: var(--accent-teal-soft); }
 </head>
 <body>
 
-<!-- ══════════ HERO ══════════ -->
-<header class="hero">
-  <div class="hero-inner">
-    <div class="hero-eyebrow">Group Trip Planner</div>
-    <h1>Panama City Beach</h1>
-    <p class="hero-lead"><strong>Your group of 9+ is heading to Gulf Highlands at the ideal time.</strong> Early April sits in a sweet spot&nbsp;&mdash; spring break crowds thin out, temperatures hover in the comfortable mid-70s, and a free air show featuring the USAF Thunderbirds lands on your final two days.</p>
-    <div class="hero-stats">
-      <div class="hero-stat">
-        <span class="hero-stat-value">April 6&ndash;11</span>
-        <span class="hero-stat-label">2026</span>
-      </div>
-      <div class="hero-stat">
-        <span class="hero-stat-value">9+</span>
-        <span class="hero-stat-label">Travelers</span>
-      </div>
-      <div class="hero-stat">
-        <span class="hero-stat-value">600 mi</span>
-        <span class="hero-stat-label">From Paducah</span>
-      </div>
-      <div class="hero-stat">
-        <span class="hero-stat-value">$26&ndash;43</span>
-        <span class="hero-stat-label">Per Person / Day</span>
-      </div>
-    </div>
-  </div>
-</header>
-
 <!-- ══════════ NAV ══════════ -->
 <nav class="nav" id="nav" aria-label="Table of Contents">
   <div class="nav-inner">
@@ -914,6 +890,33 @@ tbody tr:hover { background: var(--accent-teal-soft); }
     </ul>
   </div>
 </nav>
+
+<!-- ══════════ HERO ══════════ -->
+<header class="hero">
+  <div class="hero-inner">
+    <div class="hero-eyebrow">Group Trip Planner</div>
+    <h1>Panama City Beach</h1>
+    <p class="hero-lead"><strong>Your group of 9+ is heading to Gulf Highlands at the ideal time.</strong> Early April sits in a sweet spot&nbsp;&mdash; spring break crowds thin out, temperatures hover in the comfortable mid-70s, and a free air show featuring the USAF Thunderbirds lands on your final two days.</p>
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <span class="hero-stat-value">April 6&ndash;11</span>
+        <span class="hero-stat-label">2026</span>
+      </div>
+      <div class="hero-stat">
+        <span class="hero-stat-value">9+</span>
+        <span class="hero-stat-label">Travelers</span>
+      </div>
+      <div class="hero-stat">
+        <span class="hero-stat-value">600 mi</span>
+        <span class="hero-stat-label">From Paducah</span>
+      </div>
+      <div class="hero-stat">
+        <span class="hero-stat-value">$22&ndash;38</span>
+        <span class="hero-stat-label">Per Person / Day</span>
+      </div>
+    </div>
+  </div>
+</header>
 
 <!-- ══════════ CONTENT ══════════ -->
 <main class="content">
@@ -1000,7 +1003,7 @@ tbody tr:hover { background: var(--accent-teal-soft); }
 
       <div class="callout callout-warn">
         <strong>Fill up before entering Florida</strong>
-        Alabama and Tennessee are consistently $0.30+/gallon cheaper. For two vehicles averaging 22 MPG over a 1,200-mile round trip, expect <strong>$360&ndash;$450 total gas cost</strong>. Use the GasBuddy app for real-time prices along the route.
+        Alabama and Tennessee are consistently $0.30+/gallon cheaper. For one vehicle averaging 22 MPG over a 1,200-mile round trip (~55 gallons), expect <strong>$180&ndash;$225 total gas cost</strong>. Use the GasBuddy app for real-time prices along the route.
       </div>
 
       <h3>Key fuel stops</h3>
@@ -1234,19 +1237,19 @@ tbody tr:hover { background: var(--accent-teal-soft); }
         <table>
           <thead><tr><th>Category</th><th>Low Estimate</th><th>High Estimate</th><th>Notes</th></tr></thead>
           <tbody>
-            <tr><td><strong>Gas (2 vehicles, round trip)</strong></td><td>$360</td><td>$450</td><td>Fill up in AL/TN, avoid FL prices</td></tr>
+            <tr><td><strong>Gas (1 vehicle, round trip)</strong></td><td>$180</td><td>$225</td><td>Fill up in AL/TN, avoid FL prices</td></tr>
             <tr><td><strong>Groceries (breakfasts, lunches, 2 cook-in dinners)</strong></td><td>$250</td><td>$400</td><td>Walmart for bulk, Publix for quality</td></tr>
             <tr><td><strong>Dining out (3&ndash;4 group dinners)</strong></td><td>$300</td><td>$600</td><td>Mix of $15/person casual and one $30+ splurge</td></tr>
             <tr><td><strong>Activities (shared among group)</strong></td><td>$200</td><td>$500</td><td>Heavy use of free options + 2&ndash;3 paid activities</td></tr>
             <tr><td><strong>Beach/misc supplies</strong></td><td>$50</td><td>$100</td><td>Sunscreen refills, bait, snacks, ice</td></tr>
-            <tr class="row-total"><td><strong>TOTAL (excluding lodging)</strong></td><td><strong>$1,160</strong></td><td><strong>$1,950</strong></td><td></td></tr>
-            <tr class="row-total"><td><strong>Per person (9 people)</strong></td><td><strong>~$129</strong></td><td><strong>~$217</strong></td><td>Over 5 days</td></tr>
-            <tr class="row-total"><td><strong>Per person per day</strong></td><td><strong>~$26</strong></td><td><strong>~$43</strong></td><td>Tracks your $25&ndash;40 budget target</td></tr>
+            <tr class="row-total"><td><strong>TOTAL (excluding lodging)</strong></td><td><strong>$980</strong></td><td><strong>$1,725</strong></td><td></td></tr>
+            <tr class="row-total"><td><strong>Per person (9 people)</strong></td><td><strong>~$109</strong></td><td><strong>~$192</strong></td><td>Over 5 days</td></tr>
+            <tr class="row-total"><td><strong>Per person per day</strong></td><td><strong>~$22</strong></td><td><strong>~$38</strong></td><td>Tracks your $25&ndash;40 budget target</td></tr>
           </tbody>
         </table>
       </div>
 
-      <p>The $25/day end requires disciplined cooking in and heavy use of free activities (beach days, Conservation Park, Gulf Highlands pools/mini golf, Air Show). The $40/day end allows eating out most meals and 2&ndash;3 paid attractions. <strong>The Air Show alone&nbsp;&mdash; free, two full days of entertainment&nbsp;&mdash; saves the group hundreds of dollars</strong> compared to a week without it.</p>
+      <p>The $22/day end requires disciplined cooking in and heavy use of free activities (beach days, Conservation Park, Gulf Highlands pools/mini golf, Air Show). The $38/day end allows eating out most meals and 2&ndash;3 paid attractions. <strong>The Air Show alone&nbsp;&mdash; free, two full days of entertainment&nbsp;&mdash; saves the group hundreds of dollars</strong> compared to a week without it.</p>
 
       <h3>Top money-saving moves</h3>
       <div class="callout callout-tip">
