@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Gulf Shores Trip Planner — April 6–11, 2026</title>
-<meta name="description" content="Group trip planner for Gulf Shores, Alabama, April 6-11, 2026. Weather, route, dining, activities, packing, and day-by-day itinerary for 9 travelers.">
+<meta name="description" content="Group trip planner for Gulf Shores, Alabama, April 6-11, 2026. Weather, route, dining, activities, costs, and safety for 9 travelers.">
 <!-- iOS / Safari -->
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -582,167 +582,6 @@ tbody tr:hover { background: var(--accent-teal-soft); }
   text-transform: uppercase;
 }
 
-/* ── Day cards (itinerary) ── */
-.day-grid {
-  display: grid;
-  gap: 1rem;
-  margin-top: 1.5rem;
-}
-
-.day-card {
-  background: var(--bg-card);
-  border: 1px solid var(--border-light);
-  border-radius: var(--radius-md);
-  padding: 1.25rem 1.5rem;
-  box-shadow: var(--shadow-sm);
-  position: relative;
-  overflow: hidden;
-  transition: box-shadow 0.25s, transform 0.25s;
-}
-
-.day-card:hover {
-  box-shadow: var(--shadow-md);
-  transform: translateY(-2px);
-}
-
-.day-card::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  width: 4px;
-}
-
-.day-card:nth-child(1)::before { background: var(--accent-teal); }
-.day-card:nth-child(2)::before { background: var(--accent-blue); }
-.day-card:nth-child(3)::before { background: var(--accent-gold); }
-.day-card:nth-child(4)::before { background: var(--accent-coral); }
-.day-card:nth-child(5)::before { background: #6a5acd; }
-.day-card:nth-child(6)::before { background: #c44a8a; }
-
-.day-label {
-  font-family: var(--font-heading);
-  font-size: 1.05rem;
-  font-weight: 700;
-  color: var(--text-heading);
-  margin-bottom: 0.4em;
-}
-
-.day-date {
-  font-size: 0.78rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--text-muted);
-  margin-bottom: 0.2em;
-}
-
-.day-desc {
-  font-size: 0.95rem;
-  color: var(--text-secondary);
-  margin: 0;
-  line-height: 1.65;
-}
-
-.day-tag {
-  display: inline-block;
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  padding: 0.2em 0.6em;
-  border-radius: 999px;
-  margin-top: 0.6em;
-}
-
-.tag-free { background: var(--accent-teal-soft); color: var(--accent-teal); }
-.tag-budget { background: var(--accent-gold-soft); color: var(--accent-gold); }
-.tag-highlight { background: var(--accent-coral-soft); color: var(--accent-coral); }
-
-/* ── Packing checklist ── */
-.checklist {
-  list-style: none;
-  padding: 0;
-  margin: 1rem 0;
-}
-
-.checklist li {
-  display: flex;
-  align-items: flex-start;
-  gap: 0.65em;
-  padding: 0.5em 0;
-  border-bottom: 1px solid var(--border-light);
-  margin: 0;
-  transition: opacity 0.2s;
-}
-
-.checklist li:last-child { border-bottom: none; }
-
-.checklist input[type="checkbox"] {
-  appearance: none;
-  -webkit-appearance: none;
-  width: 20px;
-  height: 20px;
-  border: 2px solid var(--border-medium);
-  border-radius: 4px;
-  flex-shrink: 0;
-  margin-top: 2px;
-  cursor: pointer;
-  position: relative;
-  transition: background 0.15s, border-color 0.15s;
-}
-
-.checklist input[type="checkbox"]:checked {
-  background: var(--accent-teal);
-  border-color: var(--accent-teal);
-}
-
-.checklist input[type="checkbox"]:checked::after {
-  content: '';
-  position: absolute;
-  left: 5px;
-  top: 1px;
-  width: 6px;
-  height: 11px;
-  border: solid white;
-  border-width: 0 2px 2px 0;
-  transform: rotate(45deg);
-}
-
-.checklist li.checked .check-label {
-  text-decoration: line-through;
-  opacity: 0.5;
-}
-
-.check-label { flex: 1; cursor: pointer; }
-
-.checklist-progress {
-  font-size: 0.8rem;
-  color: var(--text-muted);
-  margin-bottom: 0.5rem;
-  display: flex;
-  align-items: center;
-  gap: 0.75em;
-}
-
-.progress-bar {
-  flex: 1;
-  height: 4px;
-  background: var(--border-light);
-  border-radius: 4px;
-  overflow: hidden;
-  max-width: 200px;
-}
-
-.progress-fill {
-  height: 100%;
-  background: var(--accent-teal);
-  border-radius: 4px;
-  transition: width 0.3s;
-  width: 0%;
-}
-
 /* ── Beach flag colors ── */
 .flag-row-green td:first-child { border-left: 4px solid #22c55e; }
 .flag-row-yellow td:first-child { border-left: 4px solid #eab308; }
@@ -990,10 +829,8 @@ tbody tr:hover { background: var(--accent-teal-soft); }
       <li><a href="#events">Events</a></li>
       <li><a href="#restaurants">Dining</a></li>
       <li><a href="#activities">Activities</a></li>
-      <li><a href="#packing">Packing</a></li>
       <li><a href="#costs">Costs</a></li>
       <li><a href="#safety">Safety</a></li>
-      <li><a href="#itinerary">Itinerary</a></li>
     </ul>
   </div>
 </nav>
@@ -1561,84 +1398,6 @@ tbody tr:hover { background: var(--accent-teal-soft); }
     </div>
   </section>
 
-  <!-- 7. PACKING -->
-  <section class="section" id="packing">
-    <div class="section-header" role="button" tabindex="0" aria-expanded="false" aria-controls="body-packing">
-      <h2><span class="section-num">7</span> Packing List</h2>
-      <svg class="collapse-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
-    </div>
-    <div class="section-body collapsed" id="body-packing">
-
-      <div class="checklist-progress">
-        <span id="packing-count">0 / 0 packed</span>
-        <div class="progress-bar"><div class="progress-fill" id="packing-bar"></div></div>
-      </div>
-
-      <h3>Beach Essentials</h3>
-      <ul class="checklist">
-        <li><input type="checkbox" id="pk1"><label class="check-label" for="pk1">Sunscreen SPF 30+ (lots &mdash; UV is high in April Gulf)</label></li>
-        <li><input type="checkbox" id="pk2"><label class="check-label" for="pk2">Reef-safe sunscreen (required in some areas)</label></li>
-        <li><input type="checkbox" id="pk3"><label class="check-label" for="pk3">Beach towels (1&ndash;2 per person)</label></li>
-        <li><input type="checkbox" id="pk4"><label class="check-label" for="pk4">Beach chairs or sand chairs</label></li>
-        <li><input type="checkbox" id="pk5"><label class="check-label" for="pk5">Beach umbrella or pop-up shade tent</label></li>
-        <li><input type="checkbox" id="pk6"><label class="check-label" for="pk6">Swimsuits (2+ per person for drying time)</label></li>
-        <li><input type="checkbox" id="pk7"><label class="check-label" for="pk7">Rash guards (for kids especially)</label></li>
-        <li><input type="checkbox" id="pk8"><label class="check-label" for="pk8">Beach bag / tote</label></li>
-        <li><input type="checkbox" id="pk9"><label class="check-label" for="pk9">Water shoes or sandals</label></li>
-        <li><input type="checkbox" id="pk10"><label class="check-label" for="pk10">Polarized sunglasses</label></li>
-        <li><input type="checkbox" id="pk11"><label class="check-label" for="pk11">Wide-brim hats</label></li>
-        <li><input type="checkbox" id="pk12"><label class="check-label" for="pk12">Sand toys (buckets, shovels) for kids</label></li>
-        <li><input type="checkbox" id="pk13"><label class="check-label" for="pk13">Waterproof phone case or dry bag</label></li>
-        <li><input type="checkbox" id="pk14"><label class="check-label" for="pk14">Insulated cooler for beach drinks &amp; snacks</label></li>
-        <li><input type="checkbox" id="pk15"><label class="check-label" for="pk15">Reusable water bottles</label></li>
-      </ul>
-
-      <h3>Clothing</h3>
-      <ul class="checklist">
-        <li><input type="checkbox" id="pk16"><label class="check-label" for="pk16">Light layers for cool evenings (hoodie, light jacket)</label></li>
-        <li><input type="checkbox" id="pk17"><label class="check-label" for="pk17">Casual dinner outfit (at least one nicer evening)</label></li>
-        <li><input type="checkbox" id="pk18"><label class="check-label" for="pk18">Walking/activity shoes</label></li>
-        <li><input type="checkbox" id="pk19"><label class="check-label" for="pk19">Flip flops</label></li>
-        <li><input type="checkbox" id="pk20"><label class="check-label" for="pk20">Rain jacket or compact poncho</label></li>
-        <li><input type="checkbox" id="pk21"><label class="check-label" for="pk21">Cover-ups for beach-to-restaurant</label></li>
-      </ul>
-
-      <h3>Medications &amp; Health</h3>
-      <ul class="checklist">
-        <li><input type="checkbox" id="pk22"><label class="check-label" for="pk22">Prescription medications (7-day supply + extra)</label></li>
-        <li><input type="checkbox" id="pk23"><label class="check-label" for="pk23">After-sun lotion / aloe vera gel</label></li>
-        <li><input type="checkbox" id="pk24"><label class="check-label" for="pk24">Motion sickness medication (for boat trips)</label></li>
-        <li><input type="checkbox" id="pk25"><label class="check-label" for="pk25">Basic first aid kit (bandages, antiseptic, pain relievers)</label></li>
-        <li><input type="checkbox" id="pk26"><label class="check-label" for="pk26">Insect repellent (mosquitoes near marshy areas)</label></li>
-        <li><input type="checkbox" id="pk27"><label class="check-label" for="pk27">Allergy medication if needed</label></li>
-      </ul>
-
-      <h3>Gear &amp; Gadgets</h3>
-      <ul class="checklist">
-        <li><input type="checkbox" id="pk28"><label class="check-label" for="pk28">Camera / underwater camera or GoPro</label></li>
-        <li><input type="checkbox" id="pk29"><label class="check-label" for="pk29">Portable phone charger / power bank</label></li>
-        <li><input type="checkbox" id="pk30"><label class="check-label" for="pk30">Bluetooth speaker (waterproof is better)</label></li>
-        <li><input type="checkbox" id="pk31"><label class="check-label" for="pk31">Card/board games for evenings</label></li>
-        <li><input type="checkbox" id="pk32"><label class="check-label" for="pk32">Frisbee, cornhole, volleyball</label></li>
-      </ul>
-
-      <h3>Kitchen &amp; Food Prep (for cook-in meals)</h3>
-      <ul class="checklist">
-        <li><input type="checkbox" id="pk33"><label class="check-label" for="pk33">Reusable grocery bags</label></li>
-        <li><input type="checkbox" id="pk34"><label class="check-label" for="pk34">Corkscrew / bottle opener</label></li>
-        <li><input type="checkbox" id="pk35"><label class="check-label" for="pk35">Spices &amp; cooking staples (oil, salt, pepper, garlic)</label></li>
-        <li><input type="checkbox" id="pk36"><label class="check-label" for="pk36">Aluminum foil &amp; zip-lock bags</label></li>
-        <li><input type="checkbox" id="pk37"><label class="check-label" for="pk37">Paper plates / disposable cups for beach meals</label></li>
-      </ul>
-
-      <div class="callout callout-tip">
-        <strong>Stingray Shuffle Tip</strong>
-        Pack old sneakers or water shoes for everyone. Stingrays bury in the sand in the Gulf surf &mdash; shuffle your feet when entering the water rather than stepping, and you&rsquo;ll never have a problem.
-      </div>
-
-    </div>
-  </section>
-
   <!-- 8. COSTS -->
   <section class="section" id="costs">
     <div class="section-header" role="button" tabindex="0" aria-expanded="false" aria-controls="body-costs">
@@ -1780,70 +1539,6 @@ tbody tr:hover { background: var(--accent-teal-soft); }
     </div>
   </section>
 
-  <!-- 10. ITINERARY -->
-  <section class="section" id="itinerary">
-    <div class="section-header" role="button" tabindex="0" aria-expanded="false" aria-controls="body-itinerary">
-      <h2><span class="section-num">10</span> Day-by-Day Itinerary</h2>
-      <svg class="collapse-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
-    </div>
-    <div class="section-body collapsed" id="body-itinerary">
-
-      <p>A loose framework &mdash; leave room to adjust based on weather and how the group feels each morning. The best days at the beach often happen when you throw the plan out.</p>
-
-      <div class="day-grid">
-
-        <div class="day-card">
-          <div class="day-date">Day 0 &mdash; Travel Day</div>
-          <div class="day-label">Monday, April 6</div>
-          <p class="day-desc">Depart Paducah by 6 AM. Fuel stop at <strong>Buc-ee&rsquo;s Athens</strong> (~4.5 hrs in). Optional top-off at Evergreen AL. Stop at <strong>Walmart Foley</strong> and/or <strong>Foley Fish Company</strong> for groceries and fresh seafood. Arrive at The Beach Club Resort by 3&ndash;4 PM. Check in, unpack, and walk to the beach before dark. Cook-in dinner from grocery haul.</p>
-          <span class="day-tag tag-budget">Travel Day</span>
-        </div>
-
-        <div class="day-card">
-          <div class="day-date">Day 1</div>
-          <div class="day-label">Tuesday, April 7</div>
-          <p class="day-desc">Full resort day. Morning swim at the private beach. Explore the 11+ pools &mdash; lazy river, kids pool, lap pool. Afternoon beach chairs in the sun. Pick up anything you missed at <strong>Rouses Market</strong>. Evening dinner at <strong>LuLu&rsquo;s</strong> &mdash; call ahead for wait times. Live music on their outdoor stage after dinner.</p>
-          <span class="day-tag tag-free">Resort Day</span>
-        </div>
-
-        <div class="day-card">
-          <div class="day-date">Day 2</div>
-          <div class="day-label">Wednesday, April 8</div>
-          <p class="day-desc">Morning at <strong>Gulf State Park</strong> &mdash; walk the trail or rent bikes, walk the 2,448-ft pier out over the Gulf. Lunch at <strong>Shrimp Basket</strong>. Afternoon back to the resort beach (best beach day candidate &mdash; mid-week is typically most settled). Evening: <strong>group seafood boil</strong> at the resort kitchen with Foley Fish Co. shrimp and crab. Walk to The Hangout for a nightcap &mdash; live music most evenings.</p>
-          <span class="day-tag tag-free">Beach + Park</span>
-        </div>
-
-        <div class="day-card">
-          <div class="day-date">Day 3</div>
-          <div class="day-label">Thursday, April 9</div>
-          <p class="day-desc"><strong>Dolphin cruise</strong> in the morning &mdash; book Southern Rose Dolphin Cruises ahead (~$29/person). Afternoon at <strong>Alabama Gulf Coast Zoo</strong> ($19/adult, $14/child) &mdash; hand-feed giraffes and touch stingrays. Dinner at <strong>Cobalt</strong> or <strong>The Gulf</strong> in Orange Beach for the nicer group dinner night. Make a reservation. Walk Orange Beach marina area after dinner.</p>
-          <span class="day-tag tag-highlight">Dolphin + Zoo Day</span>
-        </div>
-
-        <div class="day-card">
-          <div class="day-date">Day 4</div>
-          <div class="day-label">Friday, April 10</div>
-          <p class="day-desc">Choose based on weather and group energy: <strong>Waterville USA waterpark</strong> if it&rsquo;s warm and sunny; <strong>Pensacola Naval Aviation Museum</strong> (FREE, 1 hr east) or <strong>Fairhope</strong> (1 hr north) if you want a change of scenery. Afternoon back on the beach. Last casual dinner out &mdash; <strong>Tacky Jack&rsquo;s</strong> or <strong>Fisher&rsquo;s Dockside</strong> at OB Marina. Evening: The Track for go-karts if the group is up for it.</p>
-          <span class="day-tag tag-budget">Flex Day</span>
-        </div>
-
-        <div class="day-card">
-          <div class="day-date">Day 5 &mdash; Departure</div>
-          <div class="day-label">Saturday, April 11</div>
-          <p class="day-desc">One last sunrise beach walk. Breakfast at <strong>Sunliner Diner</strong> if they can fit the group, or cook in. Check out by 10&ndash;11 AM. Head north on Hwy 59 / I-65. Stop at the <strong>Baldwin County Strawberry Festival in Loxley</strong> (~30 min north, opens 9 AM) &mdash; free admission, fresh strawberries, live music. Fuel up in Evergreen for the rest of the drive home.</p>
-          <span class="day-tag tag-highlight">Strawberry Festival</span>
-        </div>
-
-      </div>
-
-      <div class="callout">
-        <strong>Before You Go</strong>
-        Check the NWS 7-day forecast for Gulf Shores around April 2&ndash;3 to plan the flex day. Text ALBEACHES to 888-777 on arrival morning for beach conditions. Have a great trip!
-      </div>
-
-    </div>
-  </section>
-
 </main>
 
 <!-- ══════════ FOOTER ══════════ -->
@@ -1959,50 +1654,6 @@ tbody tr:hover { background: var(--accent-teal-soft); }
   }, { passive: true });
   scrollBtn.addEventListener('click', function() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
-  });
-
-  /* ── Packing checklist with localStorage ── */
-  var STORAGE_KEY = 'gs2026-packing';
-  var checkboxes = document.querySelectorAll('.checklist input[type="checkbox"]');
-  var totalItems = checkboxes.length;
-
-  function loadChecked() {
-    try {
-      var saved = JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}');
-      checkboxes.forEach(function(cb) {
-        if (saved[cb.id]) {
-          cb.checked = true;
-          cb.closest('li').classList.add('checked');
-        }
-      });
-    } catch(e) {}
-  }
-
-  function saveChecked() {
-    var state = {};
-    checkboxes.forEach(function(cb) {
-      if (cb.checked) state[cb.id] = true;
-    });
-    try { localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); } catch(e) {}
-  }
-
-  function updateProgress() {
-    var checked = document.querySelectorAll('.checklist input:checked').length;
-    var countEl = document.getElementById('packing-count');
-    var barEl = document.getElementById('packing-bar');
-    if (countEl) countEl.textContent = checked + ' / ' + totalItems + ' packed';
-    if (barEl) barEl.style.width = (totalItems ? (checked / totalItems * 100) : 0) + '%';
-  }
-
-  loadChecked();
-  updateProgress();
-
-  checkboxes.forEach(function(cb) {
-    cb.addEventListener('change', function() {
-      this.closest('li').classList.toggle('checked', this.checked);
-      saveChecked();
-      updateProgress();
-    });
   });
 
   /* ── Staggered section fade-in ── */
